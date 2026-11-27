@@ -51,3 +51,15 @@ Novos dados em base_revisada.json / v2; relatórios em conciliacao_v2.json. Cole
 Acrescentadas ao final de Fontes e metodologia, separadas dos dados dos indicadores: artigo institucional de gestão de24/11/2026; case anunciado na programação oficial do Tax Summit2026 (31/03–01/04); cobertura institucional de19/11/2026 confirmando participação no Brasil nos Trilhos2026; portais oficiais de marcos da Receita Federal e REIDI/Ministério dos Transportes. URLs exatas, contexto, evidência e limites em src/referencias.mjs.
 
 Programação de evento não foi tratada como prova de resultados ou maturidade. O fórum ferroviário é contexto setorial, não evidência de benefício tributário. Referências técnicas gerais não foram apresentadas como eventos com participação da empresa. Autoria e identificação preservadas nos sites originais; textos do painel genéricos.
+
+## Conferência pontual V2.1.1 — 27/11/2026
+
+Consulta documental por ferramenta de pesquisa; não confundir com sucesso de coleta automatizada.
+
+- LC 227/2026, arts. 136–140: conferidos no Planalto. Compensação com IBS distingue ativo permanente (prazo remanescente) e demais créditos (240 parcelas). Ressarcimento alternativo depende da impossibilidade de compensação; art. 139 prevê 240 parcelas ou prazo remanescente, pagamento até 90 dias após encerramento do mês de referência; art. 140 condiciona transferência e parcelas de ressarcimento à regularidade. Texto do painel explicitado, sem mudar simulador hipotético. https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp227.htm
+- LC 214/2025 compilada: art. 11 VII (destino de carga), arts. 47–49 (crédito, documento, extinção e exceções), arts. 105–106 (REPORTO/REIDI), arts. 343–348 (fase inicial): conferidos. REPORTO art. 105 §7 mantém aquisições até 31/12/2028; REIDI depende de utilização/incorporação e condições específicas. https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214compilado.htm
+- Decreto 12.955/2026: texto atualizado da Câmara confirma regulamento da CBS; implantação gradual de split payment depende de ato conjunto (art. 33). https://www2.camara.leg.br/legin/fed/decret/2026/decreto-12955-29-abril-2026-799019-normaatualizada-pe.html
+- SVRS: aviso de 12/11/2026 confirmado na página abaixo, incluindo CT-e NT 2026.004 v1.01 e adiamento de produção para 14/12/2026. Link específico incorporado; data anunciada não equivale a implantação já realizada. https://dfe-portal.svrs.rs.gov.br/Cte/Avisos/3021
+- Split payment: comunicado SVRS de 02/03/2026 confirma caráter preparatório dos campos em 2026 e obrigatoriedade dependente de instrumento regulatório. Fonte separada do aviso CT-e. https://dfe-portal.svrs.rs.gov.br/Nfe/Busca?palavraschave=split+payment
+
+Revisão pontual das afirmações existentes; não constitui auditoria jurídica integral nem comprova elegibilidade de operações reais. Sem divergência numérica identificada nesta revisão; cálculos preservados.
