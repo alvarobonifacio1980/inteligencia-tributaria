@@ -31,3 +31,17 @@ Ampliação conciliada e limites atuais:
 | RFB / CT-e / DOU | Marcos regulatórios, atos técnicos e habilitação histórica consultados | Agenda com status e data; Fases II/III separadas |
 
 Hashes das três bases adicionais em `data/conciliacao_expandida.json`. Dados selecionados em `data/complementos_revisados.json`. Não se publicam bases nacionais ou PDFs integrais no cliente.
+
+## Evolução V2.1
+
+- DIR 2025 e DIP 2027–2029: PDFs completos válidos, página única renderizada; totais por classe/ano em reais conciliados, traço distinto de zero. Hashes em conciliacao_v2.json.
+- CVM DVA consolidada (DFP 2025 / ITR 2026): anual 2024/25 e 9M25/26; códigos 7.08.02.01–03, soma ao total. DFP p.46 e ITR p.33.
+- CVM DFC_MI consolidada e ITR p.30: conta 6.01.02.12, pagamentos acumulados −194.592 e −19.087 R$ mil; sinal original preservado e magnitude positiva explícita.
+- DFP nota 10(a): compensações de mesma tese 2024/2025; não equivalem ao total de compensações ou nova economia.
+- DFP nota 25(c) e ITR nota 23.1(c): riscos possíveis/prováveis, contagens e temas; provável integra total.
+- Apresentação 3T26: PDF válido, benchmark visual próprio sem copiar marca; CAPEX gerencial 9M com categorias e arredondamento identificados.
+- Tarifas e simulador XLSX: dois arquivos válidos; abas, cabeçalhos, unidades, fórmulas/cache, proteção, nomes e vínculos inspecionados por openpyxl; sem macro/execução ou vínculo externo. Referência sem ICMS, não preço ou contrato real.
+- Artigo institucional de 24/11/2026 e programação pública Tax Summit consultados: motivação gerencial, sem inferência de maturidade/processos implantados. Estatísticas externas não usadas como indicadores da empresa.
+- Relatório de sustentabilidade indicado: HTTP 403. DVA estatutária/CVM escolhida; comparação numérica não foi fabricada.
+
+Novos dados em base_revisada.json / v2; relatórios em conciliacao_v2.json. Coleta online com snapshot opcional explicitamente marcado quando fonte complementar estiver indisponível; divergência de conteúdo interrompe. Não se republicam PDFs ou planilhas integrais.

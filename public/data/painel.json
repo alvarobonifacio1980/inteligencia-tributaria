@@ -103,6 +103,45 @@
       "periodo": "2024",
       "escopo": "CNPJ da empresa",
       "unidade": "R$ na origem; R$ mi no painel"
+    },
+    {
+      "id": "dip",
+      "nome": "Dados públicos da empresa — DIP 2027–2029",
+      "url": "https://www.mrs.com.br/wp-content/uploads/2026/11/DIP-2027-2029.pdf",
+      "localizador": "p.1, classes e nota Outros",
+      "periodo": "2027–2029",
+      "unidade": "R$ originais",
+      "escopo": "Regulatório",
+      "natureza": "Real — previsão oficial"
+    },
+    {
+      "id": "dir",
+      "nome": "Dados públicos da empresa — DIR 2025",
+      "url": "https://www.mrs.com.br/wp-content/uploads/2026/11/DIR-2025.pdf",
+      "localizador": "p.1, classes e notas",
+      "periodo": "2025",
+      "unidade": "R$ originais",
+      "escopo": "Regulatório",
+      "natureza": "Real"
+    },
+    {
+      "id": "apresentacao",
+      "nome": "Dados públicos da empresa — apresentação 3T2026",
+      "url": "https://filemanager-cdn.mziq.com/published/e14f1680-635b-4328-8a06-b799b1574b43/b562dfd9-524d-47fc-91a2-ef7558f6dbda",
+      "localizador": "p.6,11,13,17",
+      "periodo": "3T2026/9M2026",
+      "escopo": "Gerencial",
+      "natureza": "Real"
+    },
+    {
+      "id": "tarifario",
+      "nome": "Dados públicos da empresa — referência tarifária",
+      "url": "https://www.mrs.com.br/wp-content/uploads/2026/07/Simulador-Tarifario-2026-2027.xlsx",
+      "localizador": "Primeira aba e PRODUTOS",
+      "periodo": "Arquivo 2026–2027",
+      "unidade": "R$/t e R$/t.km",
+      "escopo": "Teto regulatório",
+      "natureza": "Real"
     }
   ],
   "financeiro": [
@@ -364,6 +403,9 @@
       }
     ],
     "verificacao": "2026-11-27",
+    "status_dirbi": {
+      "reutilizada": false
+    },
     "operacional": [
       {
         "periodo": "2024",
@@ -390,5 +432,590 @@
         "fonte": "itr2026"
       }
     ]
-  }
+  },
+  "v2": {
+    "dva": [
+      {
+        "periodo": "2024",
+        "federal": 944.342,
+        "estadual": 29.239,
+        "municipal": 1.293,
+        "total": 974.874,
+        "fonte": "dfp2025",
+        "localizador": "DVA p.46",
+        "escopo": "Consolidado",
+        "unidade": "R$ mi",
+        "natureza": "Real"
+      },
+      {
+        "periodo": "2025",
+        "federal": 970.129,
+        "estadual": 28.897,
+        "municipal": 1.443,
+        "total": 1000.469,
+        "fonte": "dfp2025",
+        "localizador": "DVA p.46",
+        "escopo": "Consolidado",
+        "unidade": "R$ mi",
+        "natureza": "Real"
+      },
+      {
+        "periodo": "9M2025",
+        "federal": 740.181,
+        "estadual": 26.371,
+        "municipal": 1.061,
+        "total": 767.613,
+        "fonte": "itr2026",
+        "localizador": "DVA p.33",
+        "escopo": "Consolidado",
+        "unidade": "R$ mi",
+        "natureza": "Real"
+      },
+      {
+        "periodo": "9M2026",
+        "federal": 701.942,
+        "estadual": -17.798,
+        "municipal": 1.331,
+        "total": 685.475,
+        "fonte": "itr2026",
+        "localizador": "DVA p.33",
+        "escopo": "Consolidado",
+        "unidade": "R$ mi",
+        "natureza": "Real"
+      }
+    ],
+    "dfc": [
+      {
+        "periodo": "9M2025",
+        "original_mil": -194592.0,
+        "valor": 194.592,
+        "unidade": "R$ mi; saída em magnitude positiva",
+        "fonte": "itr2026",
+        "localizador": "DFC consolidada p.30; CVM 6.01.02.12",
+        "natureza": "Adaptado",
+        "escopo": "Consolidado"
+      },
+      {
+        "periodo": "9M2026",
+        "original_mil": -19087.0,
+        "valor": 19.087,
+        "unidade": "R$ mi; saída em magnitude positiva",
+        "fonte": "itr2026",
+        "localizador": "DFC consolidada p.30; CVM 6.01.02.12",
+        "natureza": "Adaptado",
+        "escopo": "Consolidado"
+      }
+    ],
+    "dip": [
+      {
+        "codigo": 1,
+        "classe": "Via Permanente",
+        "ano": 2027,
+        "valor_reais": 1086252267,
+        "original": "1.086.252.267",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 1,
+        "classe": "Via Permanente",
+        "ano": 2028,
+        "valor_reais": 1975822012,
+        "original": "1.975.822.012",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 1,
+        "classe": "Via Permanente",
+        "ano": 2029,
+        "valor_reais": 1946976735,
+        "original": "1.946.976.735",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 2,
+        "classe": "Material Rodante",
+        "ano": 2027,
+        "valor_reais": 251522294,
+        "original": "251.522.294",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 2,
+        "classe": "Material Rodante",
+        "ano": 2028,
+        "valor_reais": 256512139,
+        "original": "256.512.139",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 2,
+        "classe": "Material Rodante",
+        "ano": 2029,
+        "valor_reais": 254628870,
+        "original": "254.628.870",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 3,
+        "classe": "Infraestrutura Predial",
+        "ano": 2027,
+        "valor_reais": 71507739,
+        "original": "71.507.739",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 3,
+        "classe": "Infraestrutura Predial",
+        "ano": 2028,
+        "valor_reais": 72975830,
+        "original": "72.975.830",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 3,
+        "classe": "Infraestrutura Predial",
+        "ano": 2029,
+        "valor_reais": 72467249,
+        "original": "72.467.249",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 4,
+        "classe": "Meio Ambiente",
+        "ano": 2027,
+        "valor_reais": null,
+        "original": "-",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 4,
+        "classe": "Meio Ambiente",
+        "ano": 2028,
+        "valor_reais": null,
+        "original": "-",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 4,
+        "classe": "Meio Ambiente",
+        "ano": 2029,
+        "valor_reais": null,
+        "original": "-",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 5,
+        "classe": "Outros",
+        "ano": 2027,
+        "valor_reais": 890125414,
+        "original": "890.125.414",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 5,
+        "classe": "Outros",
+        "ano": 2028,
+        "valor_reais": 543851504,
+        "original": "543.851.504",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 5,
+        "classe": "Outros",
+        "ano": 2029,
+        "valor_reais": 286882161,
+        "original": "286.882.161",
+        "natureza": "Real — previsão oficial",
+        "fonte": "dip",
+        "localizador": "DIP p.1",
+        "escopo": "Regulatório"
+      }
+    ],
+    "dir": [
+      {
+        "codigo": 1,
+        "classe": "Via Permanente Ampliação",
+        "ano": 2025,
+        "valor_reais": 829795735,
+        "original": "829.795.735",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 2,
+        "classe": "Via Permanente Existente",
+        "ano": 2025,
+        "valor_reais": 1286433958,
+        "original": "1.286.433.958",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 3,
+        "classe": "Material Rodante Novo",
+        "ano": 2025,
+        "valor_reais": 481606376,
+        "original": "481.606.376",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 4,
+        "classe": "Material Rodante Existente",
+        "ano": 2025,
+        "valor_reais": 368855334,
+        "original": "368.855.334",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 5,
+        "classe": "Telecomunicações",
+        "ano": 2025,
+        "valor_reais": 4810491,
+        "original": "4.810.491",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 6,
+        "classe": "Oficinas",
+        "ano": 2025,
+        "valor_reais": 1850564,
+        "original": "1.850.564",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 7,
+        "classe": "Informatização",
+        "ano": 2025,
+        "valor_reais": 89309602,
+        "original": "89.309.602",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 8,
+        "classe": "Sinalização",
+        "ano": 2025,
+        "valor_reais": 240426567,
+        "original": "240.426.567",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 9,
+        "classe": "Edificações",
+        "ano": 2025,
+        "valor_reais": 5494032,
+        "original": "5.494.032",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 10,
+        "classe": "Meio ambiente",
+        "ano": 2025,
+        "valor_reais": 0,
+        "original": "0",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      },
+      {
+        "codigo": 11,
+        "classe": "Outros",
+        "ano": 2025,
+        "valor_reais": 41009658,
+        "original": "41.009.658",
+        "natureza": "Real",
+        "fonte": "dir",
+        "localizador": "DIR p.1",
+        "escopo": "Regulatório"
+      }
+    ],
+    "totais_dip": {
+      "2027": 2299407714,
+      "2028": 2849161485,
+      "2029": 2560955015
+    },
+    "total_dir": 3349592317,
+    "riscos": [
+      {
+        "data": "31/12/2024",
+        "possivel": 643.211,
+        "provavel": 142.762,
+        "total": 785.973,
+        "fonte": "dfp2025",
+        "localizador": "Nota 25(c), p.109"
+      },
+      {
+        "data": "31/12/2025",
+        "possivel": 935.621,
+        "provavel": 151.214,
+        "total": 1086.835,
+        "processos": 194,
+        "recuperacao": 26,
+        "risco": 168,
+        "provaveis": 9,
+        "fonte": "dfp2025",
+        "localizador": "Nota 25(c), p.109"
+      },
+      {
+        "data": "30/09/2026",
+        "possivel": 895.01,
+        "provavel": 150.039,
+        "total": 1045.049,
+        "processos": 171,
+        "recuperacao": 22,
+        "risco": 149,
+        "provaveis": 16,
+        "fonte": "itr2026",
+        "localizador": "Nota 23.1(c), p.80"
+      }
+    ],
+    "temas_risco_2025": [
+      {
+        "tema": "Créditos ICMS RJ/SP",
+        "valor": 239.015
+      },
+      {
+        "tema": "PIS/Cofins: arrendamento, tráfego e passagem",
+        "valor": 209.257
+      },
+      {
+        "tema": "IPTU sobre imóveis operacionais",
+        "valor": 142.419
+      },
+      {
+        "tema": "ICMS: escrituração CIAP",
+        "valor": 43.68
+      },
+      {
+        "tema": "PIS/Cofins: subvenção",
+        "valor": 22.917
+      },
+      {
+        "tema": "PIS/Cofins: tráfego mútuo",
+        "valor": 20.086
+      }
+    ],
+    "compensacoes": [
+      {
+        "ano": 2024,
+        "valor": 93.616
+      },
+      {
+        "ano": 2025,
+        "valor": 72.468
+      }
+    ],
+    "compensacao_fonte": "dfp2025",
+    "compensacao_localizador": "Nota 10(a), p.63; exclusão ICMS de PIS/Cofins",
+    "tarifas": {
+      "fixa": 22.95,
+      "variavel": 0.5321,
+      "distancia_exemplo": 1,
+      "teto_exemplo": 23.48,
+      "produto": "Demais Produtos",
+      "unidade": "R$/t",
+      "icms_incluido": false,
+      "vigencia_cache": "2027-07-28",
+      "ato": "79/2026",
+      "fonte": "tarifario",
+      "localizador": "Primeira aba, E13:E16; PRODUTOS linha 31",
+      "formula": "Arredondar(fixa + variável × distância, 2)",
+      "limite": "Valor máximo homologado; não é preço efetivo. Data da célula é mantida como metadado, sem presumir início/fim além do documento."
+    },
+    "inspecao_planilhas": [
+      {
+        "arquivo": "tarifas2026.xlsx",
+        "abas": [
+          {
+            "nome_generico": "Aba 1",
+            "linhas": 647,
+            "colunas": 9,
+            "protegida": false,
+            "formulas": 0
+          }
+        ],
+        "vinculos_externos": 0,
+        "nomes": [],
+        "macros": false
+      },
+      {
+        "arquivo": "simulador2026.xlsx",
+        "abas": [
+          {
+            "nome_generico": "Aba 1",
+            "linhas": 44,
+            "colunas": 7,
+            "protegida": true,
+            "formulas": 11
+          },
+          {
+            "nome_generico": "Aba 2",
+            "linhas": 33,
+            "colunas": 16,
+            "protegida": true,
+            "formulas": 0
+          }
+        ],
+        "vinculos_externos": 0,
+        "nomes": [
+          "NOME"
+        ],
+        "macros": false
+      }
+    ],
+    "capex_gerencial": [
+      {
+        "periodo": "9M2025",
+        "crescimento": 1228,
+        "recorrente": 1355,
+        "total": 2583
+      },
+      {
+        "periodo": "9M2026",
+        "crescimento": 1248,
+        "recorrente": 795,
+        "total": 2043
+      }
+    ],
+    "revisao": "2026-11-27",
+    "custos_referencia": {
+      "periodo": "9M2026",
+      "total": 3523.729,
+      "grupos": [
+        {
+          "nome": "Depreciação e amortização",
+          "valor": 955.593,
+          "avaliacao": "Sem crédito presumido neste modelo"
+        },
+        {
+          "nome": "Mão de obra e encargos",
+          "valor": 856.768,
+          "avaliacao": "Sem crédito presumido neste modelo"
+        },
+        {
+          "nome": "Combustíveis/lubrificantes",
+          "valor": 765.419,
+          "avaliacao": "Regime e documento a validar"
+        },
+        {
+          "nome": "Serviços de terceiros",
+          "valor": 411.064,
+          "avaliacao": "Elegibilidade a validar"
+        },
+        {
+          "nome": "Insumos/outros materiais",
+          "valor": 227.367,
+          "avaliacao": "Elegibilidade a validar"
+        },
+        {
+          "nome": "Partilhas de fretes e acessórios",
+          "valor": 211.359,
+          "avaliacao": "Operação a validar"
+        },
+        {
+          "nome": "Concessão, aluguel e outros",
+          "valor": 96.159,
+          "avaliacao": "Indeterminado; não presumir crédito"
+        }
+      ],
+      "fonte": "itr2026",
+      "localizador": "Nota 28, p.86, consolidado"
+    },
+    "reconciliacao_9m": [
+      {
+        "periodo": "9M2025",
+        "nominal": 574.627,
+        "ajustes": {
+          "Incentivos fiscais": -20.569,
+          "Exclusão ICMS base IR/CS": -86.501,
+          "PIS/Cofins base ICMS": -0.814,
+          "Estoque": 0.723,
+          "Doações": 2.345,
+          "Outros": -5.358
+        },
+        "efetivo": 464.453
+      },
+      {
+        "periodo": "9M2026",
+        "nominal": 440.377,
+        "ajustes": {
+          "Exercícios anteriores": -6.367,
+          "Incentivos fiscais": -15.158,
+          "Estoque": 0.055,
+          "Doações": 1.765,
+          "Outros": 8.004
+        },
+        "efetivo": 428.676
+      }
+    ]
+  },
+  "versao": "2.1.0",
+  "revisao": "2026-11-27"
 }

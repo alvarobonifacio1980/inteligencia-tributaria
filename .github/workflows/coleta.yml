@@ -16,11 +16,14 @@ jobs:
       - run: python scripts/coletar.py
       - run: python scripts/cvm.py
       - run: python scripts/ampliar_fontes.py --permitir-snapshot-dirbi
+      - run: python scripts/evoluir_v2.py --online --permitir-snapshot
       - run: python -m unittest discover -s tests -p 'test_*.py'
       - uses: actions/upload-artifact@v4
         with:
           name: evidencias-coleta
           path: |
+            data/conciliacao_v2.json
+            data/coleta_v2_status.json
             data/complementos_revisados.json
             data/conciliacao_expandida.json
             data/extracao_validada.json

@@ -1,0 +1,155 @@
+{
+  "versao": "2.1.0",
+  "fontes": [
+    {
+      "arquivo": "dip2027.pdf",
+      "url": "https://www.mrs.com.br/wp-content/uploads/2026/11/DIP-2027-2029.pdf",
+      "bytes": 413188,
+      "sha256": "e39d1223a85d0f04e5610fb16cd44ecc8b0c04637483e17de8f545d502f18133"
+    },
+    {
+      "arquivo": "dir2025.pdf",
+      "url": "https://www.mrs.com.br/wp-content/uploads/2026/11/DIR-2025.pdf",
+      "bytes": 526745,
+      "sha256": "948faeeef201d9162e5d915c21e41fb6cec4cf61a3a1df1aa95788be3026f769"
+    },
+    {
+      "arquivo": "apresentacao3t26.pdf",
+      "url": "https://filemanager-cdn.mziq.com/published/e14f1680-635b-4328-8a06-b799b1574b43/b562dfd9-524d-47fc-91a2-ef7558f6dbda",
+      "bytes": 904699,
+      "sha256": "6bbe2a3b7849b05bf2ea582204a75cd208393af6d1de06112384c5d4d8289a35"
+    },
+    {
+      "arquivo": "tarifas2026.xlsx",
+      "url": "https://www.mrs.com.br/wp-content/uploads/2026/07/TARIFAS-DE-REFERENCIA-2026-29.07.2026-1.xlsx",
+      "bytes": 44101,
+      "sha256": "1227b83ce7a5a534ff8b4aba04fecc2db2d2e7ce2b6a9222ff6511d3687afffd"
+    },
+    {
+      "arquivo": "simulador2026.xlsx",
+      "url": "https://www.mrs.com.br/wp-content/uploads/2026/07/Simulador-Tarifario-2026-2027.xlsx",
+      "bytes": 21397,
+      "sha256": "3113d521930ddd42010401d3a3098f2671ecb5fa64b8ec2bc37c579ab8d51780"
+    }
+  ],
+  "dva": [
+    {
+      "periodo": "2024",
+      "federal": 944.342,
+      "estadual": 29.239,
+      "municipal": 1.293,
+      "total": 974.874,
+      "fonte": "dfp2025",
+      "localizador": "DVA p.46",
+      "escopo": "Consolidado",
+      "unidade": "R$ mi",
+      "natureza": "Real"
+    },
+    {
+      "periodo": "2025",
+      "federal": 970.129,
+      "estadual": 28.897,
+      "municipal": 1.443,
+      "total": 1000.469,
+      "fonte": "dfp2025",
+      "localizador": "DVA p.46",
+      "escopo": "Consolidado",
+      "unidade": "R$ mi",
+      "natureza": "Real"
+    },
+    {
+      "periodo": "9M2025",
+      "federal": 740.181,
+      "estadual": 26.371,
+      "municipal": 1.061,
+      "total": 767.613,
+      "fonte": "itr2026",
+      "localizador": "DVA p.33",
+      "escopo": "Consolidado",
+      "unidade": "R$ mi",
+      "natureza": "Real"
+    },
+    {
+      "periodo": "9M2026",
+      "federal": 701.942,
+      "estadual": -17.798,
+      "municipal": 1.331,
+      "total": 685.475,
+      "fonte": "itr2026",
+      "localizador": "DVA p.33",
+      "escopo": "Consolidado",
+      "unidade": "R$ mi",
+      "natureza": "Real"
+    }
+  ],
+  "dfc": [
+    {
+      "periodo": "9M2025",
+      "original_mil": -194592.0,
+      "valor": 194.592,
+      "unidade": "R$ mi; saída em magnitude positiva",
+      "fonte": "itr2026",
+      "localizador": "DFC consolidada p.30; CVM 6.01.02.12",
+      "natureza": "Adaptado",
+      "escopo": "Consolidado"
+    },
+    {
+      "periodo": "9M2026",
+      "original_mil": -19087.0,
+      "valor": 19.087,
+      "unidade": "R$ mi; saída em magnitude positiva",
+      "fonte": "itr2026",
+      "localizador": "DFC consolidada p.30; CVM 6.01.02.12",
+      "natureza": "Adaptado",
+      "escopo": "Consolidado"
+    }
+  ],
+  "totais_dip": {
+    "2027": 2299407714,
+    "2028": 2849161485,
+    "2029": 2560955015
+  },
+  "total_dir": 3349592317,
+  "planilhas": [
+    {
+      "arquivo": "tarifas2026.xlsx",
+      "abas": [
+        {
+          "nome_generico": "Aba 1",
+          "linhas": 647,
+          "colunas": 9,
+          "protegida": false,
+          "formulas": 0
+        }
+      ],
+      "vinculos_externos": 0,
+      "nomes": [],
+      "macros": false
+    },
+    {
+      "arquivo": "simulador2026.xlsx",
+      "abas": [
+        {
+          "nome_generico": "Aba 1",
+          "linhas": 44,
+          "colunas": 7,
+          "protegida": true,
+          "formulas": 11
+        },
+        {
+          "nome_generico": "Aba 2",
+          "linhas": 33,
+          "colunas": 16,
+          "protegida": true,
+          "formulas": 0
+        }
+      ],
+      "vinculos_externos": 0,
+      "nomes": [
+        "NOME"
+      ],
+      "macros": false
+    }
+  ],
+  "revisao": "2026-11-27"
+}

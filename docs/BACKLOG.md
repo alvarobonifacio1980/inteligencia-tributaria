@@ -1,28 +1,32 @@
-# Backlog reconciliado — 27/11/2026
+# Backlog residual — V2.1
 
-## Entregas implementadas
+## Concluído e preservado da V1
 
-- [x] Repositório independente, Python/Pandas, React/ECharts e GitHub Pages; R$ 0.
-- [x] Preservados cascata IR/CS, fontes clicáveis, janelas de adaptação, indicação de MG não detalhado, filtros, CSV e impressão.
-- [x] Histórico 2022–2023 controladora segregado; consolidado 2024–2025 e 9M2025/2026; IR/CS 9M conciliado CVM/ITR.
-- [x] DIRBI 2024 por CNPJ, programa e tributo, com deduplicação e explicação da transformação.
-- [x] Indicadores operacionais e investimentos publicados pela empresa; fonte e conceitos explícitos.
-- [x] Agenda regulatória com CT-e, split payment e marcos 2026–2033; status/data de verificação.
-- [x] Simuladores de antecipação, parcelamento ICMS, CAPEX com/sem regime e reforma com crescimento, CAPEX, repasse e sensibilidade.
-- [x] Créditos excedentes separados de caixa; suspensão comparada ao crédito alternativo sem dupla contagem.
-- [x] Matriz qualitativa e três business cases com evidências, premissas, riscos, dependências e critérios de sucesso.
-- [x] Especificações de fórmulas e fixtures compartilhadas Python/JS; 19 testes aprovados.
-- [x] Validação visual desktop e viewport móvel; seis páginas sem overflow global.
-- [x] Pipeline manual ampliado, hashes e snapshot revisado; build/deploy no push.
+9M financeiro conciliado, histórico controladora 2022–23 isolado, DIRBI, indicadores operacionais, fundamento legal, VP de créditos, ICMS parcelado e suspensão condicional, cascata IR/CS, fontes clicáveis, modais e MG não detalhado. Não reexecutar planejamento ou fabricar séries para essas entregas.
 
-## Limitações abertas de dados/aplicação real
+## Diferenças implementadas e testadas
 
-- [ ] DIRBI: download completo e tratamento validados neste ambiente; portal encerra TLS no runner GitHub. Novas tentativas e cliente alternativo testados; workflow preserva snapshot com aviso e trilha de reutilização, sem simular atualização.
-- [ ] ANTT: CSV, JSON e API rejeitados; XLSX alternativo com HTTP 403. Retomar quando houver arquivo oficial utilizável. Fallback operacional da empresa identificado; sem análise por rota.
-- [ ] Elegibilidade efetiva por aquisição/regime, habilitação atual e contratos requerem documentação interna; não inventar nem concluir direito ao benefício.
-- [ ] Atualizações legais e novas competências exigem revisão dos mapeamentos e premissas; coleta interrompe diante de divergência.
-- [ ] Meta de carregamento de 3 s e testes em aparelho físico/Safari/Firefox não comprovados.
+- DVA/DFC, compensações e evolução dos riscos; DIR/DIP e seleção de investimento.
+- Executivo recente, variações, fontes específicas e gráficos com escalas próprias.
+- Ponte de créditos, reconciliações 9M, gráfico DIRBI, CAPEX com prazo/recuperação e contratos normalizados.
+- Origem dinâmica, vazios sem zero, CBS nos limites, presets e resultados negativos.
+- Business cases calculados, matriz/agenda e mapa conceitual de integração.
+- Hash, subabas, acessibilidade, CSV contextual e impressão com premissas.
+- Testes: 23 JS + 15 Python; mapeamento de aceite em ACEITE_V2.md.
 
-## Fora do escopo atual
+## Em validação final
 
-Corredores sem base validada, benchmark amplo, ML, integração ERP, Power BI, PowerPoint e conversores. Não implementar para preencher lacunas artificialmente.
+CI em branch, larguras desktop, impressão, exportação e publicação anônima — evidências em TESTES_V2.md / STATUS.md; manter V1 até gate.
+
+## Bloqueado / limite explícito
+
+- ANTT: alternativas anteriores sem arquivo válido; contexto por relatório oficial da empresa, sem rota ou tarifa efetiva inferida.
+- Sustentabilidade: PDF indicado HTTP 403; não foi inventada ponte com DVA estatutária/CVM.
+- Portais podem impedir coleta no runner: snapshot revisado preservado com aviso, data e hash original; não significa coleta nova.
+- Elegibilidade real de aquisições, contratos, processos e custos internos indisponíveis; modelos não constituem apuração ou parecer.
+- Validade tarifária: fórmula e cache conferidos, referência arquivada sem afirmar preço efetivo ou início/fim de validade não demonstrados.
+- Navegadores/dispositivo físico e desempenho em outras redes não comprovados.
+
+## Fora do escopo
+
+Power BI, PowerPoint/conversores, SAP real, banco, login, ML, API de IA, benchmark amplo e apuração por documento. Sem serviços pagos ou novo módulo principal.

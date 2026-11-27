@@ -47,3 +47,15 @@ Regras verificadas e fórmulas completas dos quatro simuladores: [REGRAS_E_CENAR
 ## Preservação
 
 Downloads em cache ignorado; hash SHA-256 registrado. Não republicar PDFs integrais. O snapshot revisado é versionado; substituição do JSON ocorre somente após conciliações. A coleta verifica valores de controle, mas não é um parser universal nem um robô de atualização legislativa.
+
+## V2.1 — conceitos adicionais
+
+DVA (distribuição de valor adicionado), despesa IR/CS, dedução de receita e pagamentos DFC são perspectivas diferentes. DVA ITR consolidada p.33; DFC consolidada p.30. Comparativos 9M com 9M, sinal original negativo de pagamento mantido na base, exibição em magnitude positiva. Não se atribui redução de pagamentos a compensação sem ponte documental.
+
+DIR/DIP: inteiros originais em reais, realizado 2025 separado de previsão 2027–2029; traços = null com rótulo original, sem imputação. Não é percentual de execução entre conjuntos, nem equivalência automática com CAPEX gerencial/contábil. Meio Ambiente não cria série fictícia no DIP. Classes não confirmam elegibilidade fiscal.
+
+Riscos: provisão/provável dentro do total; possível de setembro derivado de total−provável. Temas materiais da nota anual não foram promovidos à data mais recente. Compensações específicas são fluxos anuais não sobrepostos da mesma tese, sem soma automática a DFC ou estoque.
+
+Reforma visível: pleno 2033, sem CAPEX ou regimes no agregado. Referências manuais são sintéticas; origem pública permanece híbrida enquanto vinculada. Ao editar valor, remover vínculo e fonte atribuída a ele. Custos contábeis não são elegibilidade; grupos e requisitos em detalhe. Contratos normalizados são uma alternativa de sensibilidade, não uma nova parcela a somar.
+
+CSV de contexto: UTF-8 BOM, separador ponto e vírgula, decimal com vírgula; textos iniciados por caracteres de fórmula são protegidos. Simuladores exportam premissas/resultados e unidades. Campos inválidos conservam o último valor válido com aviso; vazio não é convertido em zero. Impressão mantém inputs e estado atual.

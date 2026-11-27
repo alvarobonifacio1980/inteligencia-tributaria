@@ -19,3 +19,21 @@ Unidade padrão: R$ milhões. Separador decimal no JSON: ponto; interface pt-BR.
 | Cenários | entradas editáveis no navegador | Sintético; híbrido quando usa valor público; não gravado no servidor |
 
 Especificações: REGRAS_E_CENARIOS.md e src/calculos.mjs. Fixtures em tests/fixtures_cenarios.json, conferidas por JavaScript e Python. Uma reconstrução futura em Power BI poderá usar tabelas e fórmulas equivalentes; não há arquivo Power BI ou conversor implementado. A síntese impressa é da página selecionada, não geração de PowerPoint.
+
+## Extensão V2.1
+
+| Estrutura | Campos / unidade | Natureza / interpretação |
+|---|---|---|
+| v2.dva | periodo, federal/estadual/municipal/total, R$ mi | Valores publicados; participações derivadas; negativo preservado |
+| v2.dfc | periodo, original_mil, valor magnitude em R$ mi | Adaptado só na inversão/conversão de sinal; pagamentos, não despesa |
+| v2.compensacoes | ano, valor R$ mi | Fluxo de tese específica, não todas as compensações |
+| v2.riscos | data, possivel/provavel/total, processos/recuperacao/risco/provaveis | Posição por data; possível recente = total−provável |
+| v2.temas_risco_2025 | tema, valor R$ mi | Temas selecionados da perda possível anual, não nova exposição |
+| v2.dir / v2.dip | codigo, classe, ano, valor_reais, original, fonte, localizador, natureza, escopo | Inteiros em reais; realizado separado de previsto; null preserva traço |
+| v2.totais_dip / total_dir | total por ano e realizado em R$ | Somatório de classes oficiais; sem inferir execução cruzada |
+| v2.custos_referencia | grupos contábeis, total R$ mi, avaliação, período/fonte | Escala contábil, fração elegível hipotética; não base fiscal |
+| v2.reconciliacao_9m | periodo, nominal, ajustes, efetivo R$ mi | Notas consolidadas, acumulado janeiro–setembro |
+| v2.tarifas | fixa R$/t, variável R$/t.km, exemplo/cache/ato/vigência | Teto de referência arquivado; sem ICMS, não preço efetivo |
+| v2.inspecao_planilhas | dimensões, proteção, fórmulas, nomes, links, macros | Metadados auditáveis, sem executar macros ou republicar arquivos |
+
+Estado dos cenários mantido no React durante navegação da sessão, sem servidor. Defaults e funções independentes dos gráficos; fixtures compartilhadas em fixtures_v2.json.

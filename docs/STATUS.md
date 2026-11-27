@@ -1,21 +1,13 @@
-# Status — 27/11/2026
+# Status — Inteligência Tributária V2.1
 
-Aplicação ampliada publicada: https://alvarobonifacio1980.github.io/inteligencia-tributaria/
+Data de revisão: 27/11/2026. URL estável: https://alvarobonifacio1980.github.io/inteligencia-tributaria/
 
-## Implementação ampliada — 27/11/2026
+Baseline recuperável V1: a961724182664b0baef92c0eebea2a1432c8bf4c. Evolução na branch v2-melhorias; produção preservada durante desenvolvimento e validação. O gate de publicação será registrado após conclusão dos testes e deploy.
 
-Registro mais recente prevalece sobre lacunas históricas descritas acima. Implementados histórico controladora 2022–2023, IR/CS consolidado 9M, DIRBI 2024 (12 registros), contexto operacional, agenda regulatória com status, fluxo ICMS, comparação CAPEX com/sem suspensão e sensibilidade 2026–2033. A reforma separa substituição federal e legado estadual/municipal, créditos utilizados e excedentes; não transforma excedentes em caixa.
+Entregas antecipadas na V1 preservadas: financeiro 9M, histórico controladora, DIRBI, contexto operacional, regras, simuladores, matriz e business cases. Diferenças executadas: DVA/DFC, compensações, riscos recentes, DIR/DIP, executivo recente, gráficos e subabas, cenários CAPEX/contratos, origem dinâmica, exportação/impressão e casos calculados.
 
-Matriz qualitativa e três business cases ampliados; habilitação apenas hipotética nos simuladores, sem afirmar direito real. Preservados cascata, MG não detalhado, fontes clicáveis e explicações Adaptado. 19 testes (11 JS + 8 Python) e build aprovados; navegador desktop e viewport móvel, seis páginas sem overflow global. Testes/publicação final em TESTES.md. ANTT e documentos internos permanecem limites explícitos; não caracterizam números inventados ou promessas de benefício.
+38 testes aprovados (23 JS + 15 Python); build aprovado; validações funcionais e móveis em TESTES_V2.md. Matriz de confronto requisito a requisito em ACEITE_V2.md. Limites de fontes e aplicação real em BACKLOG.md.
 
-## Publicação e preservação
+A modelagem visível da reforma usa regime pleno hipotético, com cronograma legal separado. Transição aproximada continua apenas na biblioteca legada testada, sem aparência de apuração real na interface. CAPEX independente do agregado; contratos são alternativa normalizada, nunca soma duplicada ao efeito da reforma. Suspensão específica exige hipótese explícita e validação documental.
 
-Commit funcional `17fa4c4eb3ec1fa55006cf037888ae61da8628b6`; validação e deploy aprovados no run `46040278129`. Acesso público sem autenticação confirmado por GET de HTML/JS/CSS/JSON com HTTP 200 e navegação no painel publicado. Cenário CAPEX confirmou R$ 0,28 mi no exemplo e R$ -0,20 mi com crédito alternativo imediato, evitando falsa economia.
-
-Pipeline manual: primeira execução ampliada encontrou conexão encerrada pelo portal DIRBI. Download foi corrigido com novas tentativas, validação ZIP e cliente TLS alternativo mantendo certificados. Nunca substitui snapshot por arquivo parcial. Reexecução confirmou bloqueio TLS no runner. Workflow preserva snapshot DIRBI de 2024 com aviso explícito, hash/data original e flag de reutilização, sem declarar nova coleta. CVM e testes continuam. Reexecuções registradas em TESTES.md.
-
-Identidade genérica, cores, gráficos nativos, fontes clicáveis e janelas de adaptação preservados. Nenhum outro repositório alterado; nenhuma contratação ou contato externo. Sem Power BI/PowerPoint/conversores neste escopo.
-
-Etapas 00–10 atendidas no escopo demonstrativo validado, com limites em BACKLOG.md. Atualizações não são apuração legal universal nem diagnóstico de dados internos. Revisar documentação interna antes de decisão real.
-
-Coleta recuperada concluída com sucesso no run 46041005921, com aviso explícito de reutilização da DIRBI por bloqueio TLS. Build e deploy finais aprovados no run 46040961358. Artefato de evidências disponível por 7 dias; relatórios permanentes no repositório.
+Sem custo de infraestrutura contratado, contato externo, informação privada, alteração de outros repositórios, força sobre branch ou reescrita de histórico.
