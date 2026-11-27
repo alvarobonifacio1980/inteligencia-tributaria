@@ -80,11 +80,11 @@ def executar(offline=True,permitir_snapshot=False):
  extra['reconciliacao_9m']=[{'periodo':'9M2025','nominal':574.627,'ajustes':{'Incentivos fiscais':-20.569,'Exclusão ICMS base IR/CS':-86.501,'PIS/Cofins base ICMS':-.814,'Estoque':.723,'Doações':2.345,'Outros':-5.358},'efetivo':464.453},{'periodo':'9M2026','nominal':440.377,'ajustes':{'Exercícios anteriores':-6.367,'Incentivos fiscais':-15.158,'Estoque':.055,'Doações':1.765,'Outros':8.004},'efetivo':428.676}]
  for row in extra['reconciliacao_9m']:assert abs(row['nominal']+sum(row['ajustes'].values())-row['efetivo'])<1e-6
  extra['reidi_historico']={'ano':2023,'investimento':8732.17792182,'suspensao':807.72645777,'ato':'Portaria MT 779/2023 — Fase II','fonte':'reidi'}
- d['v2']=extra;d['versao']='2.1.0';d['revisao']='2026-11-27';d['fontes']=[s for s in d['fontes'] if s['id'] not in [f['id'] for f in fontes]]+fontes
+ d['v2']=extra;d['versao']='2.1.1';d['revisao']='2026-11-27';d['fontes']=[s for s in d['fontes'] if s['id'] not in [f['id'] for f in fontes]]+fontes
  manifest=[dict(arquivo=n,url=u,bytes=(C/n).stat().st_size,sha256=hashlib.sha256((C/n).read_bytes()).hexdigest()) for n,u in URLS.items()]
  from coletar import validar
  validar(d)
- for dest,obj in [('data/base_revisada.json',d),('public/data/painel.json',d),('data/conciliacao_v2.json',dict(versao='2.1.0',fontes=manifest,dva=dva,dfc=dfc,totais_dip=totals,total_dir=extra['total_dir'],planilhas=inspection,revisao=extra['revisao']))]:
+ for dest,obj in [('data/base_revisada.json',d),('public/data/painel.json',d),('data/conciliacao_v2.json',dict(versao='2.1.1',fontes=manifest,dva=dva,dfc=dfc,totais_dip=totals,total_dir=extra['total_dir'],planilhas=inspection,revisao=extra['revisao']))]:
   p=R/dest;tmp=p.with_suffix('.tmp');tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2));tmp.replace(p)
  (R/'data/coleta_v2_status.json').write_text(json.dumps(dict(reutilizada=False,modo='cache validado' if offline else 'online',revisao=extra['revisao']),ensure_ascii=False,indent=2))
  print('V2 conciliada: DVA, DFC, DIR/DIP, compensações, riscos e planilhas tarifárias.')
