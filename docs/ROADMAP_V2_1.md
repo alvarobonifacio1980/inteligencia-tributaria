@@ -483,3 +483,7 @@ Solicitar intervenção apenas para autenticação pessoal obrigatória, autoriz
 > Faça a coleta, desenvolvimento, testes, correções, commits, merges autorizados pelo escopo, documentação e publicação usando as ferramentas disponíveis. Avance sem pedir comandos “pp” ou confirmação a cada etapa. Em caso de erro, investigue e corrija; se uma fonte complementar falhar, registre e prossiga com alternativas válidas. Só solicite minha intervenção por necessidade obrigatória de autenticação/autorização, possibilidade de custo, mudança significativa de escopo, ação destrutiva ou bloqueio incontornável. Não contrate serviços, não ative trials e não contate a público avaliador.
 >
 > Ao concluir, apresente a URL pública validada, versão publicada, resumo das melhorias, fontes conciliadas, testes realizados, limitações, backlog residual e recomendação de prontidão. Não produza outro planejamento extenso: inicie a execução pela V2-00 e siga os critérios de aceitação deste roadmap.
+
+## Registro de execução V2.1
+
+Requisitos confrontados em ACEITE_V2.md; entregas antecipadas da V1 reaproveitadas. Release a23e86b publicada após testes, CI isolada, coleta online e inspeção de qualidade.39 testes finais, build/deploy aprovados e acesso público verificado. Limites explícitos em BACKLOG.md e TESTES_V2.md; nenhuma identificação nominal no texto editorial, fontes oficiais preservadas.

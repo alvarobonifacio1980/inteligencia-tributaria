@@ -53,3 +53,13 @@ Sem teste em Safari/Firefox ou dispositivo físico; não se alega auditoria inte
 - Nenhum erro material conhecido nos dados e cálculos apresentados. Gate de publicação autorizado pelo escopo; V1 recuperável e URL preservada. Verificação pós-deploy será registrada em seguida.
 
 - Viewport adicional 320×844: página com largura útil305 e scroll305. A inspeção identificou legenda longa no DIP; ajustados espaço inferior, exclusão do total auxiliar da legenda, rótulos por largura e tooltip confinado. Tabelas e descrições mantêm valores acessíveis.
+
+- Inspeção final do DIP a390 px: totais acima das colunas, legenda sem o total auxiliar e tooltip contido. Página manteve375/375. Histórico REIDI da V1 permanece com valores na base e fonte; não duplicado no JSX.
+
+## Publicação verificada
+
+Release `a23e86bf5f3c17d55a907732343b790078ae7d4d`, merge PR1. Run `46047253655`: validação e GitHub Pages concluídos com sucesso. Versão pública 2.1.0 na mesma URL.
+
+Navegador público confirmou executivo recente, DIP Material Rodante2028 → cenário com256,512139 mi, modal Híbrido, desvinculação/edição/reset, DFC19,087 mi e recarga do hash de caixa. Console consultado sem erros da origem. Prontidão medida nessa navegação pública:480 ms até dois frames após a base; execução Chrome cloud, sem restrição artificial, amostra única. Não garante desempenho em outra rede/aparelho.
+
+HTTP sem cookies/Authorization em HTTP_PUBLICO_V2.json; HTML, JS, CSS e JSON com200. Assets públicos comparados byte a byte ao build local aprovado, confirmando versão do código servido. Nenhum dado interno ou contato externo.

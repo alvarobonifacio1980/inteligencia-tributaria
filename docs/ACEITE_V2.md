@@ -35,6 +35,6 @@ Baseline recuperável: `a961724182664b0baef92c0eebea2a1432c8bf4c`, árvore `1b1b
 | 09: CSV/impressão | Exportação financeira e fluxos | Contexto de cada análise, premissas/resultados com unidades, Excel pt-BR e proteção de fórmulas; campos mantidos na impressão |
 | 09/10: responsividade | Desktop/móvel V1 | Subabas verificadas em 390×844; inspeções adicionais e limites em TESTES_V2.md |
 | 10: testes/gate | 19 testes | 23 JS + 16 Python aprovados; cenários compartilhados e invariantes independentes; build; regressão e visual em TESTES_V2.md |
-| 11: publicação | URL pública V1 | Publicar somente após gate; mesma URL, rollback pelo commit anterior; registro final em STATUS.md |
+| 11: publicação | URL pública V1 | Publicado após gate: release a23e86b, run46047253655 aprovado; HTTP anônimo200 e navegador; mesma URL e rollback documentado em STATUS.md |
 
 Não foram repetidas etapas já aprovadas da V1. Limites de fonte são tratados como limites explícitos, não como números inventados ou novo escopo. O modelo é gerencial, sem apuração fiscal por documento, integração empresarial ou parecer de elegibilidade.

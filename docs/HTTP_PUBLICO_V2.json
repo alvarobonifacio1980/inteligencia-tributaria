@@ -1,0 +1,38 @@
+{
+  "revisao": "2026-11-27T18:10:33.060268+00:00",
+  "release": "a23e86bf5f3c17d55a907732343b790078ae7d4d",
+  "autenticacao": false,
+  "cookies": false,
+  "authorization": false,
+  "comparacao_assets": "Bytes idênticos ao build local validado",
+  "resultados": [
+    {
+      "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/?v=a23e86b",
+      "http": 200,
+      "bytes": 571,
+      "sha256": "96e20e3d2341898e274215b0db71bb1dc2f58a4192536da73d22a548ba76bbba",
+      "segundos": 4.71
+    },
+    {
+      "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/assets/index-JLv9RIFa.js",
+      "http": 200,
+      "bytes": 847534,
+      "sha256": "9d07266756f209503b07d3dcb5bd897a31fbf1127c82c62a257d254165c5f79d",
+      "segundos": 4.62
+    },
+    {
+      "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/assets/index-PLMy6vR5.css",
+      "http": 200,
+      "bytes": 15688,
+      "sha256": "6aa90016b817778bee764c21b3871afbfd47d6d2fc627e99fe37c958094807c4",
+      "segundos": 4.647
+    },
+    {
+      "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/data/painel.json?v=a23e86b",
+      "http": 200,
+      "bytes": 29398,
+      "sha256": "46caedf94fc7a9f0eb762ae9a1b93d8bb0702612824ff796767464ef334d91b8",
+      "segundos": 5.264
+    }
+  ]
+}

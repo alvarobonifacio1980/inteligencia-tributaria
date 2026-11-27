@@ -1,3 +1,5 @@
+Estado atual V2.1:39 testes, evidências atualizadas em [TESTES_V2.md](TESTES_V2.md). O registro abaixo preserva as validações históricas da V1.
+
 # Evidências de validação
 
 Estado atual: 19 testes aprovados (11 JS + 8 Python), build e deploy ampliado aprovados; HTTP público e navegação conferidos. A seção Ampliação registra os testes mais recentes; seções anteriores preservam a evolução.

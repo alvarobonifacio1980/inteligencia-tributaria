@@ -16,7 +16,7 @@
 
 ## Gate final
 
-CI da branch, coleta online, desktop1366, responsividade móvel, estilo de impressão e download CSV verificados. Captura1920 limitada por timeout, com dimensões sem overflow verificadas. Publicação anônima registrada após deploy em TESTES_V2.md / STATUS.md.
+CI da branch, coleta online, desktop1366, responsividade móvel, estilo de impressão e download CSV verificados. Captura1920 limitada por timeout, com dimensões sem overflow verificadas. Publicação anônima verificada;39 testes, build/deploy e coleta online aprovados. Evidências em TESTES_V2.md / STATUS.md / HTTP_PUBLICO_V2.json.
 
 ## Bloqueado / limite explícito
 
