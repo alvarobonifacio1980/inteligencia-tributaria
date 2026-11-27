@@ -1,4 +1,4 @@
-# Inteligência Tributária
+# Inteligência Tributária — V2.1
 
 Planejamento estratégico e eficiência fiscal. Estudo independente aplicado a uma empresa ferroviária, sem vínculo institucional. Dados públicos e simulações identificadas; sem dados internos ou promessa de economia.
 
@@ -18,6 +18,7 @@ python -m pip install -r requirements.txt
 python scripts/coletar.py           # baixa PDFs e valida âncoras e tabelas; conserva base se falhar
 python scripts/cvm.py               # conciliação por CNPJ/conta com Pandas
 python scripts/ampliar_fontes.py     # CVM 2022–23/9M e DIRBI; exige PDFs extraídos
+python scripts/evoluir_v2.py --online # DIR/DIP, DVA/DFC, riscos e referências; exige cache CVM/PDF
 python -m unittest discover -s tests -p 'test_*.py'
 npm test
 npm run dev
@@ -43,3 +44,5 @@ Consulte [status](docs/STATUS.md), [backlog](docs/BACKLOG.md), [testes](docs/TES
 Coleta ampliada: hashes e conciliação em `data/conciliacao_expandida.json`; base complementar em `data/complementos_revisados.json`. O workflow manual gera artefato revisável; não faz commit automático. `scripts/preparar_base.py` apenas valida a base canônica, evitando regressão. Regras e fórmulas: [REGRAS_E_CENARIOS.md](docs/REGRAS_E_CENARIOS.md).
 
 Se o portal DIRBI bloquear o runner, o workflow usa `--permitir-snapshot-dirbi`: mantém os registros de 2024 já revisados, emite aviso e registra reutilização/motivo com o hash e a data da coleta original. Não declara download novo. As fontes CVM continuam conciliadas; divergências contábeis ou arquivo DIRBI válido porém incoerente interrompem a execução. Execução direta sem essa opção permanece estrita.
+
+V2.1: DVA/DFC, compensações, riscos recentes, DIR/DIP, comparações recentes, subabas/hash, cenários CAPEX/contratos e business cases ligados aos cálculos. Ver [confronto requisito a requisito](docs/ACEITE_V2.md), [testes V2](docs/TESTES_V2.md) e [roadmap publicável](docs/ROADMAP_V2_1.md). Sem novo módulo principal ou mudança de URL. A biblioteca anterior permanece testada; a interface da reforma privilegia regime pleno, com CAPEX independente.

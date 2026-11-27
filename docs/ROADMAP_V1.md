@@ -8,11 +8,11 @@
 
 ## 1. Finalidade e contexto
 
-Iniciativa profissional independente para complementar a candidatura à vaga de Especialista Tributário da Empresa Ferroviária, Juiz de Fora/MG. Não é encomenda, auditoria, parecer tributário, produto oficial, diagnóstico interno nem promessa de economia. O objetivo é apresentar à recrutadora e aos gestores, inclusive após a entrevista, uma aplicação que demonstre capacidade de integrar dados, finanças, tecnologia, planejamento tributário e gestão de projetos. O acesso deve ser imediato, anônimo e gratuito. Não enviar mensagem à recrutadora automaticamente.
+Iniciativa profissional independente para complementar a demonstração profissional à vaga de Especialista Tributário da Empresa Ferroviária, Juiz de Fora/MG. Não é encomenda, auditoria, parecer tributário, produto oficial, diagnóstico interno nem promessa de economia. O objetivo é apresentar à público avaliador e aos gestores, inclusive após a entrevista, uma aplicação que demonstre capacidade de integrar dados, finanças, tecnologia, planejamento tributário e gestão de projetos. O acesso deve ser imediato, anônimo e gratuito. Não enviar mensagem à público avaliador automaticamente.
 
 A missão da vaga é converter oportunidades, riscos e mudanças tributárias em análises econômico-financeiras, business cases, recomendações executivas e projetos implementáveis, integrando equipes responsáveis e demais áreas. A gestão apoia decisões da alta administração, sustentabilidade financeira e conformidade; a vaga exige análise de dados, dashboards gerenciais, comunicação objetiva, gestão de projetos e visão estratégica, além de Excel/Power BI e conhecimentos desejáveis de Python, HTML e legislação tributária.
 
-Público primário: gestão, especialistas de planejamento e alta liderança; público inicial: recrutadora, que deve compreender o propósito sem conhecimento técnico. Público operacional secundário. Valorizar a trajetória real do candidato em gestão de TI, processos, integração e análise de dados, sem atribuir experiência fiscal interna ou certificações não confirmadas.
+Público primário: gestão, especialistas de planejamento e alta liderança; público inicial: público avaliador, que deve compreender o propósito sem conhecimento técnico. Público operacional secundário. Valorizar a trajetória real do candidato em gestão de TI, processos, integração e análise de dados, sem atribuir experiência fiscal interna ou certificações não confirmadas.
 
 ### Decisões consolidadas e precedência
 
@@ -218,7 +218,7 @@ Cada etapa deve terminar com evidências, resultado, arquivos alterados, testes,
 | 07 — Reforma e cenários | Implementar timeline, temas legais, simuladores prioritários e matriz/business cases. Testar casos extremos, cálculos e restauração de cenário. | Cenários editáveis, premissas visíveis, resultados reproduzíveis; não há previsões apresentadas como fato. |
 | 08 — QA integrado | Executar testes Python/JS, lint/build, conciliação de métricas, validação de links, navegação, filtros, simulações; testar desktop/mobile e capturar evidências visuais quando disponível. | Falhas críticas corrigidas, lista de limitações e testes realmente executados; revisão da impressão executiva e portabilidade visual. |
 | 09 — Deploy | Configurar GitHub Actions/Pages para site estático, caminho base correto; commit/merge quando autorizado e seguro; verificar execução e URL pública em sessão anônima ou browser sem autenticação. | URL real acessível, assets/links carregando, sem login; verificar mobile, sem erros críticos. Se ferramenta não permitir teste anônimo, declarar e pedir apenas esse teste. |
-| 10 — Handoff | README, fontes, dicionário, instruções, roadmap atualizado, evidências, URL, versão e resumo executivo do que foi entregue. Preparar texto sugerido à recrutadora apenas como rascunho, se útil; não enviar. | Entrega única para avaliação do patrocinador; informar o que foi feito, testado, não feito e por quê. |
+| 10 — Handoff | README, fontes, dicionário, instruções, roadmap atualizado, evidências, URL, versão e resumo executivo do que foi entregue. Preparar texto sugerido à público avaliador apenas como rascunho, se útil; não enviar. | Entrega única para avaliação do patrocinador; informar o que foi feito, testado, não feito e por quê. |
 | 11 — Evolução posterior | Corredores, automação/governança, benchmark de concessionárias, exportações avançadas, predição, conversão/reconstrução BI ou PPTX se solicitados. | Fora do MVP; incorporar só após validar entrega principal e decisão do patrocinador. |
 
 ### Estrutura mínima sugerida (adaptável)
@@ -245,7 +245,7 @@ Interromper para decisão apenas em: possível custo/contratação; autenticaç�
 
 MVP pronto quando: URL pública verificada (ou bloqueio real explicitado); cinco módulos enxutos com funções essenciais; dados oficiais conferidos e fontes navegáveis; cenários interativos e classificados; reforma com regras verificadas; business cases sem falsa precisão; aparência profissional alinhada à Empresa Ferroviária; testes relevantes executados; README/status/roadmap atualizados; ausência de custos, segredos ou falsa afiliação. Caso alguma fonte complementar falhe, reduzir dependência sem inventar dados. Se uma entrega essencial não for viável, indicar claramente a lacuna e não chamar o produto de completo.
 
-Fora do escopo inicial: Power BI/PBIX/PBIP, conversor, PPTX, login, banco remoto, SAP/ERP, microsserviços, API de IA, chatbot, ML, dados em tempo real, benchmark amplo, scraping sem autorização, auditoria/parecer fiscal, contato com recrutadora. A qualidade da apresentação decorre das evidências e da decisão de negócio, não do número de tecnologias.
+Fora do escopo inicial: Power BI/PBIX/PBIP, conversor, PPTX, login, banco remoto, SAP/ERP, microsserviços, API de IA, chatbot, ML, dados em tempo real, benchmark amplo, scraping sem autorização, auditoria/parecer fiscal, contato com público avaliador. A qualidade da apresentação decorre das evidências e da decisão de negócio, não do número de tecnologias.
 
 
 ---

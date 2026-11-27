@@ -32,3 +32,17 @@ Parcelas iguais, primeira no mês carência+1, taxa efetiva anual e sem correç�
 ## Business cases
 
 Três fichas ampliadas: evidência, hipótese, custo/prazo sintéticos ou não estimados, dependências, responsáveis genéricos, confiança, risco, etapas e critério de sucesso. Priorização qualitativa transparente: urgência regulatória e continuidade, depois materialidade e viabilidade. Nenhuma oportunidade é considerada comprovada sem validação dos requisitos.
+
+## V2.1 — decisão metodológica vigente da interface
+
+A interface passa a usar apenas comparação atual hipotética × pleno 2033. O cronograma 2026–2033 permanece legal e qualitativo. A função legada de transição é preservada e testada, mas não oferecida como apuração anual. CAPEX sai do agregado, mantendo simulador próprio. Custos públicos da nota 28 são escala contábil, com fração elegível hipotética e grupos potencialmente indeterminados, sem apropriação automática.
+
+Defaults de demonstração centralizados em modelo.mjs. Créditos: 50 mi, 24 meses, 12% a.a., custo 0,5; alternativas 18/12/6 meses. Mesma base em cada comparação, sem probabilidades. Natureza e vínculo da fonte mudam com edição/reset.
+
+CAPEX prazo: B=I×fração base, T=B×taxa hipotética, R=T×recuperação. VP=R/(1+r)^(m/12); custo do prazo=R−VP; não recuperável=T−R. Ganho incremental líquido=VP no prazo alternativo−VP no prazo atual−custo incremental. DIP vinculado tem investimento bloqueado; selecionar ano/classe muda o valor real de referência. Edição manual desfaz vínculo. Não adicionar T ao total oficial do investimento; não equivale a imposto devido ou incentivo assegurado.
+
+Fixture 100 mi, base 50%, taxa 10%, recuperação 80%, prazo 12m, capital 10%: B50, T5, R4, VP3,636364, custo prazo0,363636, não recuperável1. Custos negativos não permitidos; resultado pode ser negativo, zero ou positivo.
+
+Contratos: base comparável de receita, encargo atual e pleno hipotéticos, volume constante. Δ=novo−referência; comercial=Δ×repasse; residual=Δ×(1−repasse). Δ positivo é encargo maior; Δ negativo é redução potencial, cujo compartilhamento diminui retenção. Referência8/pleno12 e repasse0/50/100% → residual4/2/0 por100. Referência12/pleno8, 50% → −2. Não é preço final, margem, demanda, cláusula de reajuste válida ou previsão. Vigência e marcos são qualitativos.
+
+Tarifa arquivada: E16 arredonda fixa + variável×distância; cache e fórmulas conferidos, base sem ICMS. Exemplo de teto não alimenta receita, tributação de rota ou contrato. Campo de vigência é conservado sem interpretar início/fim não demonstrado; demais serviços têm regras próprias.

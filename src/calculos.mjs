@@ -1,5 +1,5 @@
 export function credito({capital,atual,proposto,taxa,custo}) {
- if (![capital,atual,proposto,taxa,custo].every(Number.isFinite)||capital<0||atual<0||proposto<0||taxa<0||custo<0) throw Error('Premissas inválidas');
+ if (![capital,atual,proposto,taxa,custo].every(Number.isFinite)||![atual,proposto].every(Number.isInteger)||capital<0||atual<0||proposto<0||taxa<0||custo<0) throw Error('Premissas inválidas');
  const vpAtual=capital/(1+taxa/100)**(atual/12),vpProposto=capital/(1+taxa/100)**(proposto/12);
  return {vpAtual,vpProposto,beneficio:vpProposto-vpAtual-custo,capital};
 }
@@ -35,3 +35,17 @@ export function fluxoParcelado({capital,parcelas,carencia,taxa}){
  return {mensal,vp:fluxos.reduce((a,f)=>a+f.vp,0),fluxos};
 }
 export const percentual=(a,b)=>b>0?a/b*100:null;
+
+// Modelos V2.1 independentes; CAPEX não alimenta automaticamente a reforma agregada.
+export function capexPrazo({investimento,fracaoBase,aliquota,recuperacao,prazo,proposto,taxa,custo}){
+ const ns=[investimento,fracaoBase,aliquota,recuperacao,prazo,proposto,taxa,custo];
+ if(!ns.every(Number.isFinite)||[investimento,prazo,proposto,taxa,custo].some(v=>v<0)||![prazo,proposto].every(Number.isInteger)||[fracaoBase,aliquota,recuperacao].some(v=>v<0||v>100))throw Error('Premissas inválidas');
+ const base=investimento*fracaoBase/100,tributo=base*aliquota/100,recuperavel=tributo*recuperacao/100,vp=recuperavel/(1+taxa/100)**(prazo/12),vpProposto=recuperavel/(1+taxa/100)**(proposto/12);
+ return {base,tributo,recuperavel,vp,vpProposto,custoPrazo:recuperavel-vp,naoRecuperavel:tributo-recuperavel,bruto:vpProposto-vp,beneficio:vpProposto-vp-custo};
+}
+export function contrato({base,referencia,novo,repasse}){
+ if(![base,referencia,novo,repasse].every(Number.isFinite)||base<=0||referencia<0||novo<0||repasse<0||repasse>100)throw Error('Premissas inválidas');
+ const diferenca=novo-referencia,comercial=diferenca*repasse/100,residual=diferenca-comercial;
+ return {diferenca,comercial,residual,percentual:residual/base*100};
+}
+export function sensibilidadeCBS(r){return [-2,0,2].map(delta=>{const cbs=Math.max(0,Math.min(100,r.cbs+delta));return {delta,cbs,...reforma({...r,cbs})}})}

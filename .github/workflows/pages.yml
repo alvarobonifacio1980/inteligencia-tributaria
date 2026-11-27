@@ -29,6 +29,7 @@ jobs:
         with:
           path: dist
   publicar:
+    if: github.ref == 'refs/heads/main'
     needs: validar
     runs-on: ubuntu-latest
     permissions:

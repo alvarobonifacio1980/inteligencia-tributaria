@@ -34,6 +34,15 @@ def validar(d):
  if 'complementos' in d:
   b=d['complementos']['dirbi'];assert abs(sum(x['valor'] for x in b['registros'])-b['total'])<1e-8,'DIRBI não concilia'
  assert d['reconciliacao']['nominal']+sum(d['reconciliacao']['ajustes'].values())==597705
+ if 'v2' in d:
+  v=d['v2']
+  for x in v['dva']:assert abs(x['federal']+x['estadual']+x['municipal']-x['total'])<1e-6,'DVA não concilia'
+  for year,n in v['totais_dip'].items():assert sum(x['valor_reais'] for x in v['dip'] if x['ano']==int(year) and x['valor_reais'] is not None)==n,'DIP não concilia'
+  assert sum(x['valor_reais'] for x in v['dir'])==v['total_dir'],'DIR não concilia'
+  for x in v['dfc']:assert x['original_mil']<0 and abs(x['valor']+x['original_mil']/1000)<1e-9,'DFC sinal inválido'
+  for x in v['riscos']:assert abs(x['possivel']+x['provavel']-x['total'])<1e-6,'Riscos não conciliam'
+  for x in v['reconciliacao_9m']:assert abs(x['nominal']+sum(x['ajustes'].values())-x['efetivo'])<1e-6,'IR/CS 9M não concilia'
+
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');a=p.parse_args()
  if not a.offline:

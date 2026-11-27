@@ -4,19 +4,19 @@
       "arquivo": "dfp2023.zip",
       "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
       "sha256": "504b124cb4073ff9e156ffca977565f10cd62589dbf9b1a716d433cddfc6651d",
-      "coleta": "2026-11-27T17:13:38.090957+00:00"
+      "coleta": "2026-11-27T17:20:58.590351+00:00"
     },
     {
       "arquivo": "itr2026.zip",
       "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
       "sha256": "bc09a9809f77bb66966d0ceff22dda1abde87e2f84bfdb668adc44146cf8da14",
-      "coleta": "2026-11-27T17:13:38.158958+00:00"
+      "coleta": "2026-11-27T17:20:58.590351+00:00"
     },
     {
       "arquivo": "dirbi.xlsb",
       "url": "https://www.gov.br/fazenda/pt-br/assuntos/politica-fiscal/atuacao-spe/plataforma-de-desoneracoes-tributarias/arquivos/desoneracoes-dirbi-2024.xlsb/@@download/file?download=1",
       "sha256": "71df327bfc438674d5d3b7cc6af41af651ca9ce359b4261becd24ce1184b56f2",
-      "coleta": "2026-11-27T17:13:38.174992+00:00"
+      "coleta": "2026-11-27T17:20:58.590351+00:00"
     }
   ],
   "contas_9m": [
