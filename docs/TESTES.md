@@ -1,5 +1,7 @@
 # Evidências de validação
 
+Estado atual: 19 testes aprovados (11 JS + 8 Python), build e deploy ampliado aprovados; HTTP público e navegação conferidos. A seção Ampliação registra os testes mais recentes; seções anteriores preservam a evolução.
+
 27/11/2026, ambiente Work, Node 24.22.3 e Python 3.12.
 
 ## Executados
@@ -39,4 +41,8 @@ Não foi comprovada a meta de carregamento inicial de 3 s; nenhum teste Safari/F
 - Navegador desktop: 9M2026 mostra 33,10%; cenários respondem aos controles; REPORTO em 2030 mantém resultado condicionado; DIRBI IRPJ filtra para R$ 9,53 mi e janela explica fonte, chave, conversão e soma.
 - Capturas desktop e viewport móvel inspecionadas visualmente. Nas seis páginas, iframe 390×844 com 375 px úteis: scrollWidth = clientWidth = 375. Mesma limitação de não ser aparelho físico.
 - Janela Adaptado aberta e fechada pelo botão acessível Fechar explicação. As janelas e fontes anteriores foram preservadas.
-- Registro de publicação ampliada será consolidado após conclusão do deploy.
+- Deploy ampliado aprovado: run 46040278129, commit 17fa4c4. HTML, JS, CSS e JSON públicos HTTP 200 sem cookies/Authorization; evidência atual em HTTP_PUBLICO.json.
+- Navegador na URL pública confirmou DIRBI, histórico, cascata e simuladores. CAPEX com hipótese habilitada: R$ 0,28 mi; crédito alternativo imediato: R$ -0,20 mi (custo). Restauração volta a resultado condicionado.
+- Coleta ampliada local reproduzida com cache oficial completo e hashes: scripts/ampliar_fontes.py --offline. Execução em nuvem 46040317265 falhou por conexão encerrada pela DIRBI; novas tentativas e cliente TLS alternativo implementados e reexecutados (46040589527), sem desativar validação de certificado.
+
+- Reexecução 46040589527 confirmou bloqueio TLS do portal DIRBI também com cliente alternativo. Implementado fallback opcional e explícito: teste local com falha de rede simulada confirmou preservação exata dos 12 registros, flag de reutilização e hash/data original. Sem fallback para divergência de conteúdo. Coleta continuará CVM e testes, registrando DIRBI reaproveitada como aviso.

@@ -41,3 +41,5 @@ ANTT sem integração validada; indicadores operacionais publicados pela empresa
 Consulte [status](docs/STATUS.md), [backlog](docs/BACKLOG.md), [testes](docs/TESTES.md), [metodologia](docs/METODOLOGIA.md) e [roadmap original](docs/ROADMAP_V1.md).
 
 Coleta ampliada: hashes e conciliação em `data/conciliacao_expandida.json`; base complementar em `data/complementos_revisados.json`. O workflow manual gera artefato revisável; não faz commit automático. `scripts/preparar_base.py` apenas valida a base canônica, evitando regressão. Regras e fórmulas: [REGRAS_E_CENARIOS.md](docs/REGRAS_E_CENARIOS.md).
+
+Se o portal DIRBI bloquear o runner, o workflow usa `--permitir-snapshot-dirbi`: mantém os registros de 2024 já revisados, emite aviso e registra reutilização/motivo com o hash e a data da coleta original. Não declara download novo. As fontes CVM continuam conciliadas; divergências contábeis ou arquivo DIRBI válido porém incoerente interrompem a execução. Execução direta sem essa opção permanece estrita.

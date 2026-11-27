@@ -17,6 +17,7 @@
 
 ## Limitações abertas de dados/aplicação real
 
+- [ ] DIRBI: download completo e tratamento validados neste ambiente; portal encerra TLS no runner GitHub. Novas tentativas e cliente alternativo testados; workflow preserva snapshot com aviso e trilha de reutilização, sem simular atualização.
 - [ ] ANTT: CSV, JSON e API rejeitados; XLSX alternativo com HTTP 403. Retomar quando houver arquivo oficial utilizável. Fallback operacional da empresa identificado; sem análise por rota.
 - [ ] Elegibilidade efetiva por aquisição/regime, habilitação atual e contratos requerem documentação interna; não inventar nem concluir direito ao benefício.
 - [ ] Atualizações legais e novas competências exigem revisão dos mapeamentos e premissas; coleta interrompe diante de divergência.

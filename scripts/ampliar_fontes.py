@@ -51,7 +51,7 @@ def valor(df,ano,conta):
  assert len(x)==1,f'Conta ausente/ambígua: {ano} {conta}'
  return float(x.iloc[0].VL_CONTA)/1000
 
-def executar(offline=False):
+def executar(offline=False,permitir_snapshot_dirbi=False):
  CACHE.mkdir(exist_ok=True,parents=True);d=json.loads((R/'data/base_revisada.json').read_text())
  df=dre('itr2026.zip','con',offline);rows=[]
  for year,expected in [(2025,(5636.531,1690.078,464.453,1225.625)),(2026,(5613.532,1295.227,428.676,866.551))]:
@@ -69,23 +69,35 @@ def executar(offline=False):
   a={c:valor(hist,y,c) for c in ['3.01','3.07','3.08','3.09']}
   assert abs(a['3.07']+a['3.08']-a['3.09'])<.00001
   historico.append(dict(ano=y,escopo='Controladora',receita=a['3.01'],lair=a['3.07'],ir=-a['3.08'],lucro=a['3.09'],aliquota=-a['3.08']/a['3.07']*100,fonte='cvm2023'))
- p=obter('dirbi.xlsb',offline)
- x=pd.read_excel(p,sheet_name='Base_Dirbi',engine='pyxlsb');x.columns=[c.strip() for c in x.columns]
- def chave(n):
-  if isinstance(n,(int,float)) and pd.notna(n):return str(int(n)).zfill(14)
-  t=str(n).strip()
-  return t.zfill(14) if t.isdigit() else None  # Identificadores textuais truncados/científicos não são inferidos.
- key=x.cnpj.map(chave);target=CNPJ.translate(str.maketrans('','','./-'))
- x=x[(key==target)&(x.ano==2024)].copy();assert len(x)>0,'CNPJ sem registro na DIRBI: não presumir zero'
- x=x.drop_duplicates();keys=['cnpj','uf','id_municipio','cod_programa','nome_tributo','ano']
- assert not x.duplicated(keys).any(),'DIRBI com chave duplicada: revisão necessária'
- assert x.Valor_desoneracao.notna().all() and (x.Valor_desoneracao>=0).all()
- def fix(t):
-  try:return str(t).encode('latin1').decode('utf-8')
-  except (UnicodeError,ValueError):return str(t)
- registros=[dict(ano=int(row.ano),uf=row.uf,programa=fix(row.nome_programa),tributo=fix(row.nome_tributo).upper().replace('_','/'),valor=float(row.Valor_desoneracao)/1e6) for row in x.itertuples()]
+ status_dirbi={'reutilizada':False}
+ try:p=obter('dirbi.xlsb',offline)
+ except RuntimeError as exc:
+  if not permitir_snapshot_dirbi:raise
+  # Fallback explícito apenas para fonte complementar indisponível. Nunca cria registros.
+  registros=d['complementos']['dirbi']['registros']
+  assert len(registros)==12 and abs(sum(r['valor'] for r in registros)-140.19918494)<1e-7
+  assert all(r['ano']==2024 and r['valor']>=0 for r in registros)
+  status_dirbi={'reutilizada':True,'motivo':str(exc),'snapshot':'data/complementos_revisados.json','ano':2024}
+  print('::warning::DIRBI indisponível nesta execução; preservado snapshot revisado de 2024. Não é coleta nova.')
+ else:
+  x=pd.read_excel(p,sheet_name='Base_Dirbi',engine='pyxlsb');x.columns=[c.strip() for c in x.columns]
+  def chave(n):
+   if isinstance(n,(int,float)) and pd.notna(n):return str(int(n)).zfill(14)
+   t=str(n).strip()
+   return t.zfill(14) if t.isdigit() else None  # Identificadores textuais truncados/científicos não são inferidos.
+  key=x.cnpj.map(chave);target=CNPJ.translate(str.maketrans('','','./-'))
+  x=x[(key==target)&(x.ano==2024)].copy();assert len(x)>0,'CNPJ sem registro na DIRBI: não presumir zero'
+  x=x.drop_duplicates();keys=['cnpj','uf','id_municipio','cod_programa','nome_tributo','ano']
+  assert not x.duplicated(keys).any(),'DIRBI com chave duplicada: revisão necessária'
+  assert x.Valor_desoneracao.notna().all() and (x.Valor_desoneracao>=0).all()
+  def fix(t):
+   try:return str(t).encode('latin1').decode('utf-8')
+   except (UnicodeError,ValueError):return str(t)
+  registros=[dict(ano=int(row.ano),uf=row.uf,programa=fix(row.nome_programa),tributo=fix(row.nome_tributo).upper().replace('_','/'),valor=float(row.Valor_desoneracao)/1e6) for row in x.itertuples()]
+
  fontes=[dict(id='cvm2023',nome='CVM — DFP 2023 e comparativo 2022',url=URLS['dfp2023.zip'],localizador='DRE individual, contas 3.01/3.07/3.08/3.09; versão 1',natureza='Real',periodo='2022–2023',escopo='Controladora',unidade='R$ mil na origem; R$ mi no painel'),dict(id='cvmitr',nome='CVM — ITR 3T2026',url=URLS['itr2026.zip'],localizador='DRE consolidada, 01/01–30/09; contas 3.01/3.07/3.08/3.09',natureza='Real',periodo='9M2025–9M2026',escopo='Consolidado',unidade='R$ mil na origem; R$ mi no painel'),dict(id='dirbi',nome='Ministério da Fazenda — DIRBI 2024',url=URLS['dirbi.xlsb'],localizador='Aba Base_Dirbi, chave CNPJ/UF/município/programa/tributo/ano; Dicionário',natureza='Adaptado',periodo='2024',escopo='CNPJ da empresa',unidade='R$ na origem; R$ mi no painel')]
  extra=dict(historico_controladora=historico,dirbi=dict(ano=2024,registros=registros,total=sum(x['valor'] for x in registros),linhas=len(registros),fonte='dirbi'),conciliacao_9m=rows,verificacao='2026-11-27')
+ extra['status_dirbi']=status_dirbi
  extra['operacional']=[{'periodo': '2024', 'volume': 202525, 'investimentos': 2864.5, 'fonte': 'dfp2025'}, {'periodo': '2025', 'volume': 213001, 'investimentos': 3400.8, 'fonte': 'dfp2025'}, {'periodo': '9M2025', 'volume': 157230, 'investimentos': 2583, 'fonte': 'itr2026'}, {'periodo': '9M2026', 'volume': 157121, 'investimentos': 2043, 'fonte': 'itr2026'}]
  for token in ['202.525','213.001','3.400,8','2.864,5']:assert token in (CACHE/'dfp2025.txt').read_text()
  for token in ['157.230','157.121','2.043','2.583']:assert token in (CACHE/'itr2026.txt').read_text()
@@ -96,9 +108,17 @@ def executar(offline=False):
  d['limitacoes']=list(dict.fromkeys(d['limitacoes']+['Histórico 2022–2023 é controladora; não comparar automaticamente com consolidado 2024–2026.','ANTT: downloads CSV/JSON/API e alternativa XLSX sem arquivo válido; contexto por rota não foi presumido.','DIRBI 2024 informa desonerações declaradas; não é caixa recebido nem economia incremental.']))
  from coletar import validar
  validar(d)
- manifest=[dict(arquivo=n,url=u,sha256=hashlib.sha256((CACHE/n).read_bytes()).hexdigest(),coleta=datetime.datetime.now(datetime.timezone.utc).isoformat()) for n,u in URLS.items()]
+ agora=datetime.datetime.now(datetime.timezone.utc).isoformat()
+ anterior=json.loads((R/'data/conciliacao_expandida.json').read_text())['fontes']
+ manifest=[]
+ for n,u in URLS.items():
+  if n=='dirbi.xlsb' and status_dirbi['reutilizada']:
+   row=next(v.copy() for v in anterior if v['arquivo']==n);row.update(reutilizada=True,tentativa=agora,motivo=status_dirbi['motivo'])
+  else:row=dict(arquivo=n,url=u,sha256=hashlib.sha256((CACHE/n).read_bytes()).hexdigest(),coleta=agora)
+  manifest.append(row)
+
  for path,obj in [('data/complementos_revisados.json',dict(complementos=extra,fontes=fontes,financeiro_9m=rows)),('data/conciliacao_expandida.json',dict(fontes=manifest,contas_9m=rows,historico=historico,dirbi_registros=len(registros))),('data/base_revisada.json',d),('public/data/painel.json',d)]:
   dest=R/path;tmp=dest.with_suffix('.tmp');tmp.write_text(json.dumps(obj,ensure_ascii=False,indent=2));tmp.replace(dest)
  print(json.dumps(dict(aliquota_9m2026=428676/1295227*100,dirbi=extra['dirbi'],historico=historico),ensure_ascii=False,indent=2))
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');args=p.parse_args();executar(args.offline)
+ p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');p.add_argument('--permitir-snapshot-dirbi',action='store_true');args=p.parse_args();executar(args.offline,args.permitir_snapshot_dirbi)
