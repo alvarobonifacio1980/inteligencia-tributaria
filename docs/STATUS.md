@@ -25,3 +25,6 @@ Pronta para avaliação gerencial, observados os limites de dados e simulação.
 Ajuste visual: seleção de período da visão executiva convertida em botões com fundo azul-escuro e seleção amarela. Períodos derivados dos dados e comparação existente preservados. Desktop e viewport móvel390 conferidos;375/375 sem overflow. Build aprovado; publicação automática pelo workflow existente.
 
 Leituras complementares adicionadas ao final de Fontes e metodologia: artigo de gestão, Tax Summit, Brasil nos Trilhos e referências técnicas oficiais. Cada card informa contexto, evidência, limites e links. CSV do catálogo inclui as referências; cálculos e dados preservados.
+
+
+Menu Sobre acrescentado como último item: resumo do projeto, tecnologias, © 2026 e links distintos para aplicação e repositório. Não exibe exportação CSV. Indicadores e simuladores preservados.

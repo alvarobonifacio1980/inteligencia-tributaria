@@ -1,5 +1,5 @@
-export const rotas=['executiva','diagnostico','eficiencia','reforma','cenarios','fontes'];
-export const nomes=['Visão executiva','Diagnóstico tributário','Eficiência tributária','Reforma tributária','Cenários e projetos','Fontes e metodologia'];
+export const rotas=['executiva','diagnostico','eficiencia','reforma','cenarios','fontes','sobre'];
+export const nomes=['Visão executiva','Diagnóstico tributário','Eficiência tributária','Reforma tributária','Cenários e projetos','Fontes e metodologia','Sobre'];
 export const defaults={credito:{capital:50,atual:24,proposto:12,taxa:12,custo:.5},reforma:{receita:100,custos:60,elegibilidade:60,atual:8,federalAtual:3,cbs:9,ibs:18,ano:2033,repasse:50,prazo:3,taxa:12,crescimento:0,capex:0,elegibilidadeCapex:0},capex:{investimento:100,fracaoBase:50,aliquota:10,recuperacao:80,prazo:12,proposto:6,taxa:10,custo:0},parcelado:{capital:50,parcelas:240,carencia:0,taxa:12},contrato:{base:100,referencia:8,novo:12,repasse:50,inicio:2027,fim:2033},regime:{investimento:100,elegibilidade:50,aliquota:9,creditoSemRegime:100,prazoCredito:12,taxa:12,custo:.2}};
 export const fmt=(n,d=1)=>n===null||n===undefined||!Number.isFinite(n)?'Não disponível':(Object.is(n,-0)?0:n).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
 export const money=(n,d=1)=>n===null||n===undefined?'Não disponível':`R$ ${fmt(n,d)} mi`;
