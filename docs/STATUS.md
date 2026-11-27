@@ -34,3 +34,9 @@ Os oito indicadores de valor exibem fonte clicável com documento/localizador, r
 ## Explicação dos dados adaptados — 27/11/2026
 
 Identificação Adaptado abre janela modal com origem, transformação, fórmula, exemplo calculado conforme período e limites. Cobertura: tributos sobre serviços, alíquota efetiva, evolução/concentração dos créditos e reconciliação IR/CS. Janela nativa com foco modal, fechamento por botão e Escape.
+
+## Reconciliação em cascata — 27/11/2026
+
+Gráfico de IRPJ/CSLL alterado para cascata com barra inicial nominal, ajuste líquido flutuante em amarelo e valor efetivo. Valores derivados da reconciliação versionada; fonte clicável e explicação da adaptação preservadas. Eixo parte de zero; rótulo do ajuste mantém o sinal negativo.
+
+Esclarecimento de UF: MG aparece como não detalhado no quadro da fonte, sem imputação de zero nem atribuição da diferença do ICMS total ao estado. Confirmados RJ/SP na nota 9 p.49 da ITR.
