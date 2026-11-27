@@ -37,3 +37,10 @@ Linha de base recuperável: `a615259a18b0ab3dd08f0bd205c0a9bdd49ed277`; desenvol
 Antes: quatro indicadores, mensagens após gráficos e descrição tecnológica restritiva. Depois: cinco indicadores (DIP calculado e com explicação), três mensagens estratégicas antes dos gráficos, dois caminhos de aprofundamento, README atualizado e Sobre com independência e uso de IA. Mesmos dados financeiros, fórmulas, gráficos, fontes e simuladores. CSV executivo inclui alíquota, créditos e DIP com seus próprios períodos e unidades.
 
 Testes e revisão documental registrados em TESTES_V2.md e METODOLOGIA.md. Rollback: reverter o merge da V2.1.1 por novo commit, ou construir a linha de base indicada, sem force push. Não republicar documentos de planejamento removidos. Limites de fontes, simulação econômica e navegadores da V2.1 permanecem. Sem contratação de serviços ou alteração de URL.
+
+
+## Monitoramento de audiência — preparado, aguardando conta
+
+Branch isolada `audiencia-privada`, base `ac1ff55bf570f27de5c07d2fa866d92de765a0aa`. Aplicação pública preservada. Coletor assíncrono sem dependências novas, navegação por hash normalizada, eventos limitados, preferências opcionais no Sobre e exclusão por navegador. Configuração permanece desabilitada e sem ID até validação da conta Hobby. Não houve contratação, trial, cartão ou publicação desta integração.
+
+47 testes (31 JS +16 Python) e build aprovados. Controles de permissão/retirada conferidos em desktop e viewport390, sem overflow375/375. Nenhum script externo carregado em localhost. Testes isolados validam payload mínimo, ausência de valores, deduplicação, falha do serviço, retirada de permissão e rotas. Registro real no Umami, privacidade da conta e validação pública ainda dependem da autenticação do administrador. Guia em AUDIENCIA.md.
