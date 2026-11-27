@@ -1014,7 +1014,14 @@
         },
         "efetivo": 428.676
       }
-    ]
+    ],
+    "reidi_historico": {
+      "ano": 2023,
+      "investimento": 8732.17792182,
+      "suspensao": 807.72645777,
+      "ato": "Portaria MT 779/2023 — Fase II",
+      "fonte": "reidi"
+    }
   },
   "versao": "2.1.0",
   "revisao": "2026-11-27"

@@ -12,11 +12,11 @@
 - Origem dinâmica, vazios sem zero, CBS nos limites, presets e resultados negativos.
 - Business cases calculados, matriz/agenda e mapa conceitual de integração.
 - Hash, subabas, acessibilidade, CSV contextual e impressão com premissas.
-- Testes: 23 JS + 15 Python; mapeamento de aceite em ACEITE_V2.md.
+- Testes: 23 JS + 16 Python; mapeamento de aceite em ACEITE_V2.md.
 
-## Em validação final
+## Gate final
 
-CI em branch, larguras desktop, impressão, exportação e publicação anônima — evidências em TESTES_V2.md / STATUS.md; manter V1 até gate.
+CI da branch, coleta online, desktop1366, responsividade móvel, estilo de impressão e download CSV verificados. Captura1920 limitada por timeout, com dimensões sem overflow verificadas. Publicação anônima registrada após deploy em TESTES_V2.md / STATUS.md.
 
 ## Bloqueado / limite explícito
 

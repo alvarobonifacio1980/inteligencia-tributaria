@@ -79,6 +79,7 @@ def executar(offline=True,permitir_snapshot=False):
  assert abs(sum(x['valor'] for x in extra['custos_referencia']['grupos'])-3523.729)<1e-6
  extra['reconciliacao_9m']=[{'periodo':'9M2025','nominal':574.627,'ajustes':{'Incentivos fiscais':-20.569,'Exclusão ICMS base IR/CS':-86.501,'PIS/Cofins base ICMS':-.814,'Estoque':.723,'Doações':2.345,'Outros':-5.358},'efetivo':464.453},{'periodo':'9M2026','nominal':440.377,'ajustes':{'Exercícios anteriores':-6.367,'Incentivos fiscais':-15.158,'Estoque':.055,'Doações':1.765,'Outros':8.004},'efetivo':428.676}]
  for row in extra['reconciliacao_9m']:assert abs(row['nominal']+sum(row['ajustes'].values())-row['efetivo'])<1e-6
+ extra['reidi_historico']={'ano':2023,'investimento':8732.17792182,'suspensao':807.72645777,'ato':'Portaria MT 779/2023 — Fase II','fonte':'reidi'}
  d['v2']=extra;d['versao']='2.1.0';d['revisao']='2026-11-27';d['fontes']=[s for s in d['fontes'] if s['id'] not in [f['id'] for f in fontes]]+fontes
  manifest=[dict(arquivo=n,url=u,bytes=(C/n).stat().st_size,sha256=hashlib.sha256((C/n).read_bytes()).hexdigest()) for n,u in URLS.items()]
  from coletar import validar

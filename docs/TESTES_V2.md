@@ -5,7 +5,7 @@ Ambiente: Node 24, Python 3.12 (runtime analítico com Pandas/openpyxl), Chrome 
 ## Automatizados
 
 - 23 testes JS aprovados: VP original, transição legada preservada na biblioteca, excedentes, CAPEX condicional, fluxo ICMS, novos CAPEX/contratos e fixtures, CBS 0/100, vazio/inteiro, natureza, LAIR não aplicável, ponte com cruzamento de zero, alteração de fixture e CSV seguro.
-- 15 testes Python aprovados: originais e novas somas DIR/DIP, traços/zero, DVA e sinal negativo, DFC com valor original, riscos sem duplicação, reconciliações 9M e fórmulas independentes.
+- 16 testes Python aprovados: originais e novas somas DIR/DIP, traços/zero, DVA e sinal negativo, DFC com valor original, riscos sem duplicação, reconciliações 9M e fórmulas independentes.
 - Build Vite aprovado; pacote cerca de 845 kB / 279 kB gzip, sem fonte externa ou mídia obrigatória. Medição de prontidão separada de tamanho do pacote.
 - scripts/evoluir_v2.py executado sobre arquivos oficiais válidos, confrontando CVM e PDFs; data/conciliacao_v2.json contém hashes, valores e inspeção das planilhas.
 - Script não é um parser universal: valores de controle e mapeamentos exigem revisão diante de novo documento/versão. Divergência de conteúdo interrompe; falha de conectividade pode preservar snapshot com aviso e motivo, se opção explícita.
@@ -44,3 +44,10 @@ Sem teste em Safari/Firefox ou dispositivo físico; não se alega auditoria inte
 - Teclado de subabas, hash e retorno testados. Console da origem da aplicação sem erros nos logs consultados; mensagens de extensão separadas.
 
 - CI isolada run 46045850771: validação aprovada, publicação ignorada por branch; V1 permaneceu no ar. Coleta run 46045918452 falhou antes dos scripts por HTTP 403 do repositório Microsoft na imagem ubuntu-latest 26.04. Corrigido para imagem estável ubuntu-24.04 e instalação de Poppler somente se ausente; sem desativar assinaturas ou certificados.
+
+## Gate consolidado antes da publicação
+
+- CI final da branch fdbc400: [run 46046447545](https://github.com/alvarobonifacio1980/inteligencia-tributaria/actions/runs/46046447545), validação aprovada e deploy ignorado conforme proteção da branch.
+- Coleta online ampliada: [run 46046414220](https://github.com/alvarobonifacio1980/inteligencia-tributaria/actions/runs/46046414220), concluída com sucesso. PDFs, CVM, DIRBI e fontes V2 foram processados; não houve aviso de reutilização nesta execução. A imagem ubuntu-24.04 resolveu a preparação do ambiente. Artefato 15222517309, evidencias-coleta, retenção sete dias.
+- Acrescentado teste de rejeição de snapshot DIP alterado em uma unidade: validar() rejeita antes de substituir publicação. Total final local: 23 JS + 16 Python = 39 testes, build aprovado. Ajustes editoriais finais preservam fontes nos contratos derivados e estimativas históricas REIDI já conferidas na V1, agora na base em vez de duplicadas no JSX.
+- Nenhum erro material conhecido nos dados e cálculos apresentados. Gate de publicação autorizado pelo escopo; V1 recuperável e URL preservada. Verificação pós-deploy será registrada em seguida.

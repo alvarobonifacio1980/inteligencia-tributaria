@@ -26,3 +26,8 @@ class V2(unittest.TestCase):
  def test_tarifa_cache_e_escopo(self):
   x=self.d['tarifas'];self.assertFalse(x['icms_incluido']);self.assertEqual(round(x['fixa']+x['variavel']*x['distancia_exemplo'],2),x['teto_exemplo'])
   self.assertTrue(all(x['vinculos_externos']==0 and not x['macros'] for x in self.d['inspecao_planilhas']))
+ def test_snapshot_invalido_rejeitado(self):
+  import sys,copy
+  sys.path.insert(0,str(R/'scripts'));from coletar import validar
+  d=json.loads((R/'data/base_revisada.json').read_text());d['v2']['dip'][0]['valor_reais']+=1
+  with self.assertRaises(AssertionError):validar(d)
