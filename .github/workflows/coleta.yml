@@ -1,0 +1,27 @@
+name: Coletar e conciliar fontes oficiais
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coleta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: pip install -r requirements.txt
+      - run: python scripts/coletar.py
+      - run: python scripts/cvm.py
+      - run: python -m unittest discover -s tests -p 'test_*.py'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evidencias-coleta
+          path: |
+            data/coletas.json
+            data/conciliacao_cvm.json
+            data/cvm_mrs_2025.csv
+            public/data/painel.json
+          retention-days: 7

@@ -1,0 +1,42 @@
+{
+  "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+  "sha256": "d0364bf186449b89b4f91ad4fb2947dcfc6403926cbbbfc80dbc2d45b544ff6b",
+  "contas": [
+    {
+      "conta": "3.01",
+      "descricao": "Receita de Venda de Bens e/ou Serviços",
+      "valor_mil": 7585058.0,
+      "data": "2025-12-31",
+      "versao": 1,
+      "cnpj": "01.417.222/0001-77",
+      "resultado": "Conciliado com DFP MRS"
+    },
+    {
+      "conta": "3.07",
+      "descricao": "Resultado Antes dos Tributos sobre o Lucro",
+      "valor_mil": 2152768.0,
+      "data": "2025-12-31",
+      "versao": 1,
+      "cnpj": "01.417.222/0001-77",
+      "resultado": "Conciliado com DFP MRS"
+    },
+    {
+      "conta": "3.08",
+      "descricao": "Imposto de Renda e Contribuição Social sobre o Lucro",
+      "valor_mil": -597705.0,
+      "data": "2025-12-31",
+      "versao": 1,
+      "cnpj": "01.417.222/0001-77",
+      "resultado": "Conciliado com DFP MRS"
+    },
+    {
+      "conta": "1.01.06",
+      "descricao": "Tributos a Recuperar",
+      "valor_mil": 266787.0,
+      "data": "2025-12-31",
+      "versao": 1,
+      "cnpj": "01.417.222/0001-77",
+      "resultado": "Conciliado com DFP MRS"
+    }
+  ]
+}

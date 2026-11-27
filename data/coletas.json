@@ -1,0 +1,32 @@
+[
+  {
+    "id": "dfp2025",
+    "documento": "DFP 2025",
+    "url": "https://api.mziq.com/mzfilemanager/v2/d/e14f1680-635b-4328-8a06-b799b1574b43/acbef322-8f85-850f-ae21-8d531a3467b4?origin=2",
+    "sha256": "cc0b293fe7b7f4f24d534338da4747a8aaebb148f1885e2206d6970ce603bfec",
+    "coleta": "2026-11-27T14:51:29.013969+00:00",
+    "validacao": "Âncoras numéricas presentes; extração revisada por nota e escopo",
+    "campos": {
+      "receita_bruta": 8054851,
+      "tributos_servicos": 469793,
+      "receita_liquida": 7585058,
+      "lucro_antes_ir": 2152768,
+      "ir_csll": 597705
+    }
+  },
+  {
+    "id": "itr2026",
+    "documento": "ITR 3T2026",
+    "url": "https://filemanager-cdn.mziq.com/published/e14f1680-635b-4328-8a06-b799b1574b43/ed0c4c1c-5cc3-4a74-ac98-e657a4cd7bbf",
+    "sha256": "d47bf5058337b0d8149d33406cebf0c03153b7f30aec0ff58e028e60ac516c97",
+    "coleta": "2026-11-27T14:51:34.819176+00:00",
+    "validacao": "Âncoras numéricas presentes; extração revisada por nota e escopo",
+    "campos": {
+      "creditos": 553764,
+      "icms": 277596,
+      "pis_cofins": 129005,
+      "irrf": 146391,
+      "outros": 772
+    }
+  }
+]
