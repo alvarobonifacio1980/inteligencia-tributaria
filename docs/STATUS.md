@@ -28,3 +28,11 @@ Leituras complementares adicionadas ao final de Fontes e metodologia: artigo de 
 
 
 Menu Sobre acrescentado como último item: resumo do projeto, tecnologias, © 2026 e links distintos para aplicação e repositório. Não exibe exportação CSV. Indicadores e simuladores preservados.
+
+## V2.1.1 — refinamento em revisão (27/11/2026)
+
+Baseline recuperável: `a615259a18b0ab3dd08f0bd205c0a9bdd49ed277`. Branch `refinamento-v2.1.1`; produção preservada. Insights antes dos gráficos, quinto indicador DIP derivado da base e incluído no CSV, navegação contextual, README positivo, independência e apoio de IA no Sobre, linguagem estratégica revisada. Fórmulas e dados numéricos preservados; apenas identificação de versão atualizada.
+
+39 testes existentes aprovados (23 JS e 16 Python) e build local aprovado. Conferência documental descrita em FONTES_STATUS.md. Gate de publicação pendente: navegador Chromium local sem binário, instalação bloqueada por HTTP 403; navegador remoto não alcança loopback do executor (ERR_CONNECTION_REFUSED). Não alegar inspeção visual, CSV por navegador ou impressão desta versão. Não publicar antes dessa validação.
+
+Rollback após eventual merge: reverter o commit de integração por novo commit, preservando histórico e a URL; baseline acima disponível para comparação.
