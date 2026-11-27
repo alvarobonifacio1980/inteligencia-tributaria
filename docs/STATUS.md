@@ -17,3 +17,5 @@ Pipeline manual: primeira execução ampliada encontrou conexão encerrada pelo 
 Identidade genérica, cores, gráficos nativos, fontes clicáveis e janelas de adaptação preservados. Nenhum outro repositório alterado; nenhuma contratação ou contato externo. Sem Power BI/PowerPoint/conversores neste escopo.
 
 Etapas 00–10 atendidas no escopo demonstrativo validado, com limites em BACKLOG.md. Atualizações não são apuração legal universal nem diagnóstico de dados internos. Revisar documentação interna antes de decisão real.
+
+Coleta recuperada concluída com sucesso no run 46041005921, com aviso explícito de reutilização da DIRBI por bloqueio TLS. Build e deploy finais aprovados no run 46040961358. Artefato de evidências disponível por 7 dias; relatórios permanentes no repositório.

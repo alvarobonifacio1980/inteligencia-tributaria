@@ -46,3 +46,10 @@ Não foi comprovada a meta de carregamento inicial de 3 s; nenhum teste Safari/F
 - Coleta ampliada local reproduzida com cache oficial completo e hashes: scripts/ampliar_fontes.py --offline. Execução em nuvem 46040317265 falhou por conexão encerrada pela DIRBI; novas tentativas e cliente TLS alternativo implementados e reexecutados (46040589527), sem desativar validação de certificado.
 
 - Reexecução 46040589527 confirmou bloqueio TLS do portal DIRBI também com cliente alternativo. Implementado fallback opcional e explícito: teste local com falha de rede simulada confirmou preservação exata dos 12 registros, flag de reutilização e hash/data original. Sem fallback para divergência de conteúdo. Coleta continuará CVM e testes, registrando DIRBI reaproveitada como aviso.
+
+## Encerramento da ampliação
+
+- Build/deploy final aprovado: [run 46040961358](https://github.com/alvarobonifacio1980/inteligencia-tributaria/actions/runs/46040961358), commit 2cfed46.
+- Coleta recuperada aprovada: [run 46041005921](https://github.com/alvarobonifacio1980/inteligencia-tributaria/actions/runs/46041005921). PDFs, CVM anual e ampliada, testes Python e artefato de evidências concluídos. DIRBI explicitamente preservada do snapshot revisado por indisponibilidade TLS, conforme aviso do job; não houve download novo dessa fonte no runner.
+- Caminho de leitura integral DIRBI reproduzido localmente com o script final e arquivo oficial completo em cache; executado com sucesso. Caminho de indisponibilidade também testado localmente e confirmado na nuvem.
+- Documentação final, dicionário, fórmulas, roadmap, backlog e estado de fontes atualizados. Sem modificação em outros repositórios, custo ou contato externo.
