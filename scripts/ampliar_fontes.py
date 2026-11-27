@@ -10,9 +10,28 @@ URLS={
 def obter(nome,offline):
  p=CACHE/nome
  if not offline:
-  with urllib.request.urlopen(URLS[nome],timeout=90) as r:raw=r.read()
-  if not zipfile.is_zipfile(__import__('io').BytesIO(raw)):raise ValueError(f'Arquivo incompleto/inválido: {nome}')
-  p.write_bytes(raw)
+  import time,subprocess
+  falhas=[];raw=None
+  for tentativa in range(3):
+   try:
+    req=urllib.request.Request(URLS[nome],headers={'User-Agent':'Mozilla/5.0 (coleta de dados publicos)','Accept':'*/*'})
+    with urllib.request.urlopen(req,timeout=90) as r:raw=r.read()
+    if not zipfile.is_zipfile(__import__('io').BytesIO(raw)):raise ValueError('Arquivo incompleto ou resposta não ZIP')
+    break
+   except (OSError,ValueError) as exc:
+    falhas.append(str(exc));raw=None
+    if tentativa<2:time.sleep(2+tentativa)
+  if raw is None:
+   # Cliente TLS alternativo padrão, com validação de certificado mantida.
+   tmp=p.with_suffix('.download')
+   try:
+    subprocess.run(['curl','--fail','--location','--retry','2','--retry-delay','2','--max-time','90','--user-agent','Mozilla/5.0','--output',str(tmp),URLS[nome]],check=True,capture_output=True)
+    raw=tmp.read_bytes()
+    if not zipfile.is_zipfile(__import__('io').BytesIO(raw)):raise ValueError('Download alternativo inválido')
+   except (OSError,ValueError,subprocess.CalledProcessError) as exc:
+    raise RuntimeError(f'Download oficial indisponível: {nome}; tentativas: {falhas}; curl: {exc}') from exc
+   finally:tmp.unlink(missing_ok=True)
+  tmp=p.with_suffix('.tmp');tmp.write_bytes(raw);tmp.replace(p)
  if not p.exists():raise FileNotFoundError(p)
  return p
 
