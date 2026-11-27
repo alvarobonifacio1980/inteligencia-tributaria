@@ -23,6 +23,6 @@ jobs:
             data/extracao_validada.json
             data/coletas.json
             data/conciliacao_cvm.json
-            data/cvm_mrs_2025.csv
+            data/cvm_empresa_2025.csv
             public/data/painel.json
           retention-days: 7

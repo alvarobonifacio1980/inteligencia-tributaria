@@ -1,12 +1,12 @@
 {
   "atualizacao": "2026-11-27",
-  "entidade": "MRS Logística S.A.",
+  "entidade": "Empresa Ferroviária",
   "escopo": "Consolidado",
   "unidade": "R$ milhões",
   "fontes": [
     {
       "id": "dfp2025",
-      "nome": "MRS — Demonstrações financeiras 2025",
+      "nome": "Empresa Ferroviária — Demonstrações financeiras 2025",
       "url": "https://api.mziq.com/mzfilemanager/v2/d/e14f1680-635b-4328-8a06-b799b1574b43/acbef322-8f85-850f-ae21-8d531a3467b4?origin=2",
       "localizador": "DRE p. 37; notas 10, 25, 29 e 33; páginas impressas 63, 109, 116 e 121",
       "natureza": "Real",
@@ -16,7 +16,7 @@
     },
     {
       "id": "itr2026",
-      "nome": "MRS — Informações trimestrais 3T2026",
+      "nome": "Empresa Ferroviária — Informações trimestrais 3T2026",
       "url": "https://filemanager-cdn.mziq.com/published/e14f1680-635b-4328-8a06-b799b1574b43/ed0c4c1c-5cc3-4a74-ac98-e657a4cd7bbf",
       "localizador": "Nota 9 p. 48–49; nota 27 p. 85; DRE consolidada",
       "natureza": "Real",
@@ -36,8 +36,8 @@
     },
     {
       "id": "reidi",
-      "nome": "Ministério dos Transportes — REIDI MRS",
-      "url": "https://www.gov.br/transportes/pt-br/assuntos/incentivos/incentivos-fiscais/reidi-requerimento-e-consulta/Portarian779de03ago2023MRSLogsticaREIDIDOU04ago2023.pdf",
+      "nome": "Ministério dos Transportes — REIDI Empresa Ferroviária",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/incentivos/reidi",
       "localizador": "Portaria MT 779/2023, anexo: estimativas de investimento e suspensões; histórico oficial também lista Portaria 841/2024, cuja relação deve ser validada antes de aplicação",
       "natureza": "Real — estimativa oficial",
       "periodo": "Aprovação original 2023; não é realização",

@@ -21,8 +21,9 @@ def executar():
  for account,expected in [('3.01',7585058),('3.07',2152768),('3.08',-597705),('1.01.06',266787)]:
   x=df[df.CD_CONTA==account];assert len(x)==1,f'Conta não única {account}'
   row=x.iloc[0];assert abs(row.VL_CONTA-expected)<.01,f'Divergência CVM: {account}'
-  out.append(dict(conta=account,descricao=row.DS_CONTA,valor_mil=float(row.VL_CONTA),data=row.DT_REFER,versao=int(row.VERSAO),cnpj=row.CNPJ_CIA,resultado='Conciliado com DFP MRS'))
- df.to_csv(R/'data/cvm_mrs_2025.csv',index=False,sep=';',encoding='utf-8')
+  out.append(dict(conta=account,descricao=row.DS_CONTA,valor_mil=float(row.VL_CONTA),data=row.DT_REFER,versao=int(row.VERSAO),cnpj=row.CNPJ_CIA,resultado='Conciliado com DFP Empresa Ferroviária'))
+ df['DENOM_CIA']='Empresa Ferroviária'  # Designação editorial; CNPJ/contas preservados.
+ df.to_csv(R/'data/cvm_empresa_2025.csv',index=False,sep=';',encoding='utf-8')
  (R/'data/conciliacao_cvm.json').write_text(json.dumps(dict(url=url,sha256=hashlib.sha256(raw).hexdigest(),contas=out),ensure_ascii=False,indent=2))
  print('CVM: 4 contas conciliadas com RI, consolidado 2025.')
 if __name__=='__main__':executar()

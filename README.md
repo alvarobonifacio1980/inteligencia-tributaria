@@ -1,6 +1,6 @@
 # Inteligência Tributária
 
-Planejamento estratégico e eficiência fiscal. Estudo independente da MRS Logística, sem vínculo institucional. Dados públicos e simulações identificadas; sem dados internos ou promessa de economia.
+Planejamento estratégico e eficiência fiscal. Estudo independente aplicado a uma empresa ferroviária, sem vínculo institucional. Dados públicos e simulações identificadas; sem dados internos ou promessa de economia.
 
 Acesso público: https://alvarobonifacio1980.github.io/inteligencia-tributaria/
 
@@ -31,10 +31,10 @@ GitHub Pages a partir de GitHub Actions, repositório público, runners padrão 
 
 ## Dados
 
-DFP MRS 2025 (comparativo 2024), ITR 3T2026 (comparativo 9M2025), CVM DFP 2025. Consolidado, valores normalizados em R$ milhões; precisão de R$ mil nos arquivos. Fontes e localizadores em `data/base_revisada.json`, hashes em `data/coletas.json`, conciliação em `data/conciliacao_cvm.json`.
+DFP Empresa Ferroviária 2025 (comparativo 2024), ITR 3T2026 (comparativo 9M2025), CVM DFP 2025. Consolidado, valores normalizados em R$ milhões; precisão de R$ mil nos arquivos. Fontes e localizadores em `data/base_revisada.json`, hashes em `data/coletas.json`, conciliação em `data/conciliacao_cvm.json`.
 
 ## Limitações
 
-ANTT e DIRBI sem integração validada. REIDI/REPORTO qualitativos até confirmar elegibilidade. Histórico 2022–2023 pendente. Simulador de reforma é sensibilidade econômica simplificada, com aproximação de transição visível, não cálculo legal de recolhimento. Sem projeções de margem/EBITDA nem economia atribuída à MRS. Não há Power BI, PowerPoint ou conversores.
+ANTT e DIRBI sem integração validada. REIDI/REPORTO qualitativos até confirmar elegibilidade. Histórico 2022–2023 pendente. Simulador de reforma é sensibilidade econômica simplificada, com aproximação de transição visível, não cálculo legal de recolhimento. Sem projeções de margem/EBITDA nem economia atribuída à Empresa Ferroviária. Não há Power BI, PowerPoint ou conversores.
 
 Consulte [status](docs/STATUS.md), [backlog](docs/BACKLOG.md), [testes](docs/TESTES.md), [metodologia](docs/METODOLOGIA.md) e [roadmap original](docs/ROADMAP_V1.md).

@@ -3,7 +3,7 @@
 ## Implementado
 
 - [x] Novo repositório independente, sem alterações em outros projetos.
-- [x] Dados MRS DFP/ITR; CVM conciliada por CNPJ, versão e conta.
+- [x] Dados Empresa Ferroviária DFP/ITR; CVM conciliada por CNPJ, versão e conta.
 - [x] Python + React + ECharts; arquitetura estática, tema centralizado.
 - [x] Cinco módulos, fontes, filtros suportados, simuladores, reset e business cases.
 - [x] Testes analíticos Python/JS e build.
