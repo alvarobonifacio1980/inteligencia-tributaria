@@ -63,3 +63,15 @@ Release `a23e86bf5f3c17d55a907732343b790078ae7d4d`, merge PR1. Run `46047253655`
 Navegador público confirmou executivo recente, DIP Material Rodante2028 → cenário com256,512139 mi, modal Híbrido, desvinculação/edição/reset, DFC19,087 mi e recarga do hash de caixa. Console consultado sem erros da origem. Prontidão medida nessa navegação pública:480 ms até dois frames após a base; execução Chrome cloud, sem restrição artificial, amostra única. Não garante desempenho em outra rede/aparelho.
 
 HTTP sem cookies/Authorization em HTTP_PUBLICO_V2.json; HTML, JS, CSS e JSON com200. Assets públicos comparados byte a byte ao build local aprovado, confirmando versão do código servido. Nenhum dado interno ou contato externo.
+
+
+## Verificação V2.1.1 — 27/11/2026
+
+- Coleta offline e 39 testes existentes (23 JavaScript, 16 Python): aprovados; build Vite aprovado. Fórmulas dos simuladores preservadas.
+- Visão executiva: cinco cards, quatro botões de período e três gráficos; mensagens posicionadas antes dos gráficos. Seleção 2025 atualizou alíquota para 27,76% e variação −3,11 p.p.; 9M2026 preserva 33,10% e +5,62 p.p. Estoque e DIP mantêm datas próprias.
+- Card DIP: R$7.709,5 mi derivados da soma anual; modal mostrou origem, conversão, fórmula e limites. Links internos para diagnóstico/cenários e links de fontes conferidos no DOM.
+- CSV executivo baixado pelo navegador após seleção 9M2026. Formatação/segurança CSV coberta pelos testes existentes; exportação ampliada com alíquota, estoque e DIP.
+- Desktop1366 inspecionado; viewport1920: cinco colunas, sem overflow nos cards. Móvel390: cinco cards e três gráficos, largura útil375 e conteúdo375, sem rolagem horizontal. Impressão: estilo aplicado, navegação oculta, mensagens em coluna e conteúdo preservado; não equivale a teste físico de impressora.
+- Regressão funcional: prazo proposto de6 meses refletido no BC01 (principal50, prazo24→6, custo0,5 e taxa12%): benefício incremental em VP R$6,886 mi.
+- Sobre: textos de independência e IA presentes; avisos anteriores preservados. README e rótulos estratégicos revisados. Nenhum módulo ou simulador novo.
+- Limites: validação em navegador Chromium remoto e viewport emulado; Safari/Firefox, dispositivo físico e impressão física não comprovados.

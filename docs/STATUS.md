@@ -28,3 +28,12 @@ Leituras complementares adicionadas ao final de Fontes e metodologia: artigo de 
 
 
 Menu Sobre acrescentado como último item: resumo do projeto, tecnologias, © 2026 e links distintos para aplicação e repositório. Não exibe exportação CSV. Indicadores e simuladores preservados.
+
+
+## V2.1.1 — refinamento executivo
+
+Linha de base recuperável: `a615259a18b0ab3dd08f0bd205c0a9bdd49ed277`; desenvolvimento isolado em `v2-1-1-refinamento`. A publicação estável foi preservada durante a validação.
+
+Antes: quatro indicadores, mensagens após gráficos e descrição tecnológica restritiva. Depois: cinco indicadores (DIP calculado e com explicação), três mensagens estratégicas antes dos gráficos, dois caminhos de aprofundamento, README atualizado e Sobre com independência e uso de IA. Mesmos dados financeiros, fórmulas, gráficos, fontes e simuladores. CSV executivo inclui alíquota, créditos e DIP com seus próprios períodos e unidades.
+
+Testes e revisão documental registrados em TESTES_V2.md e METODOLOGIA.md. Rollback: reverter o merge da V2.1.1 por novo commit, ou construir a linha de base indicada, sem force push. Não republicar documentos de planejamento removidos. Limites de fontes, simulação econômica e navegadores da V2.1 permanecem. Sem contratação de serviços ou alteração de URL.

@@ -1,4 +1,4 @@
-# Inteligência Tributária — V2.1
+# Inteligência Tributária — V2.1.1
 
 Planejamento estratégico e eficiência fiscal. Estudo independente aplicado a uma empresa ferroviária, sem vínculo institucional. Dados públicos e simulações identificadas; sem dados internos ou promessa de economia.
 
@@ -6,7 +6,7 @@ Acesso público: https://alvarobonifacio1980.github.io/inteligencia-tributaria/
 
 ## Produto
 
-Cinco módulos: visão executiva, diagnóstico, eficiência, reforma tributária e cenários/projetos. Fontes e metodologia transversais. Filtros temporais coerentes, composição de créditos, reconciliação de IRPJ/CSLL, simuladores de antecipação, parcelamento de ICMS, CAPEX/REIDI/REPORTO e sensibilidade ao consumo, fichas de business case, CSV e impressão da página selecionada.
+Cinco módulos: visão executiva, diagnóstico, eficiência, reforma tributária e cenários/projetos. Fontes e metodologia transversais e menu Sobre com informações do projeto. Filtros temporais coerentes, composição de créditos, reconciliação de IRPJ/CSLL, simuladores de antecipação, parcelamento de ICMS, CAPEX/REIDI/REPORTO e sensibilidade ao consumo, fichas de business case, CSV e impressão da página selecionada.
 
 ## Execução
 
@@ -37,7 +37,7 @@ DFP Empresa Ferroviária 2025 (comparativo 2024), ITR 3T2026 (comparativo 9M2025
 
 ## Limitações
 
-ANTT sem integração validada; indicadores operacionais publicados pela empresa como alternativa identificada. DIRBI 2024 integrada, sem equiparar declaração a caixa. REIDI/REPORTO com simulação condicional, sem afirmar elegibilidade de aquisição real. Simulador de reforma é sensibilidade econômica simplificada, com substituição federal e transição estadual/municipal explícitas, não cálculo legal de recolhimento. Sem projeções de margem/EBITDA nem economia atribuída à Empresa Ferroviária. Não há Power BI, PowerPoint ou conversores.
+ANTT sem integração validada; indicadores operacionais publicados pela empresa como alternativa identificada. DIRBI 2024 integrada, sem equiparar declaração a caixa. REIDI/REPORTO com simulação condicional, sem afirmar elegibilidade de aquisição real. Simulador de reforma é sensibilidade econômica simplificada, com substituição federal e transição estadual/municipal explícitas, não cálculo legal de recolhimento. Sem projeções de margem/EBITDA nem economia atribuída à Empresa Ferroviária. A arquitetura utiliza Python, React, HTML/CSS e Apache ECharts, permitindo acesso público sem dependência de licenciamento corporativo. O modelo de dados, os indicadores e as visualizações podem servir como referência para uma futura implementação em plataformas corporativas de Business Intelligence, como o Power BI.
 
 Consulte [status](docs/STATUS.md), [backlog](docs/BACKLOG.md), [testes](docs/TESTES.md), [metodologia](docs/METODOLOGIA.md).
 

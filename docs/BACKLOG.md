@@ -30,3 +30,8 @@ CI da branch, coleta online, desktop1366, responsividade móvel, estilo de impre
 ## Fora do escopo
 
 Power BI, PowerPoint/conversores, SAP real, banco, login, ML, API de IA, benchmark amplo e apuração por documento. Sem serviços pagos ou novo módulo principal.
+
+
+## Refinamento V2.1.1
+
+Concluídos: hierarquia executiva, indicador DIP, links de decisão, linguagem estratégica, README, Sobre/IA e revisão documental. Evidências em TESTES_V2.md e METODOLOGIA.md. Escopo de refinamento encerrado após validação e publicação, sem expansão funcional.

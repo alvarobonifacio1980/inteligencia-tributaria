@@ -59,3 +59,15 @@ Riscos: provisão/provável dentro do total; possível de setembro derivado de t
 Reforma visível: pleno 2033, sem CAPEX ou regimes no agregado. Referências manuais são sintéticas; origem pública permanece híbrida enquanto vinculada. Ao editar valor, remover vínculo e fonte atribuída a ele. Custos contábeis não são elegibilidade; grupos e requisitos em detalhe. Contratos normalizados são uma alternativa de sensibilidade, não uma nova parcela a somar.
 
 CSV de contexto: UTF-8 BOM, separador ponto e vírgula, decimal com vírgula; textos iniciados por caracteres de fórmula são protegidos. Simuladores exportam premissas/resultados e unidades. Campos inválidos conservam o último valor válido com aviso; vazio não é convertido em zero. Impressão mantém inputs e estado atual.
+
+
+## Revisão documental V2.1.1 — 27/11/2026
+
+Consulta aos textos oficiais; revisão objetiva dos temas usados, sem auditoria jurídica integral. Não houve divergência que exigisse alterar fórmulas econômicas. Aprimorados os limites e localizadores:
+
+- [LC227](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp227.htm), arts.132–140: saldo de31/12/2032, homologação e segregação. Ativo permanente segue prazo remanescente; demais créditos,240 parcelas de compensação IBS. Ressarcimento por impossibilidade de compensação, até90 dias após o mês correspondente; transferência/pagamento condicionados à regularidade. O modelo simplificado não reproduz o rito, IPCA ou datas reais de ressarcimento.
+- [LC214 compilada](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214compilado.htm): art.11,VII para destino da carga; arts.47–56 para crédito segregado, requisitos/exceções; arts.105–108 para REPORTO/REIDI/bens de capital; arts.343–348 para transição. Mantidas condições de habilitação, destinação e prazo; sem enquadramento automático do DIP.
+- [Decreto12.955 atualizado](https://www2.camara.leg.br/legin/fed/decret/2026/decreto-12955-29-abril-2026-799019-normaatualizada-pe.html): regulamento CBS; art.619 distingue efeitos imediatos/diferidos. Publicação não prova implantação universal.
+- [Avisos SVRS](https://dfe-portal.svrs.rs.gov.br/Cte/Avisos/3021): referência verificada substitui busca genérica. Comunicado12/11/2026 anuncia produção da NT CT-e2026.004 v1.01 para14/12/2026; homologação é etapa distinta. Comunicado02/03/2026 mantém caráter preparatório dos campos split payment em2026; não presume obrigatoriedade universal.
+
+Consulta documental separada da coleta automatizada de dados: indisponibilidade eventual de download não comprova incorreção legal. Vigência e operação concreta exigem nova validação na implantação.
