@@ -1,13 +1,13 @@
 {
   "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/",
   "status": 200,
-  "sans_auth": true,
+  "sem_autenticacao": true,
   "verificacao": "urllib sem cookies, Authorization ou sessão GitHub",
   "recursos": [
     {
-      "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/assets/index-7MZDdVry.js",
+      "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/assets/index-PaZkRdVv.js",
       "status": 200,
-      "bytes": 771158
+      "bytes": 771754
     },
     {
       "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/assets/index-D--oqlCJ.css",
@@ -17,8 +17,7 @@
     {
       "url": "https://alvarobonifacio1980.github.io/inteligencia-tributaria/data/painel.json",
       "status": 200,
-      "bytes": 5150
+      "bytes": 6257
     }
-  ],
-  "tempo_total_s": 23.06
+  ]
 }

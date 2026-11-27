@@ -13,9 +13,9 @@
 - Chrome: navegação até cenários, principal 50→0 resultou em benefício R$ -0,5 mi (custo inicial), sem quebra.
 - Responsividade: iframe de 390 × 844 (375 px úteis com scrollbar), desktop cloud browser. Captura visual inspecionada; menu e conteúdo legíveis. `scrollWidth=clientWidth=375` na visão executiva e em cenários. Não equivale a teste em aparelho físico.
 
-## Ainda em execução
+## Limites de cobertura
 
-Publicação Actions/Pages e teste HTTP anônimo. Não foi medida meta universal de 3 s; nenhum teste Safari/Firefox ou celular físico é alegado.
+Não foi comprovada a meta de carregamento inicial de 3 s; nenhum teste Safari/Firefox ou celular físico é alegado. Publicação e acesso sem autenticação foram concluídos conforme registros abaixo.
 
 ## Publicação verificada
 
@@ -24,3 +24,9 @@ Publicação Actions/Pages e teste HTTP anônimo. Não foi medida meta universal
 - GET sem cookies, Authorization ou sessão GitHub: HTML, JS, CSS e JSON retornaram HTTP 200; evidência em `HTTP_PUBLICO.json`. Tempo total dos quatro requests sequenciais ~23 s no ambiente remoto; não é medida de carregamento do navegador ou comprovação da meta de 3 s.
 - Navegador na URL publicada: cinco módulos + fontes abriram com título correto; sem login/cadastro. Console consultado: mensagens de erro observadas pertenciam à extensão do navegador, não à origem da aplicação.
 - Fonte adicional: extração estrutural reproduzida em `data/extracao_validada.json`: 4 períodos de receitas e 3 datas de composição de créditos.
+
+## Validação final em nuvem
+
+- Run coleta `46021113127`: concluído com sucesso, incluindo download de PDFs, extração estrutural, validação, conciliação CVM/Pandas, testes Python e artifact de evidências.
+- Build/deploy do commit `35c58b6`: aprovado (workflow #2).
+- Na versão publicada: botão de 10% do ICMS mudou a natureza para Híbrido e principal para R$ 27,8 mi; restauração recuperou o exemplo de R$ 50 mi e benefício de R$ 4,3 mi.

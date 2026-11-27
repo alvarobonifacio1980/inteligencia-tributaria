@@ -8,7 +8,7 @@
 - [x] Cinco módulos, fontes, filtros suportados, simuladores, reset e business cases.
 - [x] Testes analíticos Python/JS e build.
 - [x] Navegador desktop; viewport móvel por iframe 390 × 844, sem overflow na visão executiva e cenários.
-- [x] Workflows de build/deploy e coleta manual preparados.
+- [x] Workflows de build/deploy e coleta manual executados e aprovados no GitHub Actions.
 
 ## Gate de publicação
 

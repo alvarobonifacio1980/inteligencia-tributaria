@@ -4,6 +4,7 @@
 |---|---|---|
 | MRS DFP 2025 | PDF baixado, texto inspecionado, hash e âncoras; tabelas extraídas e conciliadas | Notas 10/25/29/33; comparativo 2024 |
 | MRS ITR 3T26 | PDF baixado, texto inspecionado, hash e âncoras; tabelas extraídas e conciliadas | Nota 9/27; dados de setembro e 9 meses |
+| Excel RI MRS | XLSX válido, seis abas inspecionadas: Índice, Demonstração de Resultados, Endividamento, Resultados Financeiros, Resultados Operacionais e Outros Resultados; valores gerenciais em R$ mi | Fonte complementar; não misturar linhas gerenciais com DRE estatutária sem conciliar |
 | CVM DFP 2025 | ZIP obtido; Pandas; CNPJ, escopo, última versão, moeda/unidade e 4 contas conciliadas | CSV apenas MRS e relatório de conciliação |
 | Receita Federal reforma | Página oficial aberta e cronograma conferido | Timeline 2026–2033; condições de teste explícitas |
 | LC 214 compilada | Texto oficial aberto por pesquisa; coleta direta não concluída | Art.11 VII e regras gerais de créditos; regulamentação operacional não auditada integralmente |

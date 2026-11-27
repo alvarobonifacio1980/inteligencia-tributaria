@@ -11,8 +11,12 @@ Entrega com limitações explícitas; não representa conclusão integral das fo
 05–07: seis páginas incluindo fontes, dois simuladores, business cases, impressão e CSV. REIDI qualitativo por insuficiência de prova de elegibilidade.
 08: 10 testes aprovados, build e navegador desktop/mobile verificados. Evidências em TESTES.md.
 09: Actions/Pages publicados. Deploy inicial corrigido após ativação do Pages. HTML/JS/CSS/JSON com HTTP 200 sem cookies ou autenticação; módulos conferidos no navegador.
-10: README, metodologia, backlog e roadmap disponíveis. Gate de URL pública atendido. Consolidação final da documentação e nova validação do workflow de coleta em execução.
+10: README, metodologia, backlog e roadmap disponíveis. Gate de URL pública atendido. Documentação consolidada e workflow de coleta aprovado em nuvem (run 46021113127). Build/deploy da versão 35c58b6 aprovados; versão publicada conferida no navegador.
 
 Sem contratação, trials, cartão ou serviços pagos. Nenhuma mensagem à recrutadora/MRS; nenhum outro repositório alterado.
 
 Atualização: extração estrutural dos PDFs acrescentada; 4 períodos de receitas e 3 datas de créditos conciliados antes de publicar. Cenário que usa 10% do saldo público é identificado como híbrido.
+
+Excel RI inspecionado: seis abas, unidade R$ milhões. Não utilizado como substituto da DRE estatutária; conceitos gerenciais exigem conciliação.
+
+Gate final: demonstração pronta para avaliação. Permanecem limitações listadas em BACKLOG.md e FONTES_STATUS.md; nenhuma intervenção técnica do patrocinador foi necessária. Atualizações futuras de dados/legislação requerem revisão dos mapeamentos e premissas, preservando o último snapshot válido.
