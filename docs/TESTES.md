@@ -55,3 +55,7 @@ Não foi comprovada a meta de carregamento inicial de 3 s; nenhum teste Safari/F
 - Coleta recuperada aprovada: [run 46041005921](https://github.com/alvarobonifacio1980/inteligencia-tributaria/actions/runs/46041005921). PDFs, CVM anual e ampliada, testes Python e artefato de evidências concluídos. DIRBI explicitamente preservada do snapshot revisado por indisponibilidade TLS, conforme aviso do job; não houve download novo dessa fonte no runner.
 - Caminho de leitura integral DIRBI reproduzido localmente com o script final e arquivo oficial completo em cache; executado com sucesso. Caminho de indisponibilidade também testado localmente e confirmado na nuvem.
 - Documentação final, dicionário, fórmulas, backlog e estado de fontes atualizados. Sem modificação em outros repositórios, custo ou contato externo.
+
+## Verificação V2.1.1
+
+27/11/2026: `npm test` 23/23 e `python -m unittest discover -s tests -p 'test_*.py'` 16/16 aprovados; `npm run build` aprovado. Validação da base por `python scripts/coletar.py --offline`. Tentativas de inspeção visual: Playwright sem executável instalado, wrapper Chromium sem binário; download oficial retorna 403. Browser remoto não alcança servidor local. Pendente: desktop/móvel, filtros/insights no navegador, links por clique, CSV e impressão. Gate de publicação não aprovado enquanto pendentes.
