@@ -16,3 +16,11 @@
 ## Ainda em execução
 
 Publicação Actions/Pages e teste HTTP anônimo. Não foi medida meta universal de 3 s; nenhum teste Safari/Firefox ou celular físico é alegado.
+
+## Publicação verificada
+
+- Actions run `46020318841`: validação aprovada. Deploy inicial falhou 404 porque Pages ainda não estava habilitado; configuração ativada e job reexecutado com sucesso (`140578704982`).
+- URL: https://alvarobonifacio1980.github.io/inteligencia-tributaria/
+- GET sem cookies, Authorization ou sessão GitHub: HTML, JS, CSS e JSON retornaram HTTP 200; evidência em `HTTP_PUBLICO.json`. Tempo total dos quatro requests sequenciais ~23 s no ambiente remoto; não é medida de carregamento do navegador ou comprovação da meta de 3 s.
+- Navegador na URL publicada: cinco módulos + fontes abriram com título correto; sem login/cadastro. Console consultado: mensagens de erro observadas pertenciam à extensão do navegador, não à origem da aplicação.
+- Fonte adicional: extração estrutural reproduzida em `data/extracao_validada.json`: 4 períodos de receitas e 3 datas de composição de créditos.

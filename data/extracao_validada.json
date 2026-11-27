@@ -1,0 +1,51 @@
+{
+  "financeiro": [
+    {
+      "periodo": "2024",
+      "bruta": 7484.648,
+      "impostos": 459.675,
+      "liquida": 7024.973
+    },
+    {
+      "periodo": "2025",
+      "bruta": 8054.851,
+      "impostos": 469.793,
+      "liquida": 7585.058
+    },
+    {
+      "periodo": "9M2025",
+      "bruta": 5988.509,
+      "impostos": 351.978,
+      "liquida": 5636.531
+    },
+    {
+      "periodo": "9M2026",
+      "bruta": 5964.721,
+      "impostos": 351.189,
+      "liquida": 5613.532
+    }
+  ],
+  "creditos": [
+    {
+      "data": "31/12/2024",
+      "pis": 161.825,
+      "irrf": 115.312,
+      "outros": 0.671,
+      "icms": 188.852
+    },
+    {
+      "data": "31/12/2025",
+      "pis": 96.173,
+      "irrf": 68.792,
+      "outros": 0.779,
+      "icms": 222.207
+    },
+    {
+      "data": "30/09/2026",
+      "pis": 129.005,
+      "irrf": 146.391,
+      "outros": 0.772,
+      "icms": 277.596
+    }
+  ]
+}

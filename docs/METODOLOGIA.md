@@ -34,7 +34,7 @@ Textos oficiais consultados por pesquisa e abertura em 27/11/2026. Coleta direta
 
 ## Fontes complementares
 
-ANTT CSV candidato retornou HTML “Request Rejected”, não CSV, em 27/11/2026. Portaria REIDI candidata retornou HTML, não PDF. Não processar resposta como dado válido. DIRBI: registrar resultado em inventário. Sem inferência de tributação individual por rota, regime ou CNPJ na ausência de base validada.
+ANTT CSV candidato retornou HTML “Request Rejected”, não CSV, em 27/11/2026. Download direto da Portaria REIDI retornou HTML; consulta web oficial permitiu conferir a Portaria 779/2023 e a tabela histórica de estimativas. Valores históricos de investimento R$ 8.732.177.921,82 e suspensões R$ 807.726.457,77, nunca realização. O portal lista Portaria 841/2024; vigência/alterações e elegibilidade por bem ainda exigem validação. Não processar resposta como dado válido. DIRBI: download resultou em arquivo de 2.621.440 bytes sem diretório ZIP válido; página oficial informa ~19.665 KB. Não utilizar arquivo parcial. Sem inferência de tributação individual por rota, regime ou CNPJ na ausência de base validada.
 
 ## Preservação
 

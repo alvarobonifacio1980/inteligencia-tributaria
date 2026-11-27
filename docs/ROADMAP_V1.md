@@ -246,3 +246,9 @@ Interromper para decisão apenas em: possível custo/contratação; autenticaç�
 MVP pronto quando: URL pública verificada (ou bloqueio real explicitado); cinco módulos enxutos com funções essenciais; dados oficiais conferidos e fontes navegáveis; cenários interativos e classificados; reforma com regras verificadas; business cases sem falsa precisão; aparência profissional alinhada à MRS; testes relevantes executados; README/status/roadmap atualizados; ausência de custos, segredos ou falsa afiliação. Caso alguma fonte complementar falhe, reduzir dependência sem inventar dados. Se uma entrega essencial não for viável, indicar claramente a lacuna e não chamar o produto de completo.
 
 Fora do escopo inicial: Power BI/PBIX/PBIP, conversor, PPTX, login, banco remoto, SAP/ERP, microsserviços, API de IA, chatbot, ML, dados em tempo real, benchmark amplo, scraping sem autorização, auditoria/parecer fiscal, contato com recrutadora. A qualidade da apresentação decorre das evidências e da decisão de negócio, não do número de tecnologias.
+
+
+---
+## Registro de execução — 27/11/2026
+
+Planejamento original preservado acima. A versão demonstrativa foi implementada e publicada: https://alvarobonifacio1980.github.io/inteligencia-tributaria/ . Estado detalhado em STATUS.md, backlog em BACKLOG.md, inventário em FONTES_STATUS.md e testes em TESTES.md. Etapas 00–10 executadas no escopo validado, com ressalvas de ANTT/DIRBI, histórico inicial reduzido, REIDI/REPORTO sem quantificação atual e reforma como sensibilidade simplificada. Não declarar cobertura integral das fontes/regras pendentes.

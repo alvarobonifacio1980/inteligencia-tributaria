@@ -20,6 +20,7 @@ jobs:
         with:
           name: evidencias-coleta
           path: |
+            data/extracao_validada.json
             data/coletas.json
             data/conciliacao_cvm.json
             data/cvm_mrs_2025.csv

@@ -32,7 +32,10 @@ def validar(d):
  assert d['reconciliacao']['nominal']+sum(d['reconciliacao']['ajustes'].values())==597705
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');a=p.parse_args()
- if not a.offline:coletar()
+ if not a.offline:
+  coletar()
+  from extrair import executar
+  executar()
  d=json.loads((ROOT/'data/base_revisada.json').read_text());validar(d)
  # Apenas após validação integral, substitui a base de publicação.
  dest=ROOT/'public/data/painel.json';temp=dest.with_suffix('.tmp');temp.write_text(json.dumps(d,ensure_ascii=False,indent=2));temp.replace(dest)

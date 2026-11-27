@@ -2,6 +2,8 @@
 
 Planejamento estratégico e eficiência fiscal. Estudo independente da MRS Logística, sem vínculo institucional. Dados públicos e simulações identificadas; sem dados internos ou promessa de economia.
 
+Acesso público: https://alvarobonifacio1980.github.io/inteligencia-tributaria/
+
 ## Produto
 
 Cinco módulos: visão executiva, diagnóstico, eficiência, reforma tributária e cenários/projetos. Fontes e metodologia transversais. Filtros temporais coerentes, composição de créditos, reconciliação de IRPJ/CSLL, simuladores de antecipação e de sensibilidade ao consumo, fichas de business case, CSV e impressão da página selecionada.
@@ -13,7 +15,7 @@ Node 24; Python 3.12; `pdftotext` (poppler-utils). Dependências gratuitas e ver
 ```sh
 npm ci
 python -m pip install -r requirements.txt
-python scripts/coletar.py           # baixa PDFs e valida âncoras; conserva base se falhar
+python scripts/coletar.py           # baixa PDFs e valida âncoras e tabelas; conserva base se falhar
 python scripts/cvm.py               # conciliação por CNPJ/conta com Pandas
 python -m unittest discover -s tests -p 'test_*.py'
 npm test

@@ -12,13 +12,13 @@
 
 ## Gate de publicação
 
-- [ ] Versionar implementação, executar Actions e ativar GitHub Pages.
-- [ ] Verificar URL pública sem autenticação e registrar evidências.
+- [x] Versionar implementação, executar Actions e ativar GitHub Pages.
+- [x] Verificar URL pública sem autenticação e registrar evidências.
 
 ## Limitações aceitas de escopo por falta de evidência
 
 - [ ] ANTT: fonte candidata retornou HTML de rejeição; procurar dataset oficial alternativo.
-- [ ] REIDI/REPORTO: validar portaria e elegibilidade; manter ficha qualitativa.
+- [ ] REIDI/REPORTO: estimativas históricas da Portaria 779/2023 confirmadas; validar atos posteriores e elegibilidade antes de quantificar benefício atual.
 - [ ] DIRBI: obter arquivo utilizável e confirmar cobertura/CNPJ.
 - [ ] 2022–2023: ampliar após conciliação; não preencher lacunas sinteticamente.
 - [ ] Alíquota efetiva 9M: disponível somente após conciliação; interface mostra indisponível.

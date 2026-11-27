@@ -25,6 +25,26 @@
       "unidade": "R$ mil na fonte; R$ milhões no painel"
     },
     {
+      "id": "cvm",
+      "nome": "CVM — DFP 2025",
+      "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+      "localizador": "DRE consolidada contas 3.01, 3.07, 3.08; BPA 1.01.06; CVM 017949, CNPJ 01.417.222/0001-77",
+      "natureza": "Real",
+      "periodo": "31/12/2025",
+      "escopo": "Consolidado",
+      "unidade": "R$ mil na fonte"
+    },
+    {
+      "id": "reidi",
+      "nome": "Ministério dos Transportes — REIDI MRS",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/incentivos/incentivos-fiscais/reidi-requerimento-e-consulta/Portarian779de03ago2023MRSLogsticaREIDIDOU04ago2023.pdf",
+      "localizador": "Portaria MT 779/2023, anexo: estimativas de investimento e suspensões; histórico oficial também lista Portaria 841/2024, cuja relação deve ser validada antes de aplicação",
+      "natureza": "Real — estimativa oficial",
+      "periodo": "Aprovação original 2023; não é realização",
+      "escopo": "Projeto Malha Sudeste — Fase 2",
+      "unidade": "R$ na portaria; R$ mi no painel"
+    },
+    {
       "id": "lc214",
       "nome": "LC 214/2025 — texto compilado",
       "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214compilado.htm",
@@ -38,7 +58,7 @@
       "id": "lc227",
       "nome": "LC 227/2026 — IBS e transição",
       "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp227.htm",
-      "localizador": "Disposições sobre saldos credores de ICMS; conferir homologação e hipóteses",
+      "localizador": "Arts. 136–140: saldos ICMS; art. 137 II e art. 139: 240 parcelas nas hipóteses legais",
       "natureza": "Regra legal",
       "periodo": "Verificação em 27/11/2026",
       "escopo": "Brasil",
@@ -165,7 +185,7 @@
   "limitacoes": [
     "Histórico financeiro inicial 2024–2025 e 9M2025–9M2026; 2022–2023 pendentes de conciliação.",
     "Créditos são estoques; não representam economia nova nem disponibilidade imediata.",
-    "ANTT, DIRBI e séries CVM: integração complementar em validação; nenhum dado dessas fontes é presumido.",
+    "CVM DFP 2025: receita, LAIR, IR/CS e créditos circulantes conciliados com RI. ANTT/DIRBI sem integração válida.",
     "Simulador da reforma é uma sensibilidade econômica simplificada: não apura tributos de operações reais.",
     "Legislação consultada em 27/11/2026; elegibilidade e execução dependem de validação fiscal e jurídica."
   ]
