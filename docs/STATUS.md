@@ -21,3 +21,5 @@ Integração aprovada via PR1; commit de release a23e86bf5f3c17d55a907732343b790
 V2.1.0 publicada e verificada. Release `a23e86bf5f3c17d55a907732343b790078ae7d4d`; run `46047253655` aprovado. Mesma URL pública, sem autenticação. Testes:39 (23 JS +16 Python); build, coleta online, inspeção visual/funcional, CSV e impressão conforme TESTES_V2.md. HTTP público e comparação dos assets em HTTP_PUBLICO_V2.json.
 
 Pronta para avaliação gerencial, observados os limites de dados e simulação. Permanecem ANTT sem integração validada, comparação com sustentabilidade bloqueada por403, elegibilidade/operações internas não disponíveis e ausência de teste físico/Safari/Firefox. Captura1920 limitada por timeout; layout1366 e móvel inspecionados. Nenhum custo de infraestrutura contratado.
+
+Ajuste visual: seleção de período da visão executiva convertida em botões com fundo azul-escuro e seleção amarela. Períodos derivados dos dados e comparação existente preservados. Desktop e viewport móvel390 conferidos;375/375 sem overflow. Build aprovado; publicação automática pelo workflow existente.
