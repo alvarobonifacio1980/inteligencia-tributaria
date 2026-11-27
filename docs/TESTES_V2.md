@@ -33,3 +33,14 @@ DFC consolidada ITR p.30 (não p.28, que é controladora); DVA ITR p.33 (não p.
 Desktop 1366/1920, estilo de impressão, CSV efetivamente baixado, desempenho, CI da branch e acesso público após deploy: registros acrescentados conforme verificação; não presumir aprovação por implementação.
 
 Sem teste em Safari/Firefox ou dispositivo físico; não se alega auditoria integral de operações reais.
+
+## Verificações complementares
+
+- Desktop equivalente 1366×768 por iframe: captura inspecionada, cards e fontes legíveis; largura útil 1351 px sem overflow. 1920×1080: layout renderizado com largura útil/scroll 1905/1905; a captura de tela ampla falhou por timeout do serviço mesmo na tentativa com recorte. Não se alega inspeção visual integral dessa captura; limitação não afeta o layout 1366 ou móvel conferidos.
+- Medição no Chrome local: atributo data-ready-ms = 269 ms após navegação no iframe, usando performance.now() até dois frames após leitura da base. É condição local sem estrangulamento e não garantia de 3 s em rede pública. Medição após deploy registrada separadamente.
+- CSV de CAPEX efetivamente baixado pelo navegador. Fórmulas, unidade e proteção de texto testadas em JS; download preserva premissas e resultados do cenário ativo.
+- Estilo de impressão aplicado pelo harness de QA: inputs continuaram visíveis (display grid), valores 1086.252267 / 50 / 10 / 80 / 12 / 6 / 10 / 0 preservados; resultado, unidade e fonte visíveis em captura. Não se alega PDF paginado em impressora física. Natureza recebe rótulo próprio para impressão.
+- Contratos: entrada referência 12/pleno8 exibiu Δ−4 e residual−2 no compartilhamento de 50%; 100% zerou o residual. BC03 aberto exibiu o mesmo ganho 1,928 mi do cenário CAPEX da sessão, com hipóteses e fonte.
+- Teclado de subabas, hash e retorno testados. Console da origem da aplicação sem erros nos logs consultados; mensagens de extensão separadas.
+
+- CI isolada run 46045850771: validação aprovada, publicação ignorada por branch; V1 permaneceu no ar. Coleta run 46045918452 falhou antes dos scripts por HTTP 403 do repositório Microsoft na imagem ubuntu-latest 26.04. Corrigido para imagem estável ubuntu-24.04 e instalação de Poppler somente se ausente; sem desativar assinaturas ou certificados.
