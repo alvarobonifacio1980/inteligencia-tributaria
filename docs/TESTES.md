@@ -54,4 +54,4 @@ Não foi comprovada a meta de carregamento inicial de 3 s; nenhum teste Safari/F
 - Build/deploy final aprovado: [run 46040961358](https://github.com/alvarobonifacio1980/inteligencia-tributaria/actions/runs/46040961358), commit 2cfed46.
 - Coleta recuperada aprovada: [run 46041005921](https://github.com/alvarobonifacio1980/inteligencia-tributaria/actions/runs/46041005921). PDFs, CVM anual e ampliada, testes Python e artefato de evidências concluídos. DIRBI explicitamente preservada do snapshot revisado por indisponibilidade TLS, conforme aviso do job; não houve download novo dessa fonte no runner.
 - Caminho de leitura integral DIRBI reproduzido localmente com o script final e arquivo oficial completo em cache; executado com sucesso. Caminho de indisponibilidade também testado localmente e confirmado na nuvem.
-- Documentação final, dicionário, fórmulas, roadmap, backlog e estado de fontes atualizados. Sem modificação em outros repositórios, custo ou contato externo.
+- Documentação final, dicionário, fórmulas, backlog e estado de fontes atualizados. Sem modificação em outros repositórios, custo ou contato externo.

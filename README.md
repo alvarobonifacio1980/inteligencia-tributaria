@@ -33,16 +33,16 @@ GitHub Pages a partir de GitHub Actions, repositório público, runners padrão 
 
 ## Dados
 
-DFP Empresa Ferroviária 2025 (comparativo 2024), ITR 3T2026 (comparativo 9M2025), CVM DFP 2023/2025, ITR 2026 e DIRBI 2024. Histórico 2022–2023 segregado como controladora; demais dados financeiros consolidados., valores normalizados em R$ milhões; precisão de R$ mil nos arquivos. Fontes e localizadores em `data/base_revisada.json`, hashes em `data/coletas.json`, conciliação em `data/conciliacao_cvm.json`.
+DFP Empresa Ferroviária 2025 (comparativo 2024), ITR 3T2026 (comparativo 9M2025), CVM DFP 2023/2025, ITR 2026 e DIRBI 2024. Histórico 2022–2023 segregado como controladora; demais dados financeiros consolidados, valores normalizados em R$ milhões; precisão de R$ mil nos arquivos. Fontes e localizadores em `data/base_revisada.json`, hashes em `data/coletas.json`, conciliação em `data/conciliacao_cvm.json`.
 
 ## Limitações
 
 ANTT sem integração validada; indicadores operacionais publicados pela empresa como alternativa identificada. DIRBI 2024 integrada, sem equiparar declaração a caixa. REIDI/REPORTO com simulação condicional, sem afirmar elegibilidade de aquisição real. Simulador de reforma é sensibilidade econômica simplificada, com substituição federal e transição estadual/municipal explícitas, não cálculo legal de recolhimento. Sem projeções de margem/EBITDA nem economia atribuída à Empresa Ferroviária. Não há Power BI, PowerPoint ou conversores.
 
-Consulte [status](docs/STATUS.md), [backlog](docs/BACKLOG.md), [testes](docs/TESTES.md), [metodologia](docs/METODOLOGIA.md) e [roadmap original](docs/ROADMAP_V1.md).
+Consulte [status](docs/STATUS.md), [backlog](docs/BACKLOG.md), [testes](docs/TESTES.md), [metodologia](docs/METODOLOGIA.md).
 
 Coleta ampliada: hashes e conciliação em `data/conciliacao_expandida.json`; base complementar em `data/complementos_revisados.json`. O workflow manual gera artefato revisável; não faz commit automático. `scripts/preparar_base.py` apenas valida a base canônica, evitando regressão. Regras e fórmulas: [REGRAS_E_CENARIOS.md](docs/REGRAS_E_CENARIOS.md).
 
 Se o portal DIRBI bloquear o runner, o workflow usa `--permitir-snapshot-dirbi`: mantém os registros de 2024 já revisados, emite aviso e registra reutilização/motivo com o hash e a data da coleta original. Não declara download novo. As fontes CVM continuam conciliadas; divergências contábeis ou arquivo DIRBI válido porém incoerente interrompem a execução. Execução direta sem essa opção permanece estrita.
 
-V2.1: DVA/DFC, compensações, riscos recentes, DIR/DIP, comparações recentes, subabas/hash, cenários CAPEX/contratos e business cases ligados aos cálculos. Ver [confronto requisito a requisito](docs/ACEITE_V2.md), [testes V2](docs/TESTES_V2.md) e [roadmap publicável](docs/ROADMAP_V2_1.md). Sem novo módulo principal ou mudança de URL. A biblioteca anterior permanece testada; a interface da reforma privilegia regime pleno, com CAPEX independente.
+V2.1: DVA/DFC, compensações, riscos recentes, DIR/DIP, comparações recentes, subabas/hash, cenários CAPEX/contratos e business cases ligados aos cálculos. Ver [confronto requisito a requisito](docs/ACEITE_V2.md), [testes V2](docs/TESTES_V2.md). Sem novo módulo principal ou mudança de URL. A biblioteca anterior permanece testada; a interface da reforma privilegia regime pleno, com CAPEX independente.

@@ -2,7 +2,7 @@ import test from'node:test';import assert from'node:assert/strict';import{readFi
 import{capexPrazo,contrato,sensibilidadeCBS,credito}from'../src/calculos.mjs';
 import{campoNumero,natureza,ponte,cascata,csv,aliquota,defaults}from'../src/modelo.mjs';
 const fix=JSON.parse(readFileSync(new URL('./fixtures_v2.json',import.meta.url)));
-test('CAPEX: fixture do roadmap e unidades',()=>{const r=capexPrazo(fix.capex.entrada);for(const k of ['base','tributo','recuperavel','vp','custoPrazo','naoRecuperavel'])assert.ok(Math.abs(r[k]-fix.capex[k])<1e-10,k)});
+test('CAPEX: fixture de referência e unidades',()=>{const r=capexPrazo(fix.capex.entrada);for(const k of ['base','tributo','recuperavel','vp','custoPrazo','naoRecuperavel'])assert.ok(Math.abs(r[k]-fix.capex[k])<1e-10,k)});
 test('CAPEX: zero prazo, taxa incidente e recuperação',()=>{const p=fix.capex.entrada;assert.equal(capexPrazo({...p,prazo:0}).custoPrazo,0);assert.equal(capexPrazo({...p,aliquota:0}).tributo,0);assert.equal(capexPrazo({...p,recuperacao:0}).custoPrazo,0);assert.equal(capexPrazo({...p,taxa:0}).bruto,0)});
 test('CAPEX: custo e piora de prazo preservam resultado negativo',()=>{const p=fix.capex.entrada;assert.ok(capexPrazo({...p,proposto:24}).beneficio<0);assert.ok(capexPrazo({...p,proposto:12,custo:1}).beneficio<0);assert.throws(()=>capexPrazo({...p,prazo:1.5}));assert.throws(()=>capexPrazo({...p,recuperacao:101}))});
 test('Contratos: repasse e compartilhamento com sinais consistentes',()=>{for(const f of fix.contratos)assert.equal(contrato(f.entrada).residual,f.residual);assert.throws(()=>contrato({base:0,referencia:8,novo:12,repasse:50}));assert.throws(()=>contrato({base:100,referencia:NaN,novo:12,repasse:50}))});
