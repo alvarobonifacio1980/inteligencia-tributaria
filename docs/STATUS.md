@@ -26,3 +26,7 @@ Gate final: demonstração pronta para avaliação. Permanecem limitações list
 Apresentação pública generalizada como Empresa Ferroviária; referências a estruturas internas substituídas por equipes responsáveis. Rótulos e documentação atualizados, com valores preservados e referências oficiais sem o nome da empresa nas URLs. A designação é editorial; os documentos de origem conservam sua identificação.
 
 Revisão ampliada: links com a identificação nominal foram substituídos por portais oficiais genéricos; documentos, números de atos e localizadores continuam registrados.
+
+## Fontes nos cards — 27/11/2026
+
+Os oito indicadores de valor exibem fonte clicável com documento/localizador, respeitando o período selecionado. Cards de insights financeiros e resultados dos simuladores também indicam sua origem; simulações apontam a metodologia, sem apresentá-las como fatos oficiais.
