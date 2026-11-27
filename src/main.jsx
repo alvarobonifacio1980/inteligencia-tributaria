@@ -17,7 +17,7 @@ function Panel({title,sub,children,tag='Real',source}){return <section className
 function Kpi({name,value,detail,tag='Real'}){return <article className="kpi"><div><span>{name}</span><Badge>{tag}</Badge></div><strong>{value}</strong><small>{detail}</small></article>}
 function Input({label,value,onChange,min=0,max=10000,step=1,suffix}){return <label className="field"><span>{label} <small>{suffix}</small></span><input type="number" min={min} max={max} step={step} value={value} onChange={e=>{let v=Number(e.target.value);onChange(Math.max(min,Math.min(max,v)))}}/></label>}
 function App(){const[d,setD]=useState(null),[page,setPage]=useState(0),[period,setPeriod]=useState('2025'),[trib,setTrib]=useState('Todos'),[c,setC]=useState({capital:50,atual:24,proposto:12,taxa:12,custo:.5}),[r,setR]=useState({receita:7585.058,custos:4000,elegibilidade:60,atual:8,cbs:9,ibs:18,ano:2033,repasse:50,prazo:3,taxa:12}),[error,setError]=useState(''),[creditRef,setCreditRef]=useState(false);
-useEffect(()=>{fetch('./data/painel.json').then(x=>{if(!x.ok)throw Error('Falha ao carregar base');return x.json()}).then(setD).catch(e=>setError(e.message))},[]);
+useEffect(()=>{fetch('./data/painel.json',{cache:'no-store'}).then(x=>{if(!x.ok)throw Error('Falha ao carregar base');return x.json()}).then(setD).catch(e=>setError(e.message))},[]);
 const changePage=i=>{setPage(i);window.scrollTo(0,0)};
 if(!d)return <main className="loading">{error||'Carregando inteligência tributária…'}</main>;
 const f=d.financeiro.find(x=>x.periodo===period),last=d.creditos.at(-1),prev=d.creditos.at(-2),sim=credito(c),rr=reforma(r),annual=period==='2024'||period==='2025',series=d.financeiro.filter(x=>x.grupo===f.grupo),delta=(last.total/prev.total-1)*100;
