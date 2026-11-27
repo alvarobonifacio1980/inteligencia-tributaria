@@ -23,3 +23,5 @@ V2.1.0 publicada e verificada. Release `a23e86bf5f3c17d55a907732343b790078ae7d4d
 Pronta para avaliação gerencial, observados os limites de dados e simulação. Permanecem ANTT sem integração validada, comparação com sustentabilidade bloqueada por403, elegibilidade/operações internas não disponíveis e ausência de teste físico/Safari/Firefox. Captura1920 limitada por timeout; layout1366 e móvel inspecionados. Nenhum custo de infraestrutura contratado.
 
 Ajuste visual: seleção de período da visão executiva convertida em botões com fundo azul-escuro e seleção amarela. Períodos derivados dos dados e comparação existente preservados. Desktop e viewport móvel390 conferidos;375/375 sem overflow. Build aprovado; publicação automática pelo workflow existente.
+
+Leituras complementares adicionadas ao final de Fontes e metodologia: artigo de gestão, Tax Summit, Brasil nos Trilhos e referências técnicas oficiais. Cada card informa contexto, evidência, limites e links. CSV do catálogo inclui as referências; cálculos e dados preservados.

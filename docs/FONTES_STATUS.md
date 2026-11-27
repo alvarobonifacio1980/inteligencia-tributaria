@@ -45,3 +45,9 @@ Hashes das três bases adicionais em `data/conciliacao_expandida.json`. Dados se
 - Relatório de sustentabilidade indicado: HTTP 403. DVA estatutária/CVM escolhida; comparação numérica não foi fabricada.
 
 Novos dados em base_revisada.json / v2; relatórios em conciliacao_v2.json. Coleta online com snapshot opcional explicitamente marcado quando fonte complementar estiver indisponível; divergência de conteúdo interrompe. Não se republicam PDFs ou planilhas integrais.
+
+## Leituras complementares — 27/11/2026
+
+Acrescentadas ao final de Fontes e metodologia, separadas dos dados dos indicadores: artigo institucional de gestão de24/11/2026; case anunciado na programação oficial do Tax Summit2026 (31/03–01/04); cobertura institucional de19/11/2026 confirmando participação no Brasil nos Trilhos2026; portais oficiais de marcos da Receita Federal e REIDI/Ministério dos Transportes. URLs exatas, contexto, evidência e limites em src/referencias.mjs.
+
+Programação de evento não foi tratada como prova de resultados ou maturidade. O fórum ferroviário é contexto setorial, não evidência de benefício tributário. Referências técnicas gerais não foram apresentadas como eventos com participação da empresa. Autoria e identificação preservadas nos sites originais; textos do painel genéricos.
