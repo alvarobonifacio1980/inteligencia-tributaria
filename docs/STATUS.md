@@ -40,3 +40,9 @@ Identificação Adaptado abre janela modal com origem, transformação, fórmula
 Gráfico de IRPJ/CSLL alterado para cascata com barra inicial nominal, ajuste líquido flutuante em amarelo e valor efetivo. Valores derivados da reconciliação versionada; fonte clicável e explicação da adaptação preservadas. Eixo parte de zero; rótulo do ajuste mantém o sinal negativo.
 
 Esclarecimento de UF: MG aparece como não detalhado no quadro da fonte, sem imputação de zero nem atribuição da diferença do ICMS total ao estado. Confirmados RJ/SP na nota 9 p.49 da ITR.
+
+## Implementação ampliada — 27/11/2026
+
+Registro mais recente prevalece sobre lacunas históricas descritas acima. Implementados histórico controladora 2022–2023, IR/CS consolidado 9M, DIRBI 2024 (12 registros), contexto operacional, agenda regulatória com status, fluxo ICMS, comparação CAPEX com/sem suspensão e sensibilidade 2026–2033. A reforma separa substituição federal e legado estadual/municipal, créditos utilizados e excedentes; não transforma excedentes em caixa.
+
+Matriz qualitativa e três business cases ampliados; habilitação apenas hipotética nos simuladores, sem afirmar direito real. Preservados cascata, MG não detalhado, fontes clicáveis e explicações Adaptado. 19 testes (11 JS + 8 Python) e build aprovados; navegador desktop e viewport móvel, seis páginas sem overflow global. Testes/publicação final em TESTES.md. ANTT e documentos internos permanecem limites explícitos; não caracterizam números inventados ou promessas de benefício.

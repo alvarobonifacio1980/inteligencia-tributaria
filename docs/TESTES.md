@@ -30,3 +30,13 @@ Não foi comprovada a meta de carregamento inicial de 3 s; nenhum teste Safari/F
 - Run coleta `46021113127`: concluído com sucesso, incluindo download de PDFs, extração estrutural, validação, conciliação CVM/Pandas, testes Python e artifact de evidências.
 - Build/deploy do commit `35c58b6`: aprovado (workflow #2).
 - Na versão publicada: botão de 10% do ICMS mudou a natureza para Híbrido e principal para R$ 27,8 mi; restauração recuperou o exemplo de R$ 50 mi e benefício de R$ 4,3 mi.
+
+## Ampliação — 27/11/2026
+
+- `npm test`: 11 testes aprovados, incluindo transição federal/estadual, créditos excedentes, CAPEX sem dupla contagem, fluxo ICMS e fixtures comuns.
+- Unittest Python: 8 testes aprovados, incluindo conciliação 9M, segregação histórica, soma DIRBI e cálculo independente das fixtures JS/Python.
+- Build Vite aprovado; pacote principal cerca de 806 kB / 266 kB gzip.
+- Navegador desktop: 9M2026 mostra 33,10%; cenários respondem aos controles; REPORTO em 2030 mantém resultado condicionado; DIRBI IRPJ filtra para R$ 9,53 mi e janela explica fonte, chave, conversão e soma.
+- Capturas desktop e viewport móvel inspecionadas visualmente. Nas seis páginas, iframe 390×844 com 375 px úteis: scrollWidth = clientWidth = 375. Mesma limitação de não ser aparelho físico.
+- Janela Adaptado aberta e fechada pelo botão acessível Fechar explicação. As janelas e fontes anteriores foram preservadas.
+- Registro de publicação ampliada será consolidado após conclusão do deploy.

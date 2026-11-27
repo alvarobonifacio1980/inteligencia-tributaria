@@ -1,29 +1,27 @@
 # Backlog reconciliado — 27/11/2026
 
-## Implementado
+## Entregas implementadas
 
-- [x] Novo repositório independente, sem alterações em outros projetos.
-- [x] Dados Empresa Ferroviária DFP/ITR; CVM conciliada por CNPJ, versão e conta.
-- [x] Python + React + ECharts; arquitetura estática, tema centralizado.
-- [x] Cinco módulos, fontes, filtros suportados, simuladores, reset e business cases.
-- [x] Testes analíticos Python/JS e build.
-- [x] Navegador desktop; viewport móvel por iframe 390 × 844, sem overflow na visão executiva e cenários.
-- [x] Workflows de build/deploy e coleta manual executados e aprovados no GitHub Actions.
+- [x] Repositório independente, Python/Pandas, React/ECharts e GitHub Pages; R$ 0.
+- [x] Preservados cascata IR/CS, fontes clicáveis, janelas de adaptação, indicação de MG não detalhado, filtros, CSV e impressão.
+- [x] Histórico 2022–2023 controladora segregado; consolidado 2024–2025 e 9M2025/2026; IR/CS 9M conciliado CVM/ITR.
+- [x] DIRBI 2024 por CNPJ, programa e tributo, com deduplicação e explicação da transformação.
+- [x] Indicadores operacionais e investimentos publicados pela empresa; fonte e conceitos explícitos.
+- [x] Agenda regulatória com CT-e, split payment e marcos 2026–2033; status/data de verificação.
+- [x] Simuladores de antecipação, parcelamento ICMS, CAPEX com/sem regime e reforma com crescimento, CAPEX, repasse e sensibilidade.
+- [x] Créditos excedentes separados de caixa; suspensão comparada ao crédito alternativo sem dupla contagem.
+- [x] Matriz qualitativa e três business cases com evidências, premissas, riscos, dependências e critérios de sucesso.
+- [x] Especificações de fórmulas e fixtures compartilhadas Python/JS; 19 testes aprovados.
+- [x] Validação visual desktop e viewport móvel; seis páginas sem overflow global.
+- [x] Pipeline manual ampliado, hashes e snapshot revisado; build/deploy no push.
 
-## Gate de publicação
+## Limitações abertas de dados/aplicação real
 
-- [x] Versionar implementação, executar Actions e ativar GitHub Pages.
-- [x] Verificar URL pública sem autenticação e registrar evidências.
+- [ ] ANTT: CSV, JSON e API rejeitados; XLSX alternativo com HTTP 403. Retomar quando houver arquivo oficial utilizável. Fallback operacional da empresa identificado; sem análise por rota.
+- [ ] Elegibilidade efetiva por aquisição/regime, habilitação atual e contratos requerem documentação interna; não inventar nem concluir direito ao benefício.
+- [ ] Atualizações legais e novas competências exigem revisão dos mapeamentos e premissas; coleta interrompe diante de divergência.
+- [ ] Meta de carregamento de 3 s e testes em aparelho físico/Safari/Firefox não comprovados.
 
-## Limitações aceitas de escopo por falta de evidência
+## Fora do escopo atual
 
-- [ ] ANTT: fonte candidata retornou HTML de rejeição; procurar dataset oficial alternativo.
-- [ ] REIDI/REPORTO: estimativas históricas da Portaria 779/2023 confirmadas; validar atos posteriores e elegibilidade antes de quantificar benefício atual.
-- [ ] DIRBI: obter arquivo utilizável e confirmar cobertura/CNPJ.
-- [ ] 2022–2023: ampliar após conciliação; não preencher lacunas sinteticamente.
-- [ ] Alíquota efetiva 9M: disponível somente após conciliação; interface mostra indisponível.
-- [ ] Revisão de regulamentação CT-e e atos posteriores: sem afirmação de conformidade integral.
-
-## Evolução posterior (fora deste MVP)
-
-Corredores, benchmark, ML, governança automatizada interna, Power BI e PowerPoint/conversores.
+Corredores sem base validada, benchmark amplo, ML, integração ERP, Power BI, PowerPoint e conversores. Não implementar para preencher lacunas artificialmente.

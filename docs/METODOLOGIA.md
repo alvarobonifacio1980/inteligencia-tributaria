@@ -5,7 +5,7 @@ Revisão em 27/11/2026. A fonte revisada prevalece sobre valores candidatos do p
 | Conjunto | Granularidade / unidade | Fonte / localizador | Validação |
 |---|---|---|---|
 | Receita bruta, impostos e líquida | Fluxo anual ou 9 meses, R$ mi | DFP nota 29 p.116; ITR nota 27 p.85 | Bruta − impostos = líquida |
-| LAIR, IRPJ/CSLL | Fluxo anual consolidado, R$ mi | DFP DRE p.37 e nota 33 p.121 | Corrente + diferido; CVM 3.07/3.08 |
+| LAIR, IRPJ/CSLL | Fluxo anual ou 9 meses consolidado, R$ mi | DFP DRE p.37 e nota 33 p.121; ITR DRE p.24 e nota 31 | Corrente + diferido; CVM 3.07/3.08 |
 | Créditos | Estoque por data e tributo, R$ mi | DFP nota 10 p.63; ITR nota 9 p.48–49 | Soma tributos = total = circulante + não circulante |
 | ICMS por UF | Subtotal circulante RJ/SP | ITR nota 9 p.49 | Não equiparar ao total ICMS |
 | Contingências | Posição em 31/12/2025 | DFP nota 25 p.109 | 194 − 26 = 168 ações de risco; provisão incluída na exposição |
@@ -20,7 +20,7 @@ CNPJ validado na CVM: 01.417.222/0001-77; código CVM 017949. Seleção: consoli
 - Estoques de crédito têm data própria; filtro financeiro não os altera. Comparação somente anual/anual ou 9M/9M.
 - Tributos sobre serviços é valor real; percentual sobre receita bruta é adaptado. Não representa recolhimento líquido após créditos.
 - Simulação de realização única, sem correção monetária. Usar 10% do saldo oficial cria cenário híbrido; percentual não é elegibilidade comprovada.
-- Reforma: bases econômicas líquidas/por fora. Carga atual é taxa líquida hipotética; custos, elegibilidade, taxas e repasse são hipóteses. A ponderação de transição não reproduz apuração legal mista. Não projetar EBITDA/margem com este modelo.
+- Reforma: bases econômicas líquidas/por fora. Carga atual é taxa líquida hipotética; custos, elegibilidade, taxas e repasse são hipóteses. A CBS substitui a parcela federal hipotética em 2027; o legado estadual/municipal remanescente reduz conforme transição. Créditos excedentes não viram caixa automaticamente. Não projetar EBITDA/margem com este modelo.
 
 ## Legislação consultada
 
@@ -34,7 +34,15 @@ Textos oficiais consultados por pesquisa e abertura em 27/11/2026. Coleta direta
 
 ## Fontes complementares
 
-ANTT CSV candidato retornou HTML “Request Rejected”, não CSV, em 27/11/2026. Download direto da Portaria REIDI retornou HTML; consulta web oficial permitiu conferir a Portaria 779/2023 e a tabela histórica de estimativas. Valores históricos de investimento R$ 8.732.177.921,82 e suspensões R$ 807.726.457,77, nunca realização. O portal lista Portaria 841/2024; vigência/alterações e elegibilidade por bem ainda exigem validação. Não processar resposta como dado válido. DIRBI: download resultou em arquivo de 2.621.440 bytes sem diretório ZIP válido; página oficial informa ~19.665 KB. Não utilizar arquivo parcial. Sem inferência de tributação individual por rota, regime ou CNPJ na ausência de base validada.
+ANTT: CSV/JSON/API retornaram rejeição HTML; XLSX oficial alternativo retornou 403. Dados operacionais do relatório público da empresa são fallback explícito, não dados ANTT nem inferência fiscal por rota.
+
+DIRBI 2024: arquivo completo de 20.137.041 bytes validado e processado. Aba Base_Dirbi, CNPJ completo, ano 2024, 12 registros únicos; R$ 140,19918494 mi declarados. UF é domicílio declarado, não cobertura operacional. Conversão reais/milhões; sem somar a créditos reconhecidos ou estimativas de portarias. Identificadores textuais truncados/científicos não são inferidos.
+
+CVM DFP 2023: 2022–2023 individual/controladora em tabela própria. CVM ITR 2026: DRE consolidada acumulada janeiro–setembro, maior versão; não trimestre isolado. 9M2026: LAIR 1.295,227 e IR/CS 428,676 mi; corrente 88,303 + diferido 340,373. 9M2025: LAIR 1.690,078 e IR/CS 464,453; corrente 166,115 + diferido 298,338. Conferência ITR p.24 e CVM; alíquota = IR/CS ÷ LAIR.
+
+REIDI: Portaria 779/2023 Fase II é estimativa histórica; Portaria 841/2024 e ADE 1.662/2024 referem-se à Fase III, não atualização numérica automática da Fase II. Nenhum ato histórico comprova elegibilidade de toda compra futura.
+
+Regras verificadas e fórmulas completas dos quatro simuladores: [REGRAS_E_CENARIOS.md](REGRAS_E_CENARIOS.md). Agenda técnica: NT CT-e 2026.004 v1.01 com produção anunciada para 14/12/2026, conforme comunicado oficial de 12/11/2026; split payment preparatório não implica exigência universal imediata. Sem conclusão de conformidade integral.
 
 ## Preservação
 

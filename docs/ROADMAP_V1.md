@@ -3,7 +3,7 @@
 **Subtítulo:** Planejamento estratégico e eficiência fiscal  
 **Estudo de caso:** Empresa Ferroviária — setor ferroviário brasileiro  
 **Data-base do planejamento:** 27/11/2026  
-**Status:** planejamento consolidado; implementação, validação de arquivos e publicação ainda pendentes.  
+**Status:** implementação ampliada; execução e ressalvas atualizadas no registro abaixo e em STATUS.md.  
 **Pilares:** Diagnosticar · Otimizar · Antecipar
 
 ## 1. Finalidade e contexto
@@ -252,3 +252,7 @@ Fora do escopo inicial: Power BI/PBIX/PBIP, conversor, PPTX, login, banco remoto
 ## Registro de execução — 27/11/2026
 
 Planejamento original preservado acima. A versão demonstrativa foi implementada e publicada: https://alvarobonifacio1980.github.io/inteligencia-tributaria/ . Estado detalhado em STATUS.md, backlog em BACKLOG.md, inventário em FONTES_STATUS.md e testes em TESTES.md. Etapas 00–10 executadas no escopo validado, com ressalvas de ANTT/DIRBI, histórico inicial reduzido, REIDI/REPORTO sem quantificação atual e reforma como sensibilidade simplificada. Não declarar cobertura integral das fontes/regras pendentes.
+
+## Ampliação do roadmap — 27/11/2026
+
+Concluídos histórico 2022–2023 segregado, IR/CS 9M conciliado, DIRBI, contexto operacional público, agenda técnica e legal, simuladores ICMS/CAPEX e reforma ampliada, sensibilidade, matriz e business cases. Preservados todos os avanços anteriores. ANTT permanece bloqueada nas alternativas oficiais testadas; fallback documentado. Elegibilidade de compra e situação interna não foram presumidas. Escopo futuro continua excluído. Ver BACKLOG.md, REGRAS_E_CENARIOS.md e TESTES.md.

@@ -1,0 +1,65 @@
+{
+  "fontes": [
+    {
+      "arquivo": "dfp2023.zip",
+      "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+      "sha256": "504b124cb4073ff9e156ffca977565f10cd62589dbf9b1a716d433cddfc6651d",
+      "coleta": "2026-11-27T17:13:38.090957+00:00"
+    },
+    {
+      "arquivo": "itr2026.zip",
+      "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+      "sha256": "bc09a9809f77bb66966d0ceff22dda1abde87e2f84bfdb668adc44146cf8da14",
+      "coleta": "2026-11-27T17:13:38.158958+00:00"
+    },
+    {
+      "arquivo": "dirbi.xlsb",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/politica-fiscal/atuacao-spe/plataforma-de-desoneracoes-tributarias/arquivos/desoneracoes-dirbi-2024.xlsb/@@download/file?download=1",
+      "sha256": "71df327bfc438674d5d3b7cc6af41af651ca9ce359b4261becd24ce1184b56f2",
+      "coleta": "2026-11-27T17:13:38.174992+00:00"
+    }
+  ],
+  "contas_9m": [
+    {
+      "periodo": "9M2025",
+      "escopo": "Consolidado",
+      "receita": 5636.531,
+      "lair": 1690.078,
+      "ir": 464.453,
+      "lucro": 1225.625,
+      "versao": 1
+    },
+    {
+      "periodo": "9M2026",
+      "escopo": "Consolidado",
+      "receita": 5613.532,
+      "lair": 1295.227,
+      "ir": 428.676,
+      "lucro": 866.551,
+      "versao": 1
+    }
+  ],
+  "historico": [
+    {
+      "ano": 2022,
+      "escopo": "Controladora",
+      "receita": 5592.118,
+      "lair": 1228.961,
+      "ir": 354.785,
+      "lucro": 874.176,
+      "aliquota": 28.86869477550549,
+      "fonte": "cvm2023"
+    },
+    {
+      "ano": 2023,
+      "escopo": "Controladora",
+      "receita": 6449.125,
+      "lair": 1777.581,
+      "ir": 577.432,
+      "lucro": 1200.149,
+      "aliquota": 32.48414558886487,
+      "fonte": "cvm2023"
+    }
+  ],
+  "dirbi_registros": 12
+}

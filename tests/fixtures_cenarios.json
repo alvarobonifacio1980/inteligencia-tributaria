@@ -1,0 +1,4 @@
+[
+ {"nome":"reforma2027","entrada":{"receita":100,"custos":60,"elegibilidade":100,"atual":10,"federalAtual":3,"cbs":9,"ibs":18,"ano":2027,"repasse":0,"prazo":0,"taxa":12},"esperado":{"transicao":10.6,"aliquotaCBS":8.9,"aliquotaIBS":0.1,"legado":7}},
+ {"nome":"reforma2033","entrada":{"receita":100,"custos":60,"elegibilidade":100,"atual":10,"federalAtual":3,"cbs":9,"ibs":18,"ano":2033,"repasse":100,"prazo":0,"taxa":12},"esperado":{"transicao":10.8,"legado":0,"efeitoCaixa":0}}
+]

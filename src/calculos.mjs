@@ -3,17 +3,35 @@ export function credito({capital,atual,proposto,taxa,custo}) {
  const vpAtual=capital/(1+taxa/100)**(atual/12),vpProposto=capital/(1+taxa/100)**(proposto/12);
  return {vpAtual,vpProposto,beneficio:vpProposto-vpAtual-custo,capital};
 }
-// Bases econômicas líquidas de tributos. Hipóteses de débitos/créditos integralmente realizáveis.
-export function reforma({receita,custos,elegibilidade,atual,cbs,ibs,ano,repasse,prazo,taxa}){
- if (![receita,custos,elegibilidade,atual,cbs,ibs,ano,repasse,prazo,taxa].every(Number.isFinite)||receita<0||custos<0||elegibilidade<0||elegibilidade>100||repasse<0||repasse>100||prazo<0||taxa<0||[atual,cbs,ibs].some(v=>v<0||v>100)||ano<2026||ano>2033)throw Error('Premissas inválidas');
+// Bases econômicas por fora. Cenário geral, sem regimes especiais ou apuração de operação real.
+export function reforma({receita,custos,elegibilidade,atual,federalAtual=atual*.375,cbs,ibs,ano,repasse,prazo,taxa,crescimento=0,capex=0,elegibilidadeCapex=0}){
+ const ns=[receita,custos,elegibilidade,atual,federalAtual,cbs,ibs,ano,repasse,prazo,taxa,crescimento,capex,elegibilidadeCapex];
+ if(!ns.every(Number.isFinite)||!Number.isInteger(ano)||ano<2026||ano>2033||receita<0||custos<0||capex<0||prazo<0||taxa<0||crescimento< -100||federalAtual<0||federalAtual>atual||[elegibilidade,repasse,elegibilidadeCapex,atual,cbs,ibs].some(v=>v<0||v>100))throw Error('Premissas inválidas');
+ const baseReceita=receita*(1+crescimento/100),baseCustos=custos*(1+crescimento/100);
  const fracao=ano<2029?0:ano===2033?1:(ano-2028)/10;
- // Sensibilidade de regime pleno ponderada: o atual é taxa líquida hipotética, não a dedução bruta da DRE.
- const debito=receita*(cbs+ibs)/100,creditos=custos*elegibilidade/100*(cbs+ibs)/100;
- const novo=debito-creditos,base=receita*atual/100;
- const peso=ano===2033?1:ano<2027?0:((cbs+ibs*fracao)/(cbs+ibs||1));
- const transicao=base*(1-peso)+novo*peso;
+ const aliquotaCBS=ano===2026?0:ano<=2028?Math.max(0,cbs-.1):cbs;
+ const aliquotaIBS=ano===2026?0:ano<=2028?.1:ibs*fracao;
+ const base=baseReceita*atual/100;
+ const legado=ano===2026?base:baseReceita*(atual-federalAtual)/100*(1-fracao);
+ const baseCredito=baseCustos*elegibilidade/100+capex*elegibilidadeCapex/100;
+ const debito=baseReceita*(aliquotaCBS+aliquotaIBS)/100,creditos=baseCredito*(aliquotaCBS+aliquotaIBS)/100;
+ const saldo=debito-creditos,creditosExcedentes=Math.max(-saldo,0),utilizados=Math.min(debito,creditos);
+ const transicao=legado+Math.max(saldo,0);
+ const novo=(baseReceita-baseCredito)*(cbs+ibs)/100;
  const diferenca=transicao-base,repasseValor=diferenca*repasse/100;
- const custoPrazo=creditos*peso*(1-1/(1+taxa/100)**(prazo/12));
- return {debito,creditos,novo,base,transicao,diferenca,repasseValor,efeitoCaixa:repasseValor-diferenca-custoPrazo,custoPrazo,peso};
+ const custoPrazo=utilizados*(1-1/(1+taxa/100)**(prazo/12));
+ return {debito,creditos,novo,base,transicao,diferenca,repasseValor,efeitoCaixa:repasseValor-diferenca-custoPrazo,custoPrazo,fracao,legado,aliquotaCBS,aliquotaIBS,creditosExcedentes,saldo,baseReceita,baseCustos};
+}
+export function capexRegime({investimento,elegibilidade,aliquota,creditoSemRegime,prazoCredito,taxa,custo}){
+ if(![investimento,elegibilidade,aliquota,creditoSemRegime,prazoCredito,taxa,custo].every(Number.isFinite)||[investimento,prazoCredito,taxa,custo].some(v=>v<0)||[elegibilidade,aliquota,creditoSemRegime].some(v=>v<0||v>100))throw Error('Premissas inválidas');
+ const suspensao=investimento*elegibilidade/100*aliquota/100;
+ const creditoAlternativo=suspensao*creditoSemRegime/100;
+ const vpCredito=creditoAlternativo/(1+taxa/100)**(prazoCredito/12);
+ return {suspensao,creditoAlternativo,vpCredito,caixaInicial:suspensao-custo,efeitoPermanente:suspensao-creditoAlternativo,beneficioVP:suspensao-vpCredito-custo};
+}
+export function fluxoParcelado({capital,parcelas,carencia,taxa}){
+ if(![capital,parcelas,carencia,taxa].every(Number.isFinite)||capital<0||!Number.isInteger(parcelas)||parcelas<1||parcelas>360||carencia<0||taxa<0)throw Error('Premissas inválidas');
+ const mensal=capital/parcelas,fluxos=Array.from({length:parcelas},(_,i)=>({mes:carencia+i+1,valor:mensal,vp:mensal/(1+taxa/100)**((carencia+i+1)/12)}));
+ return {mensal,vp:fluxos.reduce((a,f)=>a+f.vp,0),fluxos};
 }
 export const percentual=(a,b)=>b>0?a/b*100:null;

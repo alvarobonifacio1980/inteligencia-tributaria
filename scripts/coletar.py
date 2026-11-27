@@ -29,6 +29,10 @@ def validar(d):
  for c in d['creditos']:
   assert abs(sum(c[k] for k in ['icms','pis','irrf','outros'])-c['total'])<.002,'Composição não concilia'
   assert abs(c['circulante']+c['nao_circulante']-c['total'])<.002,'Classificação não concilia'
+ for f in d['financeiro']:
+  if 'lucro' in f:assert abs(f['lair']-f['ir']-f['lucro'])<.002,'DRE não concilia'
+ if 'complementos' in d:
+  b=d['complementos']['dirbi'];assert abs(sum(x['valor'] for x in b['registros'])-b['total'])<1e-8,'DIRBI não concilia'
  assert d['reconciliacao']['nominal']+sum(d['reconciliacao']['ajustes'].values())==597705
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true');a=p.parse_args()

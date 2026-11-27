@@ -15,11 +15,14 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python scripts/coletar.py
       - run: python scripts/cvm.py
+      - run: python scripts/ampliar_fontes.py
       - run: python -m unittest discover -s tests -p 'test_*.py'
       - uses: actions/upload-artifact@v4
         with:
           name: evidencias-coleta
           path: |
+            data/complementos_revisados.json
+            data/conciliacao_expandida.json
             data/extracao_validada.json
             data/coletas.json
             data/conciliacao_cvm.json

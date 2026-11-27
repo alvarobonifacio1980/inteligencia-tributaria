@@ -18,7 +18,7 @@
       "id": "itr2026",
       "nome": "Empresa Ferroviária — Informações trimestrais 3T2026",
       "url": "https://filemanager-cdn.mziq.com/published/e14f1680-635b-4328-8a06-b799b1574b43/ed0c4c1c-5cc3-4a74-ac98-e657a4cd7bbf",
-      "localizador": "Nota 9 p. 48–49; nota 27 p. 85; DRE consolidada",
+      "localizador": "DRE consolidada p.24; notas 9 p.48–49, 27 p.85 e 31",
       "natureza": "Real",
       "periodo": "30/09/2026 e 9M2026",
       "escopo": "Consolidado",
@@ -73,6 +73,36 @@
       "periodo": "Verificação em 27/11/2026",
       "escopo": "Brasil",
       "unidade": "Não se aplica"
+    },
+    {
+      "id": "cvm2023",
+      "nome": "CVM — DFP 2023 e comparativo 2022",
+      "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2023.zip",
+      "localizador": "DRE individual, contas 3.01/3.07/3.08/3.09; versão 1",
+      "natureza": "Real",
+      "periodo": "2022–2023",
+      "escopo": "Controladora",
+      "unidade": "R$ mil na origem; R$ mi no painel"
+    },
+    {
+      "id": "cvmitr",
+      "nome": "CVM — ITR 3T2026",
+      "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/ITR/DADOS/itr_cia_aberta_2026.zip",
+      "localizador": "DRE consolidada, 01/01–30/09; contas 3.01/3.07/3.08/3.09",
+      "natureza": "Real",
+      "periodo": "9M2025–9M2026",
+      "escopo": "Consolidado",
+      "unidade": "R$ mil na origem; R$ mi no painel"
+    },
+    {
+      "id": "dirbi",
+      "nome": "Ministério da Fazenda — DIRBI 2024",
+      "url": "https://www.gov.br/fazenda/pt-br/assuntos/politica-fiscal/atuacao-spe/plataforma-de-desoneracoes-tributarias/arquivos/desoneracoes-dirbi-2024.xlsb/@@download/file?download=1",
+      "localizador": "Aba Base_Dirbi, chave CNPJ/UF/município/programa/tributo/ano; Dicionário",
+      "natureza": "Adaptado",
+      "periodo": "2024",
+      "escopo": "CNPJ da empresa",
+      "unidade": "R$ na origem; R$ mi no painel"
     }
   ],
   "financeiro": [
@@ -102,7 +132,11 @@
       "bruta": 5988.509,
       "impostos": 351.978,
       "liquida": 5636.531,
-      "fonte": "itr2026"
+      "fonte": "itr2026",
+      "lair": 1690.078,
+      "ir": 464.453,
+      "lucro": 1225.625,
+      "conciliacao": "CVM ITR e DRE consolidada p.24; nota 31"
     },
     {
       "periodo": "9M2026",
@@ -110,7 +144,11 @@
       "bruta": 5964.721,
       "impostos": 351.189,
       "liquida": 5613.532,
-      "fonte": "itr2026"
+      "fonte": "itr2026",
+      "lair": 1295.227,
+      "ir": 428.676,
+      "lucro": 866.551,
+      "conciliacao": "CVM ITR e DRE consolidada p.24; nota 31"
     }
   ],
   "creditos": [
@@ -183,10 +221,174 @@
     "fonte": "dfp2025"
   },
   "limitacoes": [
-    "Histórico financeiro inicial 2024–2025 e 9M2025–9M2026; 2022–2023 pendentes de conciliação.",
     "Créditos são estoques; não representam economia nova nem disponibilidade imediata.",
-    "CVM DFP 2025: receita, LAIR, IR/CS e créditos circulantes conciliados com RI. ANTT/DIRBI sem integração válida.",
     "Simulador da reforma é uma sensibilidade econômica simplificada: não apura tributos de operações reais.",
-    "Legislação consultada em 27/11/2026; elegibilidade e execução dependem de validação fiscal e jurídica."
-  ]
+    "Legislação consultada em 27/11/2026; elegibilidade e execução dependem de validação fiscal e jurídica.",
+    "Histórico 2022–2023 é controladora; não comparar automaticamente com consolidado 2024–2026.",
+    "ANTT: downloads CSV/JSON/API e alternativa XLSX sem arquivo válido; contexto por rota não foi presumido.",
+    "DIRBI 2024 informa desonerações declaradas; não é caixa recebido nem economia incremental."
+  ],
+  "complementos": {
+    "historico_controladora": [
+      {
+        "ano": 2022,
+        "escopo": "Controladora",
+        "receita": 5592.118,
+        "lair": 1228.961,
+        "ir": 354.785,
+        "lucro": 874.176,
+        "aliquota": 28.86869477550549,
+        "fonte": "cvm2023"
+      },
+      {
+        "ano": 2023,
+        "escopo": "Controladora",
+        "receita": 6449.125,
+        "lair": 1777.581,
+        "ir": 577.432,
+        "lucro": 1200.149,
+        "aliquota": 32.48414558886487,
+        "fonte": "cvm2023"
+      }
+    ],
+    "dirbi": {
+      "ano": 2024,
+      "registros": [
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reidi - Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura",
+          "tributo": "COFINS",
+          "valor": 34.83049342
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reidi - Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura",
+          "tributo": "PIS/PASEP",
+          "valor": 7.561153
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reidi - Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura",
+          "tributo": "COFINS/IMPORTAÇÃO",
+          "valor": 1.34330742
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reidi - Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura",
+          "tributo": "PIS/PASEP/IMPORTAÇÃO",
+          "valor": 0.29232597
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reporto - Regime Tributário para Incentivo à Modernização e à Ampliação da Estrutura Portuária",
+          "tributo": "COFINS/IMPORTAÇÃO",
+          "valor": 19.19823668
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reporto - Regime Tributário para Incentivo à Modernização e à Ampliação da Estrutura Portuária",
+          "tributo": "COFINS",
+          "valor": 49.15752483
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reporto - Regime Tributário para Incentivo à Modernização e à Ampliação da Estrutura Portuária",
+          "tributo": "PIS/PASEP/IMPORTAÇÃO",
+          "valor": 4.17785462
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Reporto - Regime Tributário para Incentivo à Modernização e à Ampliação da Estrutura Portuária",
+          "tributo": "PIS/PASEP",
+          "valor": 10.67235762
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Inovação Tecnológica - Dispêndios como Despesa Operacional",
+          "tributo": "CSLL",
+          "valor": 1.6372384899999999
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Inovação Tecnológica - Dispêndios como Despesa Operacional",
+          "tributo": "IRPJ",
+          "valor": 4.54788471
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Inovação Tecnológica - Dispêndios - Adicional de 60 a 80%",
+          "tributo": "CSLL",
+          "valor": 1.7949198100000001
+        },
+        {
+          "ano": 2024,
+          "uf": "RJ",
+          "programa": "Inovação Tecnológica - Dispêndios - Adicional de 60 a 80%",
+          "tributo": "IRPJ",
+          "valor": 4.9858883700000005
+        }
+      ],
+      "total": 140.19918494,
+      "linhas": 12,
+      "fonte": "dirbi"
+    },
+    "conciliacao_9m": [
+      {
+        "periodo": "9M2025",
+        "escopo": "Consolidado",
+        "receita": 5636.531,
+        "lair": 1690.078,
+        "ir": 464.453,
+        "lucro": 1225.625,
+        "versao": 1
+      },
+      {
+        "periodo": "9M2026",
+        "escopo": "Consolidado",
+        "receita": 5613.532,
+        "lair": 1295.227,
+        "ir": 428.676,
+        "lucro": 866.551,
+        "versao": 1
+      }
+    ],
+    "verificacao": "2026-11-27",
+    "operacional": [
+      {
+        "periodo": "2024",
+        "volume": 202525,
+        "investimentos": 2864.5,
+        "fonte": "dfp2025"
+      },
+      {
+        "periodo": "2025",
+        "volume": 213001,
+        "investimentos": 3400.8,
+        "fonte": "dfp2025"
+      },
+      {
+        "periodo": "9M2025",
+        "volume": 157230,
+        "investimentos": 2583,
+        "fonte": "itr2026"
+      },
+      {
+        "periodo": "9M2026",
+        "volume": 157121,
+        "investimentos": 2043,
+        "fonte": "itr2026"
+      }
+    ]
+  }
 }

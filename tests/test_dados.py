@@ -12,4 +12,13 @@ class Dados(unittest.TestCase):
  def test_detecta_base_invalida(self):
   self.d['financeiro'][0]['liquida']+=1
   with self.assertRaises(AssertionError):validar(self.d)
+ def test_aliquota_9m_conciliada(self):
+  f=next(x for x in self.d['financeiro'] if x['periodo']=='9M2026')
+  self.assertAlmostEqual(f['lair'],1295.227);self.assertAlmostEqual(f['ir'],428.676)
+  self.assertAlmostEqual(f['ir']/f['lair']*100,33.0965923348)
+ def test_historico_segregado(self):
+  self.assertTrue(all(x['escopo']=='Controladora' for x in self.d['complementos']['historico_controladora']))
+ def test_dirbi(self):
+  b=self.d['complementos']['dirbi'];self.assertEqual(b['linhas'],12);self.assertAlmostEqual(b['total'],140.19918494)
+  self.assertEqual(len(b['registros']),12)
 if __name__=='__main__':unittest.main()
