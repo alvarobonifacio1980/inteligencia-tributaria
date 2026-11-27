@@ -30,3 +30,7 @@ Revisão ampliada: links com a identificação nominal foram substituídos por p
 ## Fontes nos cards — 27/11/2026
 
 Os oito indicadores de valor exibem fonte clicável com documento/localizador, respeitando o período selecionado. Cards de insights financeiros e resultados dos simuladores também indicam sua origem; simulações apontam a metodologia, sem apresentá-las como fatos oficiais.
+
+## Explicação dos dados adaptados — 27/11/2026
+
+Identificação Adaptado abre janela modal com origem, transformação, fórmula, exemplo calculado conforme período e limites. Cobertura: tributos sobre serviços, alíquota efetiva, evolução/concentração dos créditos e reconciliação IR/CS. Janela nativa com foco modal, fechamento por botão e Escape.
