@@ -59,3 +59,12 @@ Após nova autenticação, interface privada confirmou1 visitante de teste,3 vis
 Administrador: https://cloud.umami.is/analytics/us/websites/b154e677-76cb-45a6-abaf-95a8be728cdd . Acesso por login; compartilhar esse endereço não torna estatísticas públicas. Share URL permaneceu desativado. Idioma/fuso são preferências do navegador administrador; confirmar pt-BR/America/Sao_Paulo ao acessar por outro navegador.
 
 Configuração ativa com ID público de coleta. Estatísticas dependem de consentimento, DNT/GPC, bloqueadores e disponibilidade do serviço. Não recupera acessos anteriores à ativação. ID público não concede acesso administrativo. Código de teste HTML local não integra o build nem o repositório.
+
+
+## Publicação confirmada — 28/11/2026
+
+V2.1.2 publicada via PR4, release `2fcad2742573fc1ea04fd13657f74ce200169aa4`, workflow `46103524891` com validação e deploy aprovados. URL original acessada em navegador sem autenticação; versão2.1.2 e controles no Sobre presentes. Permitir/recusar e retorno à visão executiva funcionaram. A preferência final do navegador de QA foi recusa, impedindo novas coletas.
+
+O SDK foi carregado nessa sessão pública ao permitir estatísticas; esse navegador não expôs a automação via webdriver. Logo, a visita de QA pós-publicação pode integrar as métricas reais além da visita isolada com prefixo de teste. Não considerar essas verificações como interesse orgânico. Para testes futuros, abrir com `?sem_estatisticas=1` antes do hash; webdriver é proteção complementar, não universal. Nenhum registro foi apagado.
+
+Recepção no serviço comprovada pelo teste isolado (3 visualizações e9 eventos). A inspeção pós-publicação comprovou interface/configuração e preferências; não foi feita nova leitura autenticada dos eventos dessa sessão pública. Não há identificação de pessoas ou recuperação de acessos anteriores à ativação. Estatísticas dependem de permissão e bloqueadores.

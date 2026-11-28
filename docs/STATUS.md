@@ -52,3 +52,12 @@ Retomada: conta Hobby e site configurados, ID público salvo; coleta continua de
 ## V2.1.2 — audiência validada para publicação
 
 Recebimento confirmado na conta Hobby:3 visualizações e9 categorias de eventos, uma ocorrência cada, em rota isolada de teste.47 testes e build aprovados; consentimento, exclusão, minimização, falhas do serviço, hash e frequência cobertos. Configuração ativa apenas no domínio/caminho oficial e mediante permissão. Rollback: reverter merge de audiência ou enabled:false. Linha de base estável anterior: ac1ff55. Guia, limites e evidências em AUDIENCIA.md.
+
+
+## Publicação confirmada — 28/11/2026
+
+V2.1.2 publicada via PR4, release `2fcad2742573fc1ea04fd13657f74ce200169aa4`, workflow `46103524891` com validação e deploy aprovados. URL original acessada em navegador sem autenticação; versão2.1.2 e controles no Sobre presentes. Permitir/recusar e retorno à visão executiva funcionaram. A preferência final do navegador de QA foi recusa, impedindo novas coletas.
+
+O SDK foi carregado nessa sessão pública ao permitir estatísticas; esse navegador não expôs a automação via webdriver. Logo, a visita de QA pós-publicação pode integrar as métricas reais além da visita isolada com prefixo de teste. Não considerar essas verificações como interesse orgânico. Para testes futuros, abrir com `?sem_estatisticas=1` antes do hash; webdriver é proteção complementar, não universal. Nenhum registro foi apagado.
+
+Recepção no serviço comprovada pelo teste isolado (3 visualizações e9 eventos). A inspeção pós-publicação comprovou interface/configuração e preferências; não foi feita nova leitura autenticada dos eventos dessa sessão pública. Não há identificação de pessoas ou recuperação de acessos anteriores à ativação. Estatísticas dependem de permissão e bloqueadores.
