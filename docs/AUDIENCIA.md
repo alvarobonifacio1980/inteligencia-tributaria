@@ -1,4 +1,28 @@
-# Audiência privada — Umami Cloud
+# Audiência privada — política vigente
+
+## Coleta automática com opção de desativação — 28/11/2026
+
+Por orientação do responsável, a coleta inicia automaticamente sem clique para novos visitantes. Não há botão de permissão no rodapé; permanece link discreto para privacidade. No Sobre, o visitante pode desativar ou reativar. Recusas anteriores (`negado`) continuam impedindo toda coleta; não são apagadas ou reinterpretadas. O modo automático vale apenas na ausência de preferência ou com ativação explícita anterior.
+
+Continuam: payload mínimo, sem valores digitados, URLs livres ou IDs próprios; sem cookies de rastreamento, replay ou anúncios; DNT/GPC e exclusões de teste; localStorage indisponível mantém coleta desativada. Remoção do script e bloqueio dos envios ao desativar, sem excluir eventos já recebidos. Não recupera visitas passadas. `?sem_estatisticas=1` impede coleta desde a abertura.
+
+### Avaliação de legítimo interesse
+
+- Finalidade: medir interesse agregado nas análises e melhorar navegação/funcionalidades deste estudo público. Não identificar visitantes, tomar decisões sobre pessoas ou cruzar dados com candidaturas, contatos e bases externas.
+- Necessidade: rotas conhecidas e ocorrência de ações, sem conteúdo dos campos; uma interação de simulador por30s. Dados técnicos do provedor apenas para métricas de sessão/geografia aproximadas. Sem ferramentas publicitárias ou gravação.
+- Balanceamento: benefício limitado à melhoria do produto; navegação pública pode gerar expectativa de estatísticas mínimas. IP e User-Agent recebidos pelo provedor e sequência de sessão estimada não são tratados como dados absolutamente anônimos. Baixo volume de acessos permite inferências indevidas: não atribuir identidade por horário, origem ou localização.
+- Salvaguardas: aviso transparente, desativação simples, recusas preservadas, DNT/GPC, acesso administrativo privado, retenção de seis meses no Hobby, sem identificador próprio ou vinculação entre dispositivos. A configuração anterior exigia consentimento; essa mudança não deve reativar quem recusou.
+- Risco residual: terceiro no exterior, geolocalização imprecisa e sessões estimadas. Revisar esta avaliação se forem ampliados dados, finalidade, rastreamento ou serviços. Não constitui certificação de conformidade nem parecer jurídico integral.
+
+Referência: [ANPD — Cookies e proteção de dados pessoais](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia-orientativo-cookies-e-protecao-de-dados-pessoais.pdf), medição de audiência e legítimo interesse em contextos específicos; ausência de cookies não dispensa os demais requisitos. [DPA Umami](https://umami.is/dpa).
+
+48 testes (32 JS +16 Python) e build aprovados, incluindo visita sem preferência, recusa legada, desativação/reinício, falha do serviço e prevenção de duplicidade. Dados financeiros e simuladores inalterados. Rollback: reverter o commit deste ajuste; alternativamente enabled:false para interrupção geral.
+
+## Histórico da implantação anterior (consentimento prévio)
+
+Os registros abaixo descrevem o estado anterior à mudança para coleta automática. A política vigente é a indicada acima.
+
+
 
 Estado: integração validada para ativação na V2.1.2. Coleta condicionada à permissão do visitante. Testes isolados e recebimento pelo SDK oficial registrados separadamente abaixo.
 

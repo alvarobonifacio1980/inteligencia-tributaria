@@ -7,7 +7,7 @@ export function rotaPublica(hash=''){
 }
 export function origemPublica(referrer){try{return new URL(referrer).origin}catch{return ''}}
 export function permitido(env,config){
- try{return config.enabled===true&&/^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(config.websiteId)&&env.location.hostname===config.hostname&&env.location.pathname.startsWith(config.basePath)&&!env.navigator.webdriver&&!env.navigator.globalPrivacyControl&&env.navigator.doNotTrack!=='1'&&env.localStorage.getItem('umami.disabled')!=='1'&&env.localStorage.getItem(CHAVE_AUDIENCIA)==='permitido'&&!new URLSearchParams(env.location.search).has('sem_estatisticas')}catch{return false}
+ try{return config.enabled===true&&/^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(config.websiteId)&&env.location.hostname===config.hostname&&env.location.pathname.startsWith(config.basePath)&&!env.navigator.webdriver&&!env.navigator.globalPrivacyControl&&env.navigator.doNotTrack!=='1'&&env.localStorage.getItem('umami.disabled')!=='1'&&[null,'permitido'].includes(env.localStorage.getItem(CHAVE_AUDIENCIA))&&!new URLSearchParams(env.location.search).has('sem_estatisticas')}catch{return false}
 }
 export function payloadSeguro(config,env,rota,nome){
  return {website:config.websiteId,hostname:config.hostname,language:env.navigator.language,screen:`${env.screen.width}x${env.screen.height}`,url:config.basePath+'#'+rotaPublica('#'+rota),title:'Inteligência Tributária · '+rotaPublica('#'+rota),referrer:origemPublica(env.document.referrer),...(nome?{name:nome}:{})};
@@ -17,7 +17,7 @@ export function criarColetor({send,clock=()=>Date.now(),route=()=>''}){
  let ultimaRota=null;const ultimos=new Map();
  return {pagina(){const r=rotaPublica('#'+route());if(r===ultimaRota)return;ultimaRota=r;send(r);if(r.startsWith('cenarios/')&&r!=='cenarios/projetos')this.evento('simulador_acesso');if(r==='cenarios/projetos')this.evento('business_case')},evento(acao){if(!acoes.has(acao))return;const r=rotaPublica('#'+route()),key=acao+':'+r,agora=clock(),intervalo=acao==='simulador_interacao'?30000:1000;if(ultimos.has(key)&&agora-ultimos.get(key)<intervalo)return;ultimos.set(key,agora);send(r,acao+':'+r)}};
 }
-export function preferenciaAudiencia(){try{return window.localStorage.getItem(CHAVE_AUDIENCIA)||'pendente'}catch{return 'negado'}}
+export function preferenciaAudiencia(){try{return window.localStorage.getItem(CHAVE_AUDIENCIA)||'automatico'}catch{return 'negado'}}
 export function definirAudiencia(valor){try{window.localStorage.setItem(CHAVE_AUDIENCIA,valor);window.dispatchEvent(new Event('audiencia-preferencia'))}catch{/* armazenamento indisponível: coleta permanece desativada */}}
 let instalado=false;
 export function iniciarAudiencia(){
