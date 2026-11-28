@@ -43,3 +43,10 @@ Visitantes únicos são estimativas; redes compartilhadas, VPN, bloqueadores e r
 `public/data/audiencia.json`: `enabled`, UUID público do site, script oficial, hostname e basePath. `src/audiencia.mjs` isolado do React e reutilizável mediante troca de rotas/configuração; `Privacidade.jsx` cuida das preferências. Automático desabilitado; envio manual com campos permitidos e before-send adicional. Falha do script/serviço descartada sem bloquear UI; sem fila persistente/reenvio de dados antigos.
 
 Antes do merge: criar/configurar conta Hobby, verificar estatísticas privadas, ID e primeiro recebimento real; testar rotas/eventos e ausência de valores/duplicação. Revogar permissão e verificar interrupção. Executar testes/build e publicar só após aceite. Desativação: `enabled:false`; rollback completo por reversão do merge, preservando base `ac1ff55`. Não reescrever histórico nem modificar outros projetos.
+
+
+## Conta configurada — aguardando confirmação de recebimento
+
+Hobby confirmado na interface administrativa: US$0/mês,100K eventos/mês,1 site e6 meses. Site Inteligência Tributária criado; ID público inserido na configuração, ainda com enabled:false. Compartilhamento sem registros; replay/heatmap dependentes de Business não ativados. Região observada: US(Oregon). Fuso America/Sao_Paulo, idioma português do Brasil.
+
+Uma rotina local isolada foi iniciada para validar o SDK com rotas /__validacao_audiencia__/; a confirmação de recepção não foi concluída antes do reinício do ambiente. Esses registros, se recebidos, são testes e devem ser excluídos por filtro de caminho na análise. Não houve redefinição ou exclusão de dados. Nova autenticação administrativa necessária para verificar o resultado; integração não publicada enquanto pendente.
