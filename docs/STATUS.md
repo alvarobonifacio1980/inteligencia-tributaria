@@ -47,3 +47,8 @@ Branch isolada `audiencia-privada`, base `ac1ff55bf570f27de5c07d2fa866d92de765a0
 
 
 Retomada: conta Hobby e site configurados, ID público salvo; coleta continua desativada. Sessão administrativa perdida após reinício do ambiente. Recebimento real dos testes ainda não confirmado; não houve merge/publicação da branch. Demais evidências e passos de retomada em AUDIENCIA.md.
+
+
+## V2.1.2 — audiência validada para publicação
+
+Recebimento confirmado na conta Hobby:3 visualizações e9 categorias de eventos, uma ocorrência cada, em rota isolada de teste.47 testes e build aprovados; consentimento, exclusão, minimização, falhas do serviço, hash e frequência cobertos. Configuração ativa apenas no domínio/caminho oficial e mediante permissão. Rollback: reverter merge de audiência ou enabled:false. Linha de base estável anterior: ac1ff55. Guia, limites e evidências em AUDIENCIA.md.

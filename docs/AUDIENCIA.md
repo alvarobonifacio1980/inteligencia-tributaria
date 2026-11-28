@@ -1,6 +1,6 @@
 # Audiência privada — Umami Cloud
 
-Estado: implementação preparada em branch isolada; coleta desabilitada até autenticação/configuração e teste real. Não interpretar testes com coletor simulado como prova de recepção no serviço. Aplicação estável continua publicada.
+Estado: integração validada para ativação na V2.1.2. Coleta condicionada à permissão do visitante. Testes isolados e recebimento pelo SDK oficial registrados separadamente abaixo.
 
 ## Serviço e orçamento
 
@@ -50,3 +50,12 @@ Antes do merge: criar/configurar conta Hobby, verificar estatísticas privadas, 
 Hobby confirmado na interface administrativa: US$0/mês,100K eventos/mês,1 site e6 meses. Site Inteligência Tributária criado; ID público inserido na configuração, ainda com enabled:false. Compartilhamento sem registros; replay/heatmap dependentes de Business não ativados. Região observada: US(Oregon). Fuso America/Sao_Paulo, idioma português do Brasil.
 
 Uma rotina local isolada foi iniciada para validar o SDK com rotas /__validacao_audiencia__/; a confirmação de recepção não foi concluída antes do reinício do ambiente. Esses registros, se recebidos, são testes e devem ser excluídos por filtro de caminho na análise. Não houve redefinição ou exclusão de dados. Nova autenticação administrativa necessária para verificar o resultado; integração não publicada enquanto pendente.
+
+
+## Recebimento confirmado — 28/11/2026
+
+Após nova autenticação, interface privada confirmou1 visitante de teste,3 visualizações e9 eventos distintos (cada qual com1 ocorrência), nas rotas /__validacao_audiencia__/. Nove categorias da tabela recebidas. O teste controla SDK/serviço; testes isolados cobrem a ligação dos eventos da aplicação. Não houve acesso orgânico demonstrado por essa evidência. Para leitura de audiência real, filtrar caminho contendo `/inteligencia-tributaria/`, que exclui o prefixo de teste. Não se apagaram registros.
+
+Administrador: https://cloud.umami.is/analytics/us/websites/b154e677-76cb-45a6-abaf-95a8be728cdd . Acesso por login; compartilhar esse endereço não torna estatísticas públicas. Share URL permaneceu desativado. Idioma/fuso são preferências do navegador administrador; confirmar pt-BR/America/Sao_Paulo ao acessar por outro navegador.
+
+Configuração ativa com ID público de coleta. Estatísticas dependem de consentimento, DNT/GPC, bloqueadores e disponibilidade do serviço. Não recupera acessos anteriores à ativação. ID público não concede acesso administrativo. Código de teste HTML local não integra o build nem o repositório.
